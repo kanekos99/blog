@@ -1,9 +1,9 @@
 <div class="sidebar">
-  <img src="{{ '/assets/blog.png' | url}}" class="sidebar-img" />
+  <img src="{{ '/assets/blog.png' | url }}" class="sidebar-img" />
   <div class="about-blog-box">
     <p>
       Just a space for me to write stuff. Might post personal updates, updates
-      on my projects or maybe even some tutorials. For my art updates, you can
+      on my projects or maybe even some resources. For my art updates, you can
       check out my Sketchlog page instead. This is written in 11ty!
     </p>
   </div>
@@ -26,9 +26,15 @@
           <hr class="dotted-divider" />
           <div class="filters-list">
             <div class="d-flex flex-row flex-wrap justify-content-center">
-              <a class="filter-item" href="{{ '/tag/tutorials' | url }}"> tutorials </a>
-              <a class="filter-item" href="{{ '/tag/personal' | url }}"> personal </a>
-              <a class="filter-item" href="{{ '/tag/projects' | url }}"> projects </a>
+              <a class="filter-item" href="{{ '/tag/resources' | url }}">
+                resources
+              </a>
+              <a class="filter-item" href="{{ '/tag/personal' | url }}">
+                personal
+              </a>
+              <a class="filter-item" href="{{ '/tag/projects' | url }}">
+                projects
+              </a>
             </div>
           </div>
         </div>
@@ -37,10 +43,12 @@
   </div>
   <div class="sidebar-buttons-row mt-2">
     <div class="tags-btn">
-      <a href=""> <i class="fa fa-tags me-2" aria-hidden="true"></i>tags</a>
+      <a href="{{ '/taglist' | url }}">
+        <i class="fa fa-tags me-2" aria-hidden="true"></i>tags</a
+      >
     </div>
     <div class="archive-btn">
-      <a href="">
+      <a href="{{ '/archive' | url }}">
         <i class="fa fa-archive me-2" aria-hidden="true"></i>
         archive</a
       >

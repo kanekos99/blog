@@ -1,0 +1,20 @@
+---
+title: "Taglist"
+layout: "base.njk"
+---
+
+<h1 class="blog-header mt-2 mb-3">tag list</h1>
+<div class="tag-list-description">
+  <p>
+    A flat list of all tags I have used in this blog. To view all posts instead,
+    you can check out the <a href="{{ '/archive' | url }}">archive</a>.
+  </p>
+</div>
+<hr class="dotted-divider-80 dotted-divider" />
+<div class="tag-list-container">
+  {% for tag in collections.allTags %}
+    <a href="{{ ('/tag/' + (tag | slug) + '/') | url }}" class="tag-list-item">
+      {{ tag }}
+    </a>
+  {% endfor %}
+</div>

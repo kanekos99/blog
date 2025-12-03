@@ -1,0 +1,19 @@
+---
+title: "Archive"
+layout: "base.njk"
+---
+
+<h1 class="blog-header mt-2 mb-3">archive</h1>
+<div class="tag-list-description">
+  <p>
+    A flat list of all the posts on this site chronologically. To view posts by
+    their tags instead, you can check out the
+    <a href="{{ '/taglist' | url }}">taglist page</a>.
+  </p>
+</div>
+<hr class="dotted-divider-80 dotted-divider" />
+<ul class="archive-list">
+  {%- for post in collections.post | reverse -%}
+  <li class="archive-item">{{ post.data.date | postDate }}: <a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
+  {%- endfor -%}
+</ul>
