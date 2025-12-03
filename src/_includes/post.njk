@@ -1,0 +1,25 @@
+---
+layout: "base.njk"
+nesting: "../../"
+---
+
+<p class="post-date-label">{{ date | postDate }}</p>
+<h1 class="post-title-header mt-2 mb-3">
+  {{ title }}
+</h1>
+<hr class="dotted-divider" />
+<div class="post-body">
+  <div>
+    {{ content | safe }}
+  </div>
+</div>
+<div class="post-tags-box">
+  <h3>Tags:</h3>
+  {% for tag in tags %} {% if tag != "post" %}
+  <a href="{{ ('/tag/' + (tag | slug) + '/') | url }}">{{ tag }}</a>
+  {% endif %} {% endfor %}
+</div>
+<hr class="dotted-divider" />
+
+<div id="c_widget"></div>
+<script src="{{nesting}}scripts/comment-widget.js"></script>

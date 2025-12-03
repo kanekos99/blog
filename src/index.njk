@@ -1,0 +1,11 @@
+---
+title: Kaneko's Blog
+layout: "base.njk"
+nesting: "./"
+---
+
+<h1 class="blog-header mt-2 mb-3">recent posts</h1>
+{%- for post in collections.post | reverse -%} {% include 'post-snippet.njk' %} {%- endfor
+-%} 
+
+{% include 'pagination.njk' %}

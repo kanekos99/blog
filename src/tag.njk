@@ -1,0 +1,16 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  addAllPagesToCollections: true
+layout: "base.njk"
+permalink: /tag/{{ tag | slug }}/
+nesting: "../../"
+eleventyComputed:
+  title: Posts tagged with "{{ tag }}"
+---
+
+<h1 class="blog-header mt-2 mb-3">{{ tag }}</h1>
+{%- for post in collections[tag] | reverse -%} {% include 'post-snippet.njk' %}
+{%- endfor -%} {% include 'pagination.njk' %}

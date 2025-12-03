@@ -1,0 +1,20 @@
+<div class="top-buttons-row">
+  <div class="back-btn top-btn">
+    {% if page.url == '/' %}
+    <a href="https://kanekos.neocities.org/"
+      ><i class="fa fa-home me-2"></i>home</a
+    >
+    {% else %}
+    <a href="/blog/"><i class="fa fa-caret-left me-2"></i>back</a>
+    {% endif %}
+  </div>
+  <div class="tags-btn top-btn hide-btn">
+    <a href=""> <i class="fa fa-tags me-2" aria-hidden="true"></i>tags</a>
+  </div>
+  <div class="archive-btn top-btn hide-btn">
+    <a href="">
+      <i class="fa fa-archive me-2" aria-hidden="true"></i>
+      archive</a
+    >
+  </div>
+</div>
