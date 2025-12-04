@@ -2,7 +2,7 @@
 title: Blog Dev Log 1
 author: kanekos
 date: 2025-12-04
-tags: ["projects", "blog"]
+tags: ["projects", "blog", "blog dev log"]
 imageAlt: This is a test
 description: The first dev log for building this blog LOL
 ---
