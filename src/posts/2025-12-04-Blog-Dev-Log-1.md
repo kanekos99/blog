@@ -152,9 +152,9 @@ As you can see, these same tags are displayed at the bottom of this post.
 On the other hand, something new that I did learn about posts is the flexibility of what you can do in Markdown.
 
 ### 💻 Markdown
-Did you know you can include HTML directly in Markdown? Because I did not. One problem I had with writing posts in Markdown is that I wanted to include images, which means I had to have a way of styling them. Being able to add HTML directly in Markdown makes this super simple, of course. 
+Did you know you can include HTML directly in Markdown? Because I did not. One problem I thought I would have with writing posts in Markdown is that I wanted to include images, which meant I had to have a way of styling them. Being able to add HTML directly in Markdown makes this super simple, since I can just add the image, you know, *in HTML*.
 
-If I wanted to add any special styling for any particular text, I can simply add a HTML tag around it, assign a class to it, and then style it in CSS.
+Also, if I wanted to add any special styling for any particular text, I can simply add a HTML tag around it, assign a class to it, and then style it in CSS.
 
 <span class="demo-text-markdown">Like this</span>
 
