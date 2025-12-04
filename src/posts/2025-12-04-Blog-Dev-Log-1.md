@@ -11,16 +11,21 @@ Here I will write about building this blog. Idk what nonsense I'm going to put h
 
 Alright I might as well put a to do list here
 
-- Pagination link via url input
-- Images in Markdown and general markdown testing (can I include videos)
-- Intro post
-- Resources compilation post
+## Dev related
+
+- ~~Pagination link via url input~~
+- ~~Images in Markdown and general markdown testing (can I include videos)~~
 - 404 not found page for neocities
-- 404 not found page for this blog
-- This actual dev log post
-- Archive
+- ~~404 not found page for this blog~~
 - Microblog
 - Update graphics
-- LINK in the post titles
+- ~~LINK in the post titles~~
+- Credits and footer
+
+## Post related
+
+- Intro post
+- Resources compilation post
+- This actual dev log post
 
 Okay yeah and then it will be ready for neocities publishing ORZZZZZZZZZZ

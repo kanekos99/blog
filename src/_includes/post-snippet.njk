@@ -1,7 +1,7 @@
 <div class="blog-post-container">
   <p class="post-date">{{ post.data.date | postDate }}</p>
   <div class="post-box">
-    <h2 class="post-title">{{ post.data.title }}</h2>
+    <h2 class="post-title"><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
     <div class="post-summary-box d-flex flex-row flex-wrap">
       {% if post.data.image %}
       <div class="post-img-container">
