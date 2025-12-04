@@ -238,19 +238,20 @@ body {
 }
 
 .post-img-container {
-  flex: 1 1 calc(33.33% - 2rem);
+  width: 30%;
   padding-right: 20px;
 }
 
 .post-img {
   max-width: 100%;
-  background-color: #a3a5cf74;
   border-radius: 10px;
 }
 
 .post-text-container {
-  flex: 1 1 calc(66.66% - 2rem);
+  flex: 1 1 calc(66% - 2rem);
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .post-text {
@@ -587,13 +588,20 @@ body {
     margin-top: 20px;
   }
 
+  .post-img {
+    height: 300px;
+    margin: auto;
+  }
+
   .post-img-container {
-    flex: 1 1 calc(100% - 2rem);
+    width: 100%;
     padding-right: 0px;
+    justify-content: center;
+    text-align: center;
   }
 
   .post-text-container {
-    flex: 1 1 calc(100% - 2rem);
+    width: 100%;
     margin-top: 20px;
   }
 

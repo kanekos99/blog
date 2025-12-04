@@ -1,5 +1,5 @@
 ---
-title: Blog Dev Log 1
+title: How I Made This Blog - Dev Log 1
 author: kanekos
 date: 2025-12-04
 tags: ["projects", "blog", "blog dev log"]
@@ -21,10 +21,11 @@ Alright I might as well put a to do list here
 - Update graphics
 - ~~LINK in the post titles~~
 - Credits and footer
+- Styling for posts
 
 ## Post related
 
-- Intro post
+- ~~Intro post~~
 - Resources compilation post
 - This actual dev log post
 

@@ -6,7 +6,7 @@
       {% if post.data.image %}
       <div class="post-img-container">
         <img
-          src="{{ post.data.image }}"
+          src="{{ post.data.image | url }}"
           alt="{{ post.data.imageAlt | default('this is an image') }}"
           class="post-img"
         />
@@ -14,7 +14,7 @@
       {% endif %}
       <div class="post-text-container">
         <p class="post-text">
-          {{ post.data.description }}
+          {{ post.data.description | safe }}
         </p>
       </div>
     </div>
