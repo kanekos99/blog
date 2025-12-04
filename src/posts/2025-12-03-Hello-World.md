@@ -26,4 +26,4 @@ As for what I'll be posting here, so far I'm planning for a mix of personal upda
 <br><br>
 If you have read this post all the way until here, thank you for reading! I don't have an RSS feed or anything like that that you can subscribe to (I have no idea how to set that up yet), but I'll keep working on this blog, and my Neocities site as well. For a rundown of how I set this blog up, you can check out my first Dev Log (if you can even call it that) for this blog [here](/blog/posts/2025-12-04-Blog-Dev-Log-1/).
 <br><br>
-(Technically this could all have been in one post but I needed three posts for each of the three different categories on the sidebar that I've created.)
+(Alright, I'll be honest. This could all have been in one post but I needed three posts for each of the three different categories on the sidebar that I've created 😂)

@@ -33,7 +33,9 @@ As a disclaimer, these tutorials/ resources probably require some knowledge of H
 ### Deployment
 
 - [**Deploying 11ty site to github pages**](https://www.youtube.com/watch?v=x4rRO12swrw)<br>
-  > I like to host mirrors of my websites on Github Pages for testing since it's super convenient, but it's a little harder to do with statically generated sites. This Youtube tutorial shows how to deploy your 11ty site onto Github Pages through a Github action. Also helped me to fix an issue with broken links on the statically generated pages. Do note that the Github workflow build file they have used in the video is no longer working for newer versions of 11ty - you can find a build file that worked for me [here](https://github.com/kanekos99/blog/blob/main/.github/workflows/build.yml) instead.
+  > I like to host mirrors of my websites on Github Pages for testing since it's super convenient, but it's a little harder to do with statically generated sites. This Youtube tutorial shows how to deploy your 11ty site onto Github Pages through a Github action. Also helped me to fix an issue with broken links on the statically generated pages. <br>
+  >> Do note that the Github workflow build file they have used in the video is no longer working for newer versions of 11ty - you can find a build file that worked for me [here](https://github.com/kanekos99/blog/blob/main/.github/workflows/build.yml) instead. <br>
+  >>> Also make sure to enable **"Read and write permissions"** under Workflow Permissions on Github (you can find this under your repository's Settings > Actions > General)
 
 ### Other Resources
 

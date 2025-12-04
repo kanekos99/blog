@@ -35,6 +35,11 @@
   border-radius: 10px;
 }
 
+.post-body-img-l {
+  width: 75%;
+  border-radius: 10px;
+}
+
 .post-img-caption {
   margin: 0px;
   font-style: italic;
@@ -103,6 +108,11 @@
   color: #67a9a9;
 }
 
+.demo-text-markdown {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 1.5rem;
+}
+
 @media only screen and (max-width: 992px) {
   .post-date-label {
     width: 90%;
@@ -110,6 +120,9 @@
 
   .post-title-header {
     width: 90%;
+  }
+  .post-body-img-l {
+    width: 100%;
   }
 }
 
