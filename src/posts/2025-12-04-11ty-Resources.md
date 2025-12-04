@@ -42,7 +42,7 @@ As a disclaimer, these tutorials/ resources probably require some knowledge of H
 - [**Petrapixel's 11ty tutorial**](https://petrapixel.neocities.org/coding/eleventy-tutorial)<br>
   > Maybe a simpler to follow tutorial if you want to learn the basics of 11ty, and if you prefer reading.
 - [**The Official 11ty Documentation**](https://www.11ty.dev/)<br>
-  > I am adding this here in this list not because I found it helpful, but just to complain about how confusing it is. Maybe I'm just dumb but I have found nothing in here that helped me to understand how to actually use their framework to create a proper website, and how to resolve the various issues that I faced such as broken links etc.
+  > I am adding this here in this list not because I found it helpful, but just to complain about how confusing it is. Maybe I'm just dumb but I have found nothing in here that helped me to understand how to actually use their framework to create a proper website, or how to resolve the various issues that I faced such as broken links etc.
 
 <hr class="dotted-divider">
 
