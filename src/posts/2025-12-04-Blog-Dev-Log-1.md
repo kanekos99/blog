@@ -2,7 +2,7 @@
 title: Blog Dev Log 1
 author: kanekos
 date: 2025-12-04
-tags: ["projects", "blog dev log"]
+tags: ["projects", "blog"]
 imageAlt: This is a test
 description: The first dev log for building this blog LOL
 ---
@@ -15,7 +15,7 @@ Alright I might as well put a to do list here
 
 - ~~Pagination link via url input~~
 - ~~Images in Markdown and general markdown testing (can I include videos)~~
-- 404 not found page for neocities
+- ~~404 not found page for neocities~~
 - ~~404 not found page for this blog~~
 - Microblog
 - Update graphics

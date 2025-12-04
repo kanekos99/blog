@@ -2,7 +2,7 @@
 title: 11ty Blog Resources
 author: kanekos
 date: 2025-12-04
-tags: ["resources", "blog dev log"]
+tags: ["resources", "blog"]
 imageAlt: This is a test
 description: A compilation of all the resources I used to build this blog that I found helpful.
 ---

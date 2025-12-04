@@ -1,6 +1,5 @@
 ---
 layout: "base.njk"
-nesting: "../../"
 ---
 
 <p class="post-date-label">{{ date | postDate }}</p>
@@ -16,7 +15,8 @@ nesting: "../../"
 <div class="post-tags-box">
   <h3>Tags:</h3>
   {% for tag in tags %} {% if tag != "post" %}
-  <a href="{{ '/tag/' + (tag | slug) + '/' | url }}">{{ tag }}</a>
+  <!-- prettier-ignore -->
+  <a href="{{ ('/tag/' + (tag | slug) + '/') | url }}">{{ tag }}</a>
   {% endif %} {% endfor %}
 </div>
 <hr class="dotted-divider" />
