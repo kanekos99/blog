@@ -24,11 +24,11 @@ This is the first step when I add any new page on this website, which is to desi
 
 ### 💻 Blog HTML Template
 
-After I have the rough UI designs, I just straight into coding the page in HTML. I add whatever CSS I need at this stage. I also used [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) through a CDN, because I've used it so much I include it by default, but you don't really need to use it at all. In fact, I'm not sure if it is even advisable to use Bootstrap anymore in the modern front end development. Unfortunately, I love Bootstrap so I will continue using it.
+After I have the rough UI designs, I just straight into coding the page in HTML. I add whatever CSS I need at this stage. I also used [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) through a CDN, because I've used it so much I include it by default, but you don't really need to use it at all. In fact, I'm not sure if it is even advisable to use Bootstrap anymore in modern front end development. Unfortunately, I love Bootstrap so I will continue using it.
 
 I created one template page for the main page (with the list of posts), and one template page to be used for the individual post. You can view the HTML templates I've made for this blog [here](https://github.com/kanekos99/blog-template).
 
-I also add any Javascript I need at this point, which is only the [comment widget](https://virtualobserver.moe/ayano/comment-widget) in this case. I won't go into detail on how I set it up because the widget page itself already explains it very well.
+I also add any Javascript I need at this point, which is only the [comment widget](https://virtualobserver.moe/ayano/comment-widget) in this case. I won't go into detail on how I set it up because the widget page itself already explains it very well, but I absolutely love this widget for how customisable it is!
 
 I also try to keep my page as responsive as possible. This means having to shift some UI elements like moving the buttons on the sidebar in the desktop view to the top in the mobile view.
 
@@ -97,10 +97,6 @@ With that, I have a collection (collection.allTags) which contains all the tags 
 
 Similar to the tag list page, [this page](/blog/archive/) displays all the posts ever in this site. Really it's just a flattened version of the landing page, so it is created in basically the same manner, but only displaying the date and title of each post.
 
-### 💻 Comments
-
-I love this comment widget so much!
-
 ### 💻 Pagination
 
 I... I will update this section when I have more than five posts on this blog.
@@ -137,7 +133,7 @@ By appending ```| url``` at the end of every link, 11ty will convert the URLs to
 If you have encountered a similar issue, feel free to let me know how you have resolved it, as I am still not certain if this is the correct approach.
 
 ### 💻 Posts
-Every post on this blog is created by inserting content written in a Markdown file into a common template. I mean, that is just how 11ty works, so it is nothing special. Other than the content of the post itself, you can also display "meta" information, such as the post date and the post tags, which is defined in a header portion of the Markdown file (also known as the front matter).
+Every post on this blog is created by inserting content written in a Markdown file into a common template. I mean, that is just how 11ty works, so it is nothing special. Other than the content of the post itself, you can also display "meta" information, such as the post date and the post tags, which is defined in the header portion of the Markdown file (also known as the front matter).
 
 **Example for this post**
 ```
@@ -161,6 +157,8 @@ Did you know you can include HTML directly in Markdown? Because I did not. One p
 If I wanted to add any special styling for any particular text, I can simply add a HTML tag around it, assign a class to it, and then style it in CSS.
 
 <span class="demo-text-markdown">Like this</span>
+
+Technically inline CSS should work perfectly fine as well.
 
 On the other hand, if you want to apply changes across all posts - e.g. change the colour of all links in posts - then simply finding the right element to target in CSS will be sufficient. 
 
