@@ -95,7 +95,7 @@ With that, I have a collection (collection.allTags) which contains all the tags 
 
 ### 💻 Archive Page
 
-Similar to the tag list page, [this page](/blog/archive/) displays all the posts ever in this site. Really it's just a flattened version of the landing page, so it is created in basically the same manner, but only displaying the date and title of each post.
+Similar to the tag list page, [this page](/blog/archive/) displays all the posts ever on this site. Really it's just a flattened version of the landing page, so it is created in basically the same manner, but only displaying the date and title of each post.
 
 ### 💻 Pagination
 
