@@ -32,17 +32,8 @@ I also add any Javascript I need at this point, which is only the [comment widge
 
 I also try to keep my page as responsive as possible. This means having to shift some UI elements like moving the "tags" and "archive" buttons on the sidebar in the desktop view to the top in the mobile view. The trick is to actually have two sets of buttons, one on the sidebar and one at the top. Then all you need to do is to hide the top buttons in desktop view and the sidebar buttons in mobile view.
 
-<div class="post-body-img-container">
-    <img src="{{ '/posts/images/blog-dev-log/btn_sidebar.png' | url }}" class="post-body-img-l" />
-    <p class="post-img-caption">Desktop view</p>
-</div>
-<br>
-
-<div class="post-body-img-container">
-    <img src="{{ '/posts/images/blog-dev-log/btn_topbar.png' | url }}" class="post-body-img-l" />
-    <p class="post-img-caption">Mobile view</p>
-</div>
-<br>
+{% imgBlock "/posts/images/blog-dev-log/btn_sidebar.png", "Desktop view" %}
+{% imgBlock "/posts/images/blog-dev-log/btn_topbar.png", "Mobile view" %}
 
 Again, I am not the best at responsive design. I just try to come up with something that doesn't look horrible to me.
 
@@ -109,6 +100,7 @@ With that, I have a collection (collection.allTags) which contains all the tags 
 
 On my taglist page, I just loop through this collection to display each tag:
 
+<!-- prettier-ignore -->
 ```{% raw %}
 ---
 title: "Taglist"
@@ -150,6 +142,7 @@ So this has seemed to work for me:
 
 I added a path prefix in the .eleventy.js config file.
 
+<!-- prettier-ignore -->
 ```
 return {
   dir: {
@@ -214,9 +207,3 @@ For my own reference, here is a to-do list of features I plan to add to this blo
 - Pop up modal for images
 - Multiple images in one row (?)
 - Fix styling for code blocks in posts
-
-
-
-
-
-

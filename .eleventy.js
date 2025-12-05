@@ -26,6 +26,16 @@ module.exports = function (eleventyConfig) {
     return [...tagSet].sort();
   });
 
+  eleventyConfig.addShortcode("imgBlock", function (src, caption) {
+    const url = eleventyConfig.getFilter("url")(src);
+    return `
+      <div class="post-body-img-container">
+        <img src="${url}" class="post-body-img-l" />
+        <p class="post-img-caption">${caption}</p>
+      </div>
+    `;
+  });
+
   return {
     dir: {
       input: "src",
