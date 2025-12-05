@@ -34,15 +34,17 @@ As a disclaimer, these tutorials/ resources probably require some knowledge of H
 
 - [**Deploying 11ty site to github pages**](https://www.youtube.com/watch?v=x4rRO12swrw)<br>
   > I like to host mirrors of my websites on Github Pages for testing since it's super convenient, but it's a little harder to do with statically generated sites. This Youtube tutorial shows how to deploy your 11ty site onto Github Pages through a Github action. Also helped me to fix an issue with broken links on the statically generated pages. <br>
-  >> Do note that the Github workflow build file they have used in the video is no longer working for newer versions of 11ty - you can find a build file that worked for me [here](https://github.com/kanekos99/blog/blob/main/.github/workflows/build.yml) instead. <br>
-  >>> Also make sure to enable **"Read and write permissions"** under Workflow Permissions on Github (you can find this under your repository's Settings > Actions > General)
+  >
+  > > Do note that the Github workflow build file they have used in the video is no longer working for newer versions of 11ty - you can find a build file that worked for me [here](https://github.com/kanekos99/blog/blob/main/.github/workflows/build.yml) instead. <br>
+  > >
+  > > > Also make sure to enable **"Read and write permissions"** under Workflow Permissions on Github (you can find this under your repository's Settings > Actions > General)
 
 ### Other Resources
 
 - [**Petrapixel's 11ty tutorial**](https://petrapixel.neocities.org/coding/eleventy-tutorial)<br>
   > Maybe a simpler to follow tutorial if you want to learn the basics of 11ty, and if you prefer reading.
 - [**The Official 11ty Documentation**](https://www.11ty.dev/)<br>
-  > I am adding this here in this list not because I found it helpful, but just to complain about how confusing it is. Maybe I'm just dumb but I have found nothing in here that helped me to understand how to actually use their framework to create a proper website, or how to resolve the various issues that I faced such as broken links etc.
+  > I am adding this here in this list not because I found it helpful, but just to complain about how confusing it is. I might be stupid, but I found nothing in here that helped me to understand how to actually use their framework to create a proper website, or how to resolve the various issues that I faced like broken links etc. Honestly, I'd recommend referring to their documentation only if you have a decent understanding of how it works already.
 
 <hr class="dotted-divider">
 

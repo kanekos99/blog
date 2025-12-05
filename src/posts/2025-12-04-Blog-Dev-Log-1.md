@@ -12,9 +12,9 @@ I thought it'd be interesting to document how I put this blog together, although
 
 <hr class="dotted-divider">
 
-### 💻 Blog UI Design
+### 🎨 Blog UI Design
 
-This is the first step when I add any new page on this website, which is to design what it looks like first. A professional would use something like Figma. I use [Canva](https://www.canva.com/). The design doesn't need to include every detail (even the colours are off!), but I find it very helpful to have an idea of how the page should look like instead of experimenting as I am coding.
+This is the first step when I add any new page on this website, which is to design what it looks like. A professional would use something like Figma. I use [Canva](https://www.canva.com/). The design doesn't need to include every detail (even the colours are off!), but I find it very helpful to have an idea of how the page should look like instead of experimenting as I am coding.
 
 <div class="post-body-img-container">
     <img src="{{ '/posts/images/blog-dev-log/canva_blog.png' | url }}" class="post-body-img-l" />
@@ -22,15 +22,15 @@ This is the first step when I add any new page on this website, which is to desi
 </div>
 <br>
 
-### 💻 Blog HTML Template
+### 📃 Blog HTML Template
 
-After I have the rough UI designs, I just straight into coding the page in HTML. I add whatever CSS I need at this stage. I also used [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) through a CDN, because I've used it so much I include it by default, but you don't really need to use it at all. In fact, I'm not sure if it is even advisable to use Bootstrap anymore in modern front end development. Unfortunately, I love Bootstrap so I will continue using it.
+After I have the rough UI designs, I just jump straight into coding the page in HTML. I add whatever CSS I need at this stage. I also used [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) through a CDN, because I've used it so much I include it by default, but you don't really need to use it at all. In fact, I'm not sure if it is even advisable to use Bootstrap anymore in modern front end web development. Unfortunately, I love Bootstrap so I will continue using it.
 
-I created one template page for the main page (with the list of posts), and one template page to be used for the individual post. You can view the HTML templates I've made for this blog [here](https://github.com/kanekos99/blog-template).
+I created one template page for the main page (with the list of posts), and one template page to be used for the individual posts. You can view the HTML templates I've made for this blog [here](https://github.com/kanekos99/blog-template).
 
-I also add any Javascript I need at this point, which is only the [comment widget](https://virtualobserver.moe/ayano/comment-widget) in this case. I won't go into detail on how I set it up because the widget page itself already explains it very well, but I absolutely love this widget for how customisable it is!
+I also add any Javascript I need at this point, which is only the [comment widget](https://virtualobserver.moe/ayano/comment-widget) in this case. I won't go into detail on how I set it up because the widget page itself already explains it very well, but I absolutely love it for how customisable it is!
 
-I also try to keep my page as responsive as possible. This means having to shift some UI elements like moving the buttons on the sidebar in the desktop view to the top in the mobile view.
+I also try to keep my page as responsive as possible. This means having to shift some UI elements like moving the "tags" and "archive" buttons on the sidebar in the desktop view to the top in the mobile view. The trick is to actually have two sets of buttons, one on the sidebar and one at the top. Then all you need to do is to hide the top buttons in desktop view and the sidebar buttons in mobile view.
 
 <div class="post-body-img-container">
     <img src="{{ '/posts/images/blog-dev-log/btn_sidebar.png' | url }}" class="post-body-img-l" />
@@ -54,88 +54,16 @@ I don't think I can offer a better explanation of what needs to be done in text 
 
 You can view my source code for this blog in my [Github repository](https://github.com/kanekos99/blog).
 
-### 💻 Blog Index Page
+### 🏠 Blog Index Page
 
 This is [the landing page](/blog/), which will display all posts, sorted in a chronological order, with the most recent ones at the top. It has pagination, but unfortunately there are too few posts right now on this site to demonstrate it.
 
-### 💻 Blog Tag Pages
+### 📑 Posts
 
-Every tag has their own HTML page that displays all the posts under that tag ([example](/blog/tag/projects/)). This is a built-in feature of 11ty that I found to be incredibly useful, so I didn't have to go write my own custom JS tagging system.
-
-For how to do this, you can try this tutorial [here](https://www.youtube.com/watch?v=kRQr9W7WcVc).
-
-### 💻 Tag List Page
-
-[This page](/blog/taglist/) simply displays a list of all current tags used on this blog. It is automatically updated whenever I add a new tag to a post. I don't think there is built-in way for 11ty to get all your tags, but this custom function in the .eleventy.js config did the trick for me:
-
-```
-  eleventyConfig.addCollection("allTags", function (collectionApi) {
-    let tagSet = new Set();
-
-    collectionApi.getAll().forEach((item) => {
-      if (Array.isArray(item.data.tags)) {
-        item.data.tags.forEach((tag) => {
-          if (tag !== "post") {
-            tagSet.add(tag);
-          }
-        });
-      }
-    });
-
-    return [...tagSet].sort();
-  });
-```
-
-<br>
-
-(There might be a better way to do this, but I haven't found it.)
-<br>
-
-With that, I have a collection (collection.allTags) which contains all the tags I've ever used. Note that this excludes the tag "post", which I have included on every post by default.
-
-### 💻 Archive Page
-
-Similar to the tag list page, [this page](/blog/archive/) displays all the posts ever on this site. Really it's just a flattened version of the landing page, so it is created in basically the same manner, but only displaying the date and title of each post.
-
-### 💻 Pagination
-
-I... I will update this section when I have more than five posts on this blog.
-
-### 💻 Fixing Broken Links
-
-The biggest problem I faced when I started to use 11ty was that I had no idea how to handle links. After I got the generated HTML files and dumped them on Neocities, all the links, including those to my CSS and Javascript files, were just completely broken. When I tried to search up this issue online, there didn't seem to be any straightforward answer to this problem either.
-
-This issue seemed to be that I was deploying my blog under kanekos.neocities.org<b>/blog/</b>, instead of simply kanekos.neocities.org/ — because I keep all of the files related to this blog in their own folder, instead of the root directory.
-
-So this has seemed to work for me:
-
-I added a path prefix in the .eleventy.js config file.
-
-```
-  return {
-    dir: {
-      input: "src",
-      output: "public/blog",
-    },
-    pathPrefix: "/blog/",
-  };
-```
-I also updated all URLs to this format:
-
-{% raw %}
-```<link rel="stylesheet" type="text/css" href="{{ '/styles/main.css' | url }}"/> ```<br>
-```<script src="{{ '/scripts/pagination.js' | url }}"></script>```<br>
-```<a class="filter-item" href="{{ '/tag/resources' | url }}"> resources</a>```
-{% endraw %}
-
-By appending ```| url``` at the end of every link, 11ty will convert the URLs to include the root directory of your site. For example, in my case, this would be /blog/ - so the URL in the generated HTML page will be <b>/blog/</b>styles/main.css
-
-If you have encountered a similar issue, feel free to let me know how you have resolved it, as I am still not certain if this is the correct approach.
-
-### 💻 Posts
 Every post on this blog is created by inserting content written in a Markdown file into a common template. I mean, that is just how 11ty works, so it is nothing special. Other than the content of the post itself, you can also display "meta" information, such as the post date and the post tags, which is defined in the header portion of the Markdown file (also known as the front matter).
 
 **Example for this post**
+
 ```
 ---
 title: How I Made This Blog - Dev Log 1
@@ -147,12 +75,92 @@ imageAlt: Blog UI Design
 description: A documentation of how I put this blog together.
 ---
 ```
+
 As you can see, these same tags are displayed at the bottom of this post.
 
-On the other hand, something new that I did learn about posts is the flexibility of what you can do in Markdown.
+### 💻 Blog Tag Pages
 
-### 💻 Markdown
-Did you know you can include HTML directly in Markdown? Because I did not. One problem I thought I would have with writing posts in Markdown was that I wanted to include images, which meant I had to have a way of styling them. Being able to add HTML directly in Markdown makes this super simple, since I can just add the image, you know, *in HTML*.
+Every tag has their own HTML page that displays all the posts under that tag ([example](/blog/tag/projects/)). This is a built-in feature of 11ty that I found to be incredibly useful, so I didn't have to go write my own custom JS tagging system.
+
+For how to do this, you can try this tutorial [here](https://www.youtube.com/watch?v=kRQr9W7WcVc).
+
+### 🏷️ Tag List Page
+
+[This page](/blog/taglist/) simply displays a list of all current tags used on this blog. It is automatically updated whenever I add a new tag to a post. I don't think there is built-in way for 11ty to get all your tags, but this custom function in the .eleventy.js config did the trick for me:
+
+```
+eleventyConfig.addCollection("allTags", function (collectionApi) {
+  let tagSet = new Set();
+    collectionApi.getAll().forEach((item) => {
+      if (Array.isArray(item.data.tags)) {
+        item.data.tags.forEach((tag) => {
+          if (tag !== "post") {
+            tagSet.add(tag);
+          }
+        });
+      }
+    });return [...tagSet].sort();
+});
+```
+
+_(There might be a better way to do this, but I haven't found it.)_
+
+With that, I have a collection (collection.allTags) which contains all the tags I've ever used. Note that this excludes the tag "post", which I have included on every post by default.
+
+### 🗃️ Archive Page
+
+Similar to the tag list page, [this page](/blog/archive/) displays all the posts ever on this site. Really it's just a flattened version of the landing page, so it is created in basically the same manner, but only displaying the date and title of each post.
+
+### 🔢 Pagination
+
+I"ll update this section when I have more than five posts on this blog.
+
+### 🚫 Fixing Broken Links
+
+The biggest problem I faced when I started to use 11ty was that I had no idea how to handle links. After I got the generated HTML files and dumped them on Neocities, all the links, including those to my CSS and Javascript files, were just completely broken. When I tried to search up this issue online, there didn't seem to be any straightforward answer to this problem either.
+
+This issue seemed to be that I was deploying my blog under kanekos.neocities.org<b>/blog/</b>, instead of simply kanekos.neocities.org/ — because I keep all of the files related to this blog in their own folder, instead of the root directory.
+
+So this has seemed to work for me:
+
+I added a path prefix in the .eleventy.js config file.
+
+```
+return {
+  dir: {
+    input: "src",
+    output: "public/blog",
+  },
+  pathPrefix: "/blog/",
+};
+```
+
+I also updated all URLs to this format:
+
+<!-- prettier-ignore -->
+```{% raw %}
+<link rel="stylesheet" type="text/css" href="{{ '/styles/main.css' | url }}"/>
+{% endraw %}```
+
+<!-- prettier-ignore -->
+```{% raw %}
+<script src="{{ '/scripts/pagination.js' | url }}"></script>
+{% endraw %}```
+
+<!-- prettier-ignore -->
+```{% raw %}
+<a class="filter-item" href="{{ '/tag/resources' | url }}"> resources</a>
+{% endraw %}```
+
+By appending `| url` at the end of every link, 11ty will convert the URLs to include the prefix you defined. For example, in my case, this would be /blog/ - so the URL in the generated HTML page will be <b>/blog/</b>styles/main.css
+
+If you have encountered a similar issue, feel free to let me know how you have resolved it, as I am still not certain if this is the correct approach.
+
+### 🛠️ Markdown
+
+All of the posts on this site are written in Markdown language, which I've used to write Github README.md files before, but didn't realise how flexible it was until now.
+
+One problem I thought I would have with writing posts in Markdown that I planned to add images to my posts, and I didn't know how I could style time in Markdown. However, I have since learnt that you can add HTML directly in Markdown, and that immedately made this super simple, since I can just add the image, you know, _in HTML_.
 
 Also, if I wanted to add some special styling for any particular text, I can simply add a HTML tag around it, assign a class to it, and then style it in CSS.
 
@@ -160,9 +168,14 @@ Also, if I wanted to add some special styling for any particular text, I can sim
 
 Technically inline CSS should work perfectly fine as well.
 
-On the other hand, if you want to apply changes across all posts - e.g. change the colour of all links in posts - then simply finding the right element to target in CSS will be sufficient. 
+On the other hand, if you want to apply changes across all posts - e.g. change the colour of all links in posts - then simply finding the right element to target in CSS will be sufficient.
 
-INSERT IMAGE HERE
+For example, I used the CSS selector `.post-body pre` to apply styling to all code blocks in this post:
+
+<div class="post-body-img-container">
+    <img src="{{ '/posts/images/blog-dev-log/code_block_styling.png' | url }}" class="post-body-img-l" />
+</div>
+<br>
 
 <hr class="dotted-divider">
 
@@ -176,4 +189,9 @@ For my own reference, here is a to-do list of features I plan to add to this blo
 - Pop up modal for images
 - Multiple images in one row (?)
 - Fix styling for code blocks in posts
-````
+
+
+
+
+
+
