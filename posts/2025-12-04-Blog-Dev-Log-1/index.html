@@ -172,7 +172,7 @@
 <p>I don't think I can offer a better explanation of what needs to be done in text than <a href="https://www.youtube.com/watch?v=4wD00RT6d-g">this video</a>, so I won't go into detail for this part. But the end result is that I had some source code that 11ty could compile into static HTML pages.</p>
 <p>You can view my source code for this blog in my <a href="https://github.com/kanekos99/blog">Github repository</a>.</p>
 <h3>🏠 Blog Index Page</h3>
-<p>This is <a href="/blog/">the landing page</a>, which will display all posts, sorted in a chronological order, with the most recent ones at the top. It has pagination, but unfortunately there are too few posts right now on this site to demonstrate it.</p>
+<p>This is <a href="/blog/">the landing page</a>, which will display a preview of all posts, sorted in a chronological order, with the most recent ones at the top. It has pagination, but unfortunately there are too few posts right now on this site to demonstrate it.</p>
 <h3>📑 Posts</h3>
 <p>Every post on this blog is created by inserting content written in a Markdown file into a common template. I mean, that is just how 11ty works, so it is nothing special. Other than the content of the post itself, you can also display &quot;meta&quot; information, such as the post date and the post tags, which is defined in the header portion of the Markdown file (also known as the front matter).</p>
 <p><strong>Example for this post</strong></p>
@@ -188,10 +188,10 @@ description: A documentation of how I put this blog together.
 </code></pre>
 <p>As you can see, these same tags are displayed at the bottom of this post.</p>
 <h3>💻 Blog Tag Pages</h3>
-<p>Every tag has their own HTML page that displays all the posts under that tag (<a href="/blog/tag/projects/">example</a>). This is a built-in feature of 11ty that I found to be incredibly useful, so I didn't have to go write my own custom JS tagging system.</p>
+<p>Every tag has their own HTML page that displays a preview of all the posts under that tag (<a href="/blog/tag/projects/">example</a>). This is a built-in feature of 11ty that I found to be incredibly useful, so I didn't have to go write my own custom JS tagging system.</p>
 <p>For how to do this, you can try this tutorial <a href="https://www.youtube.com/watch?v=kRQr9W7WcVc">here</a>.</p>
 <h3>🏷️ Tag List Page</h3>
-<p><a href="/blog/taglist/">This page</a> simply displays a list of all current tags used on this blog. It is automatically updated whenever I add a new tag to a post. I don't think there is built-in way for 11ty to get all your tags, but this custom function in the .eleventy.js config did the trick for me:</p>
+<p><a href="/blog/taglist/">This page</a> simply displays a list of all current tags used on this blog. It is automatically updated whenever I add a new tag to a post. I don't think there is a built in collection you can use in 11ty to get all your tags, but this custom function in the .eleventy.js config file did the trick for me:</p>
 <pre><code>eleventyConfig.addCollection(&quot;allTags&quot;, function (collectionApi) {
   let tagSet = new Set();
     collectionApi.getAll().forEach((item) =&gt; {
@@ -207,6 +207,28 @@ description: A documentation of how I put this blog together.
 </code></pre>
 <p><em>(There might be a better way to do this, but I haven't found it.)</em></p>
 <p>With that, I have a collection (collection.allTags) which contains all the tags I've ever used. Note that this excludes the tag &quot;post&quot;, which I have included on every post by default.</p>
+<p>On my taglist page, I just loop through this collection to display each tag:</p>
+<pre><code>---
+title: &quot;Taglist&quot;
+layout: &quot;base.njk&quot;
+---
+
+&lt;h1 class=&quot;blog-header mt-2 mb-3&quot;&gt;tag list&lt;/h1&gt;
+&lt;div class=&quot;tag-list-description&quot;&gt;
+  &lt;p&gt;
+    A flat list of all tags I have used in this blog. To view all posts instead,
+    you can check out the &lt;a href=&quot;{{ '/archive' | url }}&quot;&gt;archive&lt;/a&gt;.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;hr class=&quot;dotted-divider-80 dotted-divider&quot; /&gt;
+&lt;div class=&quot;tag-list-container&quot;&gt;
+  {% for tag in collections.allTags %}
+    &lt;a href=&quot;{{ ('/tag/' + (tag | slug) + '/') | url }}&quot; class=&quot;tag-list-item&quot;&gt;
+      {{ tag }}
+    &lt;/a&gt;
+  {% endfor %}
+&lt;/div&gt;
+</code></pre>
 <h3>🗃️ Archive Page</h3>
 <p>Similar to the tag list page, <a href="/blog/archive/">this page</a> displays all the posts ever on this site. Really it's just a flattened version of the landing page, so it is created in basically the same manner, but only displaying the date and title of each post.</p>
 <h3>🔢 Pagination</h3>
