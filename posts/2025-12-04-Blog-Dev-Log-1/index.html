@@ -156,16 +156,14 @@
 <p>I created one template page for the main page (with the list of posts), and one template page to be used for the individual posts. You can view the HTML templates I've made for this blog <a href="https://github.com/kanekos99/blog-template">here</a>.</p>
 <p>I also add any Javascript I need at this point, which is only the <a href="https://virtualobserver.moe/ayano/comment-widget">comment widget</a> in this case. I won't go into detail on how I set it up because the widget page itself already explains it very well, but I absolutely love it for how customisable it is!</p>
 <p>I also try to keep my page as responsive as possible. This means having to shift some UI elements like moving the &quot;tags&quot; and &quot;archive&quot; buttons on the sidebar in the desktop view to the top in the mobile view. The trick is to actually have two sets of buttons, one on the sidebar and one at the top. Then all you need to do is to hide the top buttons in desktop view and the sidebar buttons in mobile view.</p>
-<div class="post-body-img-container">
-    <img src="/blog/posts/images/blog-dev-log/btn_sidebar.png" class="post-body-img-l" />
-    <p class="post-img-caption">Desktop view</p>
-</div>
-<br>
-<div class="post-body-img-container">
-    <img src="/blog/posts/images/blog-dev-log/btn_topbar.png" class="post-body-img-l" />
-    <p class="post-img-caption">Mobile view</p>
-</div>
-<br>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/blog-dev-log/btn_sidebar.png" class="post-body-img-l" />
+<p class="post-img-caption">Desktop view</p>
+</div></p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/blog-dev-log/btn_topbar.png" class="post-body-img-l" />
+<p class="post-img-caption">Mobile view</p>
+</div></p>
 <p>Again, I am not the best at responsive design. I just try to come up with something that doesn't look horrible to me.</p>
 <h3>💻 11ty-fying My Site</h3>
 <p>With the HTML templates mostly complete, I start converting them into something I can use with <a href="https://www.11ty.dev/">Eleventy</a>, which is a static site generator and <a href="/blog/posts/2025-12-03-Hello-World/">the whole reason I built this site</a>. Anyway, because the 11ty documentation page is horrible, I followed Youtube tutorials for this part, a list of which I have compiled <a href="/blog/posts/2025-12-04-11ty-Resources/">here</a>.</p>
@@ -208,6 +206,7 @@ description: A documentation of how I put this blog together.
 <p><em>(There might be a better way to do this, but I haven't found it.)</em></p>
 <p>With that, I have a collection (collection.allTags) which contains all the tags I've ever used. Note that this excludes the tag &quot;post&quot;, which I have included on every post by default.</p>
 <p>On my taglist page, I just loop through this collection to display each tag:</p>
+<!-- prettier-ignore -->
 <pre><code>---
 title: &quot;Taglist&quot;
 layout: &quot;base.njk&quot;
@@ -238,6 +237,7 @@ layout: &quot;base.njk&quot;
 <p>This issue seemed to be that I was deploying my blog under kanekos.neocities.org<b>/blog/</b>, instead of simply kanekos.neocities.org/ — because I keep all of the files related to this blog in their own folder, instead of the root directory.</p>
 <p>So this has seemed to work for me:</p>
 <p>I added a path prefix in the .eleventy.js config file.</p>
+<!-- prettier-ignore -->
 <pre><code>return {
   dir: {
     input: &quot;src&quot;,
