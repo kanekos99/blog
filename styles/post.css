@@ -36,7 +36,7 @@
 }
 
 .post-body-img-l {
-  width: 75%;
+  width: 100%;
   border-radius: 10px;
 }
 
@@ -109,8 +109,36 @@
 }
 
 .demo-text-markdown {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 1.5rem;
+}
+
+.post-body pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.post-body pre::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+}
+
+.post-body pre::-webkit-scrollbar {
+  height: 6px;
+}
+
+.post-body pre {
+  background-color: #d6eef3e6;
+  padding: 10px;
+  border-radius: 10px;
+  border: inset 2px #67a9a95c;
+}
+
+.post-body pre code {
+  font-weight: 100;
+}
+
+.post-body code {
+  color: #2b7379;
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 992px) {
