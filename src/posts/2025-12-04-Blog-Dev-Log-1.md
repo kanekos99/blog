@@ -56,7 +56,7 @@ You can view my source code for this blog in my [Github repository](https://gith
 
 ### 🏠 Blog Index Page
 
-This is [the landing page](/blog/), which will display all posts, sorted in a chronological order, with the most recent ones at the top. It has pagination, but unfortunately there are too few posts right now on this site to demonstrate it.
+This is [the landing page](/blog/), which will display a preview of all posts, sorted in a chronological order, with the most recent ones at the top. It has pagination, but unfortunately there are too few posts right now on this site to demonstrate it.
 
 ### 📑 Posts
 
@@ -80,13 +80,13 @@ As you can see, these same tags are displayed at the bottom of this post.
 
 ### 💻 Blog Tag Pages
 
-Every tag has their own HTML page that displays all the posts under that tag ([example](/blog/tag/projects/)). This is a built-in feature of 11ty that I found to be incredibly useful, so I didn't have to go write my own custom JS tagging system.
+Every tag has their own HTML page that displays a preview of all the posts under that tag ([example](/blog/tag/projects/)). This is a built-in feature of 11ty that I found to be incredibly useful, so I didn't have to go write my own custom JS tagging system.
 
 For how to do this, you can try this tutorial [here](https://www.youtube.com/watch?v=kRQr9W7WcVc).
 
 ### 🏷️ Tag List Page
 
-[This page](/blog/taglist/) simply displays a list of all current tags used on this blog. It is automatically updated whenever I add a new tag to a post. I don't think there is built-in way for 11ty to get all your tags, but this custom function in the .eleventy.js config did the trick for me:
+[This page](/blog/taglist/) simply displays a list of all current tags used on this blog. It is automatically updated whenever I add a new tag to a post. I don't think there is a built in collection you can use in 11ty to get all your tags, but this custom function in the .eleventy.js config file did the trick for me:
 
 ```
 eleventyConfig.addCollection("allTags", function (collectionApi) {
@@ -106,6 +106,31 @@ eleventyConfig.addCollection("allTags", function (collectionApi) {
 _(There might be a better way to do this, but I haven't found it.)_
 
 With that, I have a collection (collection.allTags) which contains all the tags I've ever used. Note that this excludes the tag "post", which I have included on every post by default.
+
+On my taglist page, I just loop through this collection to display each tag:
+
+```{% raw %}
+---
+title: "Taglist"
+layout: "base.njk"
+---
+
+<h1 class="blog-header mt-2 mb-3">tag list</h1>
+<div class="tag-list-description">
+  <p>
+    A flat list of all tags I have used in this blog. To view all posts instead,
+    you can check out the <a href="{{ '/archive' | url }}">archive</a>.
+  </p>
+</div>
+<hr class="dotted-divider-80 dotted-divider" />
+<div class="tag-list-container">
+  {% for tag in collections.allTags %}
+    <a href="{{ ('/tag/' + (tag | slug) + '/') | url }}" class="tag-list-item">
+      {{ tag }}
+    </a>
+  {% endfor %}
+</div>
+{% endraw %}```
 
 ### 🗃️ Archive Page
 
