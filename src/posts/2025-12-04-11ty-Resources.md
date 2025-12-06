@@ -48,6 +48,6 @@ As a disclaimer, these tutorials/ resources probably require some knowledge of H
 
 <hr class="dotted-divider">
 
-If I have missed out any, I'll update it in this post later. For how a run down of how I put everything together to create this blog, you can check out this post [here](/blog/posts/2025-12-04-Blog-Dev-Log-1/).
+If I have missed out any, I'll update it in this post later. For how a run down of how I put everything together to create this blog, you can check out this post [here](/blog/posts/2025-12-05-Blog-Dev-Log-1/).
 
 </div>

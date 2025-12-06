@@ -43,14 +43,18 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <link rel="icon" type="image/x-icon" href="{{'/assets/confuse.png' | url}}" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ '/assets/confuse.png' | url }}"
+    />
   </head>
   <body>
     <div class="main-body" id="main-body">
       <div class="container mt-5">
         <div class="d-flex flex-row flex-wrap justify-content-center">
           {% include 'sidebar.njk' %}
-          <div class="blog-container">
+          <div class="blog-container mb-5">
             {% include 'topbar.njk' %}
             <div class="blog-box-outer">
               <img
@@ -61,10 +65,21 @@
                 {{ content | safe }}
               </div>
             </div>
+            <div class="footer-container mt-2">
+              <button
+                class="footer-btn"
+                onclick="window.scrollTo({top:0,behavior:'smooth'})"
+              >
+                <i class="fa fa-arrow-up me-2" aria-hidden="true"></i>
+                <span>top</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    {% include 'credit-modal.njk' %} {% include 'image-modal.njk' %}
   </body>
   <script src="{{ '/scripts/main.js' | url }}"></script>
 </html>

@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy --pathprefix 'blog'"
+    "build": "eleventy --pathprefix 'blog'",
+    "neocities": "cross-env NODE_ENV=neocities eleventy --pathprefix 'blog' && rimraf public/blog/posts/images"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.2"
+    "@11ty/eleventy": "^3.1.2",
+    "cross-env": "^10.1.0",
+    "rimraf": "^6.1.2"
   }
 }
