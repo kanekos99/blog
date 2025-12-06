@@ -8,7 +8,7 @@ imageAlt: Blog UI Design
 description: A documentation of how I put this blog together. May or may not have a sequel depending on when or what new features I add to the blog in the future.
 ---
 
-I thought it'd be interesting to document how I put this blog together, although it is nothing particularly special. So here is the first installment of a dev log of sorts for this blog, to be updated later as I add more features to it (maybe). Note that everything here is my own process and is really not a guideline for best pratices. It is simply what worked for me in the most convenient way, balancing between what is familiar/ easy for me, and trying to learn new things.
+I thought it'd be interesting to document how I put this blog together, although it is nothing particularly special. So here is the first installment of a dev log of sorts for this blog, to be updated later as I add more features to it (maybe). Note that everything here is my own process and is really not a guideline for best practices. It is simply what worked for me in the most convenient way, balancing between what is familiar/ easy for me, and trying to learn new things.
 
 If you just want to see a list of resources I used, you can go [here](/blog/posts/2025-12-04-11ty-Resources/) instead.
 
@@ -37,7 +37,7 @@ If you just want to see a list of resources I used, you can go [here](/blog/post
 
 ### 🎨 Blog UI Design <a name="blog-ui-design"></a>
 
-This is the first step when I add any new page on this website, which is to design what it looks like. A professional would use something like Figma. I use [Canva](https://www.canva.com/). The design doesn't need to include every detail (even the colours are off!), but I find it very helpful to have an idea of how the page should look like instead of experimenting as I am coding.
+This is the first step when I add any new page on this website, which is to design what it looks like. A professional would use something like Figma. I use [Canva](https://www.canva.com/). The design doesn't need to include every detail (even the colours are off!), but I find it very helpful to have an idea of how the page should look instead of experimenting as I am coding.
 
 {% imgBlock "/posts/images/blog-dev-log/canva_blog.png", "Canva UI Design for Blog" %}
 
@@ -66,7 +66,7 @@ You can view my source code for this blog in my [Github repository](https://gith
 
 ### 🏠 Blog Index Page <a name="blog-index"></a>
 
-This is [the landing page](/blog/), which will display a preview of all posts, sorted in a chronological order, with the most recent ones at the top. It has pagination, but unfortunately there are too few posts right now on this site to demonstrate it.
+This is [the landing page](/blog/), which will display a preview of all posts, sorted in chronological order, with the most recent ones at the top. It has pagination, but unfortunately there are too few posts right now on this site to demonstrate it.
 
 ### 📑 Posts <a name="blog-posts"></a>
 
@@ -92,7 +92,7 @@ As you can see, these same tags are displayed at the bottom of this post.
 
 {% imgBlock "/posts/images/blog-dev-log/blog_tag_page.png", "Tag Page for Projects" %}
 
-Every tag has their own HTML page that displays a preview of all the posts under that tag ([example](/blog/tag/projects/)). This is a built-in feature of 11ty that I found to be incredibly useful, so I didn't have to go write my own custom JS tagging system.
+Every tag has its own HTML page that displays a preview of all the posts under that tag ([example](/blog/tag/projects/)). This is a built-in feature of 11ty that I found to be incredibly useful, so I didn't have to go write my own custom JS tagging system.
 
 For how to do this, you can try this tutorial [here](https://www.youtube.com/watch?v=kRQr9W7WcVc).
 
@@ -100,7 +100,7 @@ For how to do this, you can try this tutorial [here](https://www.youtube.com/wat
 
 {% imgBlock "/posts/images/blog-dev-log/tag_list_page.png", "Taglist Page" %}
 
-[This page](/blog/taglist/) simply displays a list of all current tags used on this blog. It is automatically updated whenever I add a new tag to a post. I don't think there is a built in collection you can use in 11ty to get all your tags, but this custom function in the .eleventy.js config file did the trick for me:
+[This page](/blog/taglist/) simply displays a list of all current tags used on this blog. It is automatically updated whenever I add a new tag to a post. I don't think there is a built-in collection you can use in 11ty to get all your tags, but this custom function in the .eleventy.js config file did the trick for me:
 
 ```
 eleventyConfig.addCollection("allTags", function (collectionApi) {
@@ -117,7 +117,7 @@ eleventyConfig.addCollection("allTags", function (collectionApi) {
 });
 ```
 
-_(There might be a better way to do this, but I haven't found it.)_
+_(There might be a better way to do this, but I haven't found one.)_
 
 With that, I have a collection (collection.allTags) which contains all the tags I've ever used. Note that this excludes the tag "post", which I have included on every post by default.
 
@@ -165,7 +165,7 @@ Similar to the tag list page, [this page](/blog/archive/) displays all the posts
 
 ### 🔢 Pagination <a name="pagination"></a>
 
-I"ll update this section when I have more than five posts on this blog.
+I'll update this section when I have more than five posts on this blog.
 
 ### 🚫 Fixing Broken Links <a name="links"></a>
 
@@ -212,9 +212,9 @@ If you have encountered a similar issue, feel free to let me know how you have r
 
 All of the posts on this site are written in Markdown language, which I've used to write Github README.md files before, but didn't realise how flexible it was until now.
 
-One problem I thought I would have with writing posts in Markdown that I planned to add images to my posts, and I didn't know how I could style time in Markdown. However, I have since learnt that you can add HTML directly in Markdown, and that immedately made this super simple, since I can just add the image, you know, _in HTML_.
+One problem I thought I would have with writing posts in Markdown that I planned to add images to my posts, and I didn't know how I could style them in Markdown. However, I have since learnt that you can add HTML directly in Markdown, and that immediately made this super simple, since I can just add the image, you know, _in HTML_.
 
-Also, if I wanted to add some special styling for any particular text, I can simply add a HTML tag around it, assign a class to it, and then style it in CSS.
+Also, if I wanted to add some special styling for any particular text, I can simply add an HTML tag around it, assign a class to it, and then style it in CSS.
 
 <p class="demo-text-markdown">Like this</p>
 
@@ -228,7 +228,7 @@ For example, I used the CSS selector `.post-body pre` to apply styling to all co
 
 ### 🖼️ Image Handling <a name="images"></a>
 
-So it's great that I can add images in Markdown files using HTML, but that meant that every time I wanted to add a image, I had to include this chunk of code. Not fun, right?
+So it's great that I can add images in Markdown files using HTML, but that meant that every time I wanted to add an image, I had to include this chunk of code. Not fun, right?
 
 ```
 <div class="post-body-img-container">
@@ -236,7 +236,7 @@ So it's great that I can add images in Markdown files using HTML, but that meant
     <p class="post-img-caption">image caption</p>
 </div>
 ```
-Instead of having to copy and paste this chunk around every time, I created what is known as a shortcode in 11ty, which is basically way to create a shortened version of that code block.
+Instead of having to copy and paste this chunk around every time, I created what is known as a shortcode in 11ty, which is basically a way to create a shortened version of that code block.
 
 So now, all I have to add in the Markdown file itself is this:
 
@@ -246,7 +246,7 @@ So now, all I have to add in the Markdown file itself is this:
 
 Which will give me the exact same rendered HTML output as the code block above.
 
-To achieve this, I just needed to include this function in the .elventy.js config file:
+To achieve this, I just needed to include this function in the .eleventy.js config file:
 
 ```
 eleventyConfig.addShortcode("imgBlock", function (src, caption) {
@@ -264,7 +264,7 @@ Great! But some of the images look a little too small in the post. What if you c
 
 **Image Modal**
 
-You could probably achieve this with some JS library like [LightBox2](https://lokeshdhakar.com/projects/lightbox2/), but since I'm using Bootstrap already, I prefer to use their built in modal.
+You could probably achieve this with some JS library like [LightBox2](https://lokeshdhakar.com/projects/lightbox2/), but since I'm using Bootstrap already, I prefer to use their built-in modal.
 
 I can recycle the same modal I'm using in my [art gallery page](https://kanekos.neocities.org/gallery/#original) for this. 
 
@@ -402,7 +402,7 @@ You can use this image modal in regular HTML pages as well, no 11ty is required,
 
 For my own reference, here is a to-do list of features I plan to add to this blog in the near future:
 
-- Microblog - this will be a list of my status.cafe statues, probably extracted using the Surfing Waves RSS widget
+- Microblog - this will be a list of my status.cafe statuses, probably extracted using the Surfing Waves RSS widget
 - More image styling options in posts, maybe even an image gallery or carousel? 
 - A way to filter or list posts by date
 - Update graphics - I gotta stop reusing that same Catnekos png
