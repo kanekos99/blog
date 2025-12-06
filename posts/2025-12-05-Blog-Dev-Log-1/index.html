@@ -420,7 +420,7 @@ pathPrefix: &quot;/blog/&quot;,
 </details>
 <br>
 <p>I include image-modal.njk right before the end of the body tag in my base template (base.njk), since I want this modal to be there for every post.</p>
-<p>Then I make a few changes to my Eleventy shortcode</p>
+<p>Then I make a few changes to my Eleventy shortcode:</p>
 <pre><code>eleventyConfig.addShortcode(&quot;imgBlock&quot;, function (src, caption) {
     const url = eleventyConfig.getFilter(&quot;url&quot;)(src);
     return `
@@ -470,7 +470,7 @@ function showImage(image) {
   </summary>
 <pre><code>function showNextOrPrevImg(direction) {
   const visibleImages = Array.from(
-    document.querySelectorAll(&quot;.post-body-img-l&quot;)
+    document.querySelectorAll(&quot;.YOUR_CLASS_NAME&quot;)
   );
   const currentSrc = modalImg.src;
   let currentIndex = visibleImages.findIndex((img) =&gt; img.src === currentSrc);
@@ -485,7 +485,7 @@ function showImage(image) {
 </code></pre>
 </details>
 <br>
-<p>In <code>document.querySelectorAll(&quot;.post-body-img-l&quot;)</code>, just make sure to change the selector to a class that all your clickable images should have in common.</p>
+<p>Note: Replace <code>YOUR_CLASS_NAME</code> with a class that all your clickable images should have in common.</p>
 <p>You can use this image modal in regular HTML pages as well, no 11ty is required, only Bootstrap. I can make a separate post on this in the future, once I've cleaned up my code.</p>
 <hr class="dotted-divider">
 <h3>🌟 Future Plans <a name="todo"></a></h3>
