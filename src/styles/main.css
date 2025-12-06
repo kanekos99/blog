@@ -407,7 +407,7 @@ body {
 .footer-container {
   display: flex;
   justify-content: end;
-  padding-right: 20px;
+  padding-right: 10px;
 }
 
 .footer-btn {
