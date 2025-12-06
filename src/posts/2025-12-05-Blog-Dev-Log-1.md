@@ -320,7 +320,7 @@ First, I create a new .njk file containing the HTML code for my modal, naming it
 
 I include image-modal.njk right before the end of the body tag in my base template (base.njk), since I want this modal to be there for every post.
 
-Then I make a few changes to my Eleventy shortcode
+Then I make a few changes to my Eleventy shortcode:
 
 ```
 eleventyConfig.addShortcode("imgBlock", function (src, caption) {
@@ -375,7 +375,7 @@ If you want something even more extra, you can add left and right navigation but
 ```
 function showNextOrPrevImg(direction) {
   const visibleImages = Array.from(
-    document.querySelectorAll(".post-body-img-l")
+    document.querySelectorAll(".YOUR_CLASS_NAME")
   );
   const currentSrc = modalImg.src;
   let currentIndex = visibleImages.findIndex((img) => img.src === currentSrc);
@@ -392,7 +392,7 @@ function showNextOrPrevImg(direction) {
 </details>
 <br>
 
-In `document.querySelectorAll(".post-body-img-l")`, just make sure to change the selector to a class that all your clickable images should have in common.
+Note: Replace `YOUR_CLASS_NAME` with a class that all your clickable images should have in common.
 
 You can use this image modal in regular HTML pages as well, no 11ty is required, only Bootstrap. I can make a separate post on this in the future, once I've cleaned up my code.
 
