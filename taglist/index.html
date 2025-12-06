@@ -43,7 +43,11 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <link rel="icon" type="image/x-icon" href="/blog/assets/confuse.png" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/blog/assets/confuse.png"
+    />
   </head>
   <body>
     <div class="main-body" id="main-body">
@@ -58,6 +62,13 @@
       Just a space for me to write stuff. Might post personal updates, updates
       on my projects or maybe even some resources.
     </p>
+    <button
+      class="credits-button mt-3"
+      data-bs-toggle="modal"
+      data-bs-target="#aboutBlogModal"
+    >
+      credits
+    </button>
   </div>
   <div class="accordion filters-box mt-2">
     <div class="accordion-item">
@@ -108,7 +119,7 @@
   </div>
 </div>
 
-          <div class="blog-container">
+          <div class="blog-container mb-5">
             <div class="top-buttons-row">
   <div class="back-btn top-btn">
     
@@ -169,10 +180,99 @@
 
               </div>
             </div>
+            <div class="footer-container mt-2">
+              <button
+                class="footer-btn"
+                onclick="window.scrollTo({top:0,behavior:'smooth'})"
+              >
+                <i class="fa fa-arrow-up me-2" aria-hidden="true"></i>
+                <span>top</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="modal fade" id="aboutBlogModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content about-modal-content">
+      <div class="modal-body">
+        <div class="modal-title credits-title">credits</div>
+        <div class="credits-body mt-3">
+          <ul>
+            <li>
+              This blog is coded by me with
+              <a href="https://www.11ty.dev/">Eleventy</a> with the help of many
+              tutorials, a list of which you can find
+              <a href="/blog/posts/2025-12-04-11ty-Resources/">here</a
+              >. Bootstrap was also used for the HTML template.
+            </li>
+            <li>
+              Artworks are drawn by me and any decorative graphics are made in
+              <a href="https://www.canva.com/">Canva</a>.
+            </li>
+            <li>
+              I am using
+              <a href="https://virtualobserver.moe/ayano/comment-widget"
+                >Ayano's Comment Widget</a
+              >
+              for the comments section on the posts.
+            </li>
+          </ul>
+          <hr class="dotted-divider" />
+          <div class="close-modal-container">
+            <button
+              type="button"
+              class="btn btn-secondary close-about-modal-btn"
+              data-bs-dismiss="modal"
+            >
+              back to blog
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- Modal -->
+<div
+  class="modal fade"
+  id="galleryModal"
+  tabindex="-1"
+  aria-labelledby="galleryModalLabel"
+>
+  <i
+    class="fa fa-times-circle-o modal-cross"
+    aria-hidden="true"
+    data-bs-dismiss="modal"
+    aria-label="Close"
+  ></i>
+  <div class="modal-nav-container">
+    <i
+      class="fa fa-chevron-left modal-arrow modal-arrow-left"
+      aria-hidden="true"
+      onclick="showNextOrPrevImg(-1);"
+    ></i>
+  </div>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="d-flex flex-row justify-content-center modal-row">
+        <div class="modal-image-container">
+          <img src="" class="modal-image img-fluid" id="modal-image" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-nav-container">
+    <i
+      class="fa fa-chevron-right modal-arrow modal-arrow-right"
+      aria-hidden="true"
+      onclick="showNextOrPrevImg(1);"
+    ></i>
+  </div>
+</div>
+
   </body>
   <script src="/blog/scripts/main.js"></script>
 </html>

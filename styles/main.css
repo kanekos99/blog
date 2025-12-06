@@ -33,6 +33,10 @@ body {
   overflow-x: hidden;
 }
 
+.main-body {
+  position: relative;
+}
+
 .container {
   max-width: 1330px;
 }
@@ -77,6 +81,28 @@ body {
   width: 70%;
   margin: auto;
   box-shadow: 2px 2px #67a9a9;
+}
+
+.credits-button {
+  margin: auto;
+  color: #2b7379;
+  background-color: #d6eef3e6;
+  font-family: afacad;
+  font-weight: 600;
+  border-radius: 15px !important;
+  border: none;
+  width: 75%;
+  box-shadow: none !important;
+  display: flex;
+  align-items: end;
+  font-size: 0.9rem;
+  justify-content: center;
+}
+
+.credits-button:hover {
+  background-color: #67a9a9;
+  color: white;
+  transition: ease-in-out 0.2s;
 }
 
 .filters-title.accordion-button {
@@ -177,6 +203,7 @@ body {
   padding: 15px;
   border-radius: 25px;
   box-shadow: 2px 2px #2b7379;
+  position: relative;
 }
 
 .blog-box-inner {
@@ -309,8 +336,8 @@ body {
   width: 60px;
   z-index: 10;
   filter: drop-shadow(0 0 0.1rem gray);
-  right: 15%;
-  top: 110px;
+  right: 10%;
+  top: 10px;
 }
 
 .sidebar-buttons-row {
@@ -375,6 +402,30 @@ body {
 
 .hide-btn {
   display: none;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: end;
+  padding-right: 20px;
+}
+
+.footer-btn {
+  background-color: rgba(237, 208, 159, 1);
+  color: rgb(127, 101, 68);
+  border: none;
+  padding: 6px 30px 6px 30px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 2px rgb(175, 146, 95);
+}
+
+.footer-btn:hover {
+  background-color: rgb(175, 146, 95);
+  color: rgb(255, 255, 255);
+  box-shadow: 2px 2px rgb(155, 128, 83);
+  transition: ease-in-out 0.2s;
 }
 
 /*---------------------------- pagination -----------------------------*/
@@ -511,6 +562,57 @@ body {
   padding: 10px 20px 5px 20px;
 }
 
+/*-------------------------------- credits modal ----------------------------------*/
+
+.about-modal-content {
+  width: 36%;
+  margin: auto;
+  background-color: white !important;
+  font-size: 1.1rem;
+  color: #2b7379;
+  font-family: afacad;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.about-modal-content a {
+  text-decoration: underline solid 2px #67a9a973;
+  color: #2b7379;
+  font-weight: 600;
+}
+
+.about-modal-content a:hover {
+  color: #67a9a9;
+}
+
+.close-about-modal-btn {
+  background-color: #67a9a9;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  font-family: "Dosis";
+  font-weight: 600;
+}
+
+.close-about-modal-btn:hover {
+  background-color: #2b7379;
+}
+
+.credits-title {
+  font-size: 1.2rem;
+  background-color: #2b7379;
+  color: white;
+  font-weight: 600;
+  font-family: "Dosis";
+  border-radius: 10px;
+  padding: 8px 16px;
+}
+
+.close-modal-container {
+  display: flex;
+  justify-content: end;
+}
+
 /*---------------------------- Scrollbar -----------------------------*/
 
 /* width */
@@ -553,6 +655,10 @@ body {
   .blog-container {
     width: 100%;
     margin-top: 10px;
+  }
+
+  .credits-button {
+    width: 50%;
   }
 
   .filters-box {
@@ -614,7 +720,8 @@ body {
   }
 
   .blog-ribbon-deco {
-    display: none;
+    width: 35px;
+    top: 5px;
   }
 
   .about-blog-box {
@@ -652,9 +759,13 @@ body {
     text-align: justify;
     width: 100%;
   }
+
+  .about-modal-content {
+    width: 70%;
+  }
 }
 
-@media only screen and (max-width: 422px) {
+@media only screen and (max-width: 480px) {
   .pagination a {
     padding: 4px 12px;
     margin: 0 1px;
@@ -662,6 +773,10 @@ body {
   }
 
   .not-found-img {
-    width: 300px;
+    width: 250px;
+  }
+
+  .about-modal-content {
+    width: 100%;
   }
 }

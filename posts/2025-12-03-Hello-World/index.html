@@ -43,7 +43,11 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <link rel="icon" type="image/x-icon" href="/blog/assets/confuse.png" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/blog/assets/confuse.png"
+    />
   </head>
   <body>
     <div class="main-body" id="main-body">
@@ -58,6 +62,13 @@
       Just a space for me to write stuff. Might post personal updates, updates
       on my projects or maybe even some resources.
     </p>
+    <button
+      class="credits-button mt-3"
+      data-bs-toggle="modal"
+      data-bs-target="#aboutBlogModal"
+    >
+      credits
+    </button>
   </div>
   <div class="accordion filters-box mt-2">
     <div class="accordion-item">
@@ -108,7 +119,7 @@
   </div>
 </div>
 
-          <div class="blog-container">
+          <div class="blog-container mb-5">
             <div class="top-buttons-row">
   <div class="back-btn top-btn">
     
@@ -153,11 +164,11 @@
 Why did I code a blog? Why not just settle for Blogspot or Bear Blog? Well, mostly to challenge myself, and hopefully learn how to use a new front end framework in the process. I've always hated installing node modules, so as far as possible, I've kept to using vanilla Javascript or whatever libraries that I could get through a CDN. Sorry if my coding practices are extremely questionable. But that all changes with this blog! Yay! (Not really, please don't look at the source code for this, it is still really bad.)
 <br>
 <br>
-This blog was built using <a href="https://www.11ty.dev/">eleventy</a> with the help of many tutorials that I will link in a <a href="/blog/posts/2025-12-04-11ty-Resources/">separate resources post</a>. The process was a little easier than I thought it would be, and somehow, kind of fun? In the same way that running a marathon might be fun, maybe. For some people. Not me though. I would rather code a blog from scratch than run a marathon. The point is, it's just nice to see everything come together. This blog will also serve as a sort of scaffolding or a test for a revamp of my sketch log page that is to come. Hopefully.
+This blog was built using <a href="https://www.11ty.dev/">Eleventy</a> with the help of many tutorials that I will link in a <a href="/blog/posts/2025-12-04-11ty-Resources/">separate resources post</a>. The process was a little easier than I thought it would be, and somehow, kind of fun? In the same way that running a marathon might be fun, maybe. For some people. Not me though. I would rather code a blog from scratch than run a marathon. The point is, it's just nice to see everything come together. This blog will also serve as a sort of scaffolding or a test for a revamp of my sketch log page that is to come. Hopefully.
 <br><br>
 As for what I'll be posting here, so far I'm planning for a mix of personal updates, project logs/ dev logs, as well as resource compilations and maybe even tutorials/ code snippets? Maybe? If I can actually clean up some of my code well enough to share it.
 <br><br>
-If you have read this post all the way until here, thank you for reading! I don't have an RSS feed or anything like that that you can subscribe to (I have no idea how to set that up yet), but I'll keep working on this blog, and my Neocities site as well. For a rundown of how I set this blog up, you can check out my first Dev Log (if you can even call it that) for this blog <a href="/blog/posts/2025-12-04-Blog-Dev-Log-1/">here</a>.
+If you have read this post all the way until here, thank you for reading! I don't have an RSS feed or anything like that that you can subscribe to (I have no idea how to set that up yet), but I'll keep working on this blog, and my Neocities site as well. For a rundown of how I set this blog up, you can check out my first Dev Log (if you can even call it that) for this blog <a href="/blog/posts/2025-12-05-Blog-Dev-Log-1/">here</a>.
 <br><br>
 (Alright, I'll be honest. This could all have been in one post but I needed three posts for each of the three different categories on the sidebar that I've created 😂)</p>
 
@@ -180,10 +191,99 @@ If you have read this post all the way until here, thank you for reading! I don'
 
               </div>
             </div>
+            <div class="footer-container mt-2">
+              <button
+                class="footer-btn"
+                onclick="window.scrollTo({top:0,behavior:'smooth'})"
+              >
+                <i class="fa fa-arrow-up me-2" aria-hidden="true"></i>
+                <span>top</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="modal fade" id="aboutBlogModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content about-modal-content">
+      <div class="modal-body">
+        <div class="modal-title credits-title">credits</div>
+        <div class="credits-body mt-3">
+          <ul>
+            <li>
+              This blog is coded by me with
+              <a href="https://www.11ty.dev/">Eleventy</a> with the help of many
+              tutorials, a list of which you can find
+              <a href="/blog/posts/2025-12-04-11ty-Resources/">here</a
+              >. Bootstrap was also used for the HTML template.
+            </li>
+            <li>
+              Artworks are drawn by me and any decorative graphics are made in
+              <a href="https://www.canva.com/">Canva</a>.
+            </li>
+            <li>
+              I am using
+              <a href="https://virtualobserver.moe/ayano/comment-widget"
+                >Ayano's Comment Widget</a
+              >
+              for the comments section on the posts.
+            </li>
+          </ul>
+          <hr class="dotted-divider" />
+          <div class="close-modal-container">
+            <button
+              type="button"
+              class="btn btn-secondary close-about-modal-btn"
+              data-bs-dismiss="modal"
+            >
+              back to blog
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- Modal -->
+<div
+  class="modal fade"
+  id="galleryModal"
+  tabindex="-1"
+  aria-labelledby="galleryModalLabel"
+>
+  <i
+    class="fa fa-times-circle-o modal-cross"
+    aria-hidden="true"
+    data-bs-dismiss="modal"
+    aria-label="Close"
+  ></i>
+  <div class="modal-nav-container">
+    <i
+      class="fa fa-chevron-left modal-arrow modal-arrow-left"
+      aria-hidden="true"
+      onclick="showNextOrPrevImg(-1);"
+    ></i>
+  </div>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="d-flex flex-row justify-content-center modal-row">
+        <div class="modal-image-container">
+          <img src="" class="modal-image img-fluid" id="modal-image" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-nav-container">
+    <i
+      class="fa fa-chevron-right modal-arrow modal-arrow-right"
+      aria-hidden="true"
+      onclick="showNextOrPrevImg(1);"
+    ></i>
+  </div>
+</div>
+
   </body>
   <script src="/blog/scripts/main.js"></script>
 </html>
