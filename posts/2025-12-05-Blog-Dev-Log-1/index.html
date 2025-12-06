@@ -153,7 +153,7 @@
 <hr class="dotted-divider" />
 <div class="post-body">
   <div>
-    <p>I thought it'd be interesting to document how I put this blog together, although it is nothing particularly special. So here is the first installment of a dev log of sorts for this blog, to be updated later as I add more features to it (maybe). Note that everything here is my own process and is really not a guideline for best pratices. It is simply what worked for me in the most convenient way, balancing between what is familiar/ easy for me, and trying to learn new things.</p>
+    <p>I thought it'd be interesting to document how I put this blog together, although it is nothing particularly special. So here is the first installment of a dev log of sorts for this blog, to be updated later as I add more features to it (maybe). Note that everything here is my own process and is really not a guideline for best practices. It is simply what worked for me in the most convenient way, balancing between what is familiar/ easy for me, and trying to learn new things.</p>
 <p>If you just want to see a list of resources I used, you can go <a href="/blog/posts/2025-12-04-11ty-Resources/">here</a> instead.</p>
 <details>
   <summary class="quick-nav">
@@ -177,7 +177,7 @@
 </details>
 <hr class="dotted-divider">
 <h3>🎨 Blog UI Design <a name="blog-ui-design"></a></h3>
-<p>This is the first step when I add any new page on this website, which is to design what it looks like. A professional would use something like Figma. I use <a href="https://www.canva.com/">Canva</a>. The design doesn't need to include every detail (even the colours are off!), but I find it very helpful to have an idea of how the page should look like instead of experimenting as I am coding.</p>
+<p>This is the first step when I add any new page on this website, which is to design what it looks like. A professional would use something like Figma. I use <a href="https://www.canva.com/">Canva</a>. The design doesn't need to include every detail (even the colours are off!), but I find it very helpful to have an idea of how the page should look instead of experimenting as I am coding.</p>
 <p><div class="post-body-img-container">
 <img src="/blog/posts/images/blog-dev-log/canva_blog.png" class="post-body-img-l" 
           onclick="showImage(this);"
@@ -213,7 +213,7 @@
 <p>I don't think I can offer a better explanation of what needs to be done in text than <a href="https://www.youtube.com/watch?v=4wD00RT6d-g">this video</a>, so I won't go into detail for this part. But the end result is that I had some source code that 11ty could compile into static HTML pages.</p>
 <p>You can view my source code for this blog in my <a href="https://github.com/kanekos99/blog">Github repository</a>.</p>
 <h3>🏠 Blog Index Page <a name="blog-index"></a></h3>
-<p>This is <a href="/blog/">the landing page</a>, which will display a preview of all posts, sorted in a chronological order, with the most recent ones at the top. It has pagination, but unfortunately there are too few posts right now on this site to demonstrate it.</p>
+<p>This is <a href="/blog/">the landing page</a>, which will display a preview of all posts, sorted in chronological order, with the most recent ones at the top. It has pagination, but unfortunately there are too few posts right now on this site to demonstrate it.</p>
 <h3>📑 Posts <a name="blog-posts"></a></h3>
 <p>Every post on this blog is created by inserting content written in a Markdown file into a common template. I mean, that is just how 11ty works, so it is nothing special. Other than the content of the post itself, you can also display &quot;meta&quot; information, such as the post date and the post tags, which is defined in the header portion of the Markdown file (also known as the front matter).</p>
 <p><strong>Example for this post</strong></p>
@@ -237,7 +237,7 @@ description: A documentation of how I put this blog together.
         />
 <p class="post-img-caption">Tag Page for Projects</p>
 </div></p>
-<p>Every tag has their own HTML page that displays a preview of all the posts under that tag (<a href="/blog/tag/projects/">example</a>). This is a built-in feature of 11ty that I found to be incredibly useful, so I didn't have to go write my own custom JS tagging system.</p>
+<p>Every tag has its own HTML page that displays a preview of all the posts under that tag (<a href="/blog/tag/projects/">example</a>). This is a built-in feature of 11ty that I found to be incredibly useful, so I didn't have to go write my own custom JS tagging system.</p>
 <p>For how to do this, you can try this tutorial <a href="https://www.youtube.com/watch?v=kRQr9W7WcVc">here</a>.</p>
 <h3>🏷️ Tag List Page <a name="tag-list-page"></a></h3>
 <p><div class="post-body-img-container">
@@ -248,7 +248,7 @@ description: A documentation of how I put this blog together.
         />
 <p class="post-img-caption">Taglist Page</p>
 </div></p>
-<p><a href="/blog/taglist/">This page</a> simply displays a list of all current tags used on this blog. It is automatically updated whenever I add a new tag to a post. I don't think there is a built in collection you can use in 11ty to get all your tags, but this custom function in the .eleventy.js config file did the trick for me:</p>
+<p><a href="/blog/taglist/">This page</a> simply displays a list of all current tags used on this blog. It is automatically updated whenever I add a new tag to a post. I don't think there is a built-in collection you can use in 11ty to get all your tags, but this custom function in the .eleventy.js config file did the trick for me:</p>
 <pre><code>eleventyConfig.addCollection(&quot;allTags&quot;, function (collectionApi) {
   let tagSet = new Set();
     collectionApi.getAll().forEach((item) =&gt; {
@@ -262,7 +262,7 @@ description: A documentation of how I put this blog together.
     });return [...tagSet].sort();
 });
 </code></pre>
-<p><em>(There might be a better way to do this, but I haven't found it.)</em></p>
+<p><em>(There might be a better way to do this, but I haven't found one.)</em></p>
 <p>With that, I have a collection (collection.allTags) which contains all the tags I've ever used. Note that this excludes the tag &quot;post&quot;, which I have included on every post by default.</p>
 <p>On my taglist page, I just loop through this collection to display each tag:</p>
 <details>
@@ -304,7 +304,7 @@ layout: &quot;base.njk&quot;
 </div></p>
 <p>Similar to the tag list page, <a href="/blog/archive/">this page</a> displays all the posts ever on this site. Really it's just a flattened version of the landing page, so it is created in basically the same manner, but only displaying the date and title of each post.</p>
 <h3>🔢 Pagination <a name="pagination"></a></h3>
-<p>I&quot;ll update this section when I have more than five posts on this blog.</p>
+<p>I'll update this section when I have more than five posts on this blog.</p>
 <h3>🚫 Fixing Broken Links <a name="links"></a></h3>
 <p>The biggest problem I faced when I started to use 11ty was that I had no idea how to handle links. After I got the generated HTML files and dumped them on Neocities, all the links, including those to my CSS and Javascript files, were just completely broken. When I tried to search up this issue online, there didn't seem to be any straightforward answer to this problem either.</p>
 <p>This issue seemed to be that I was deploying my blog under kanekos.neocities.org<b>/blog/</b>, instead of simply kanekos.neocities.org/ — because I keep all of the files related to this blog in their own folder, instead of the root directory.</p>
@@ -332,8 +332,8 @@ pathPrefix: &quot;/blog/&quot;,
 <p>If you have encountered a similar issue, feel free to let me know how you have resolved it, as I am still not certain if this is the correct approach.</p>
 <h3>🛠️ Markdown <a name="markdown"></a></h3>
 <p>All of the posts on this site are written in Markdown language, which I've used to write Github README.md files before, but didn't realise how flexible it was until now.</p>
-<p>One problem I thought I would have with writing posts in Markdown that I planned to add images to my posts, and I didn't know how I could style time in Markdown. However, I have since learnt that you can add HTML directly in Markdown, and that immedately made this super simple, since I can just add the image, you know, <em>in HTML</em>.</p>
-<p>Also, if I wanted to add some special styling for any particular text, I can simply add a HTML tag around it, assign a class to it, and then style it in CSS.</p>
+<p>One problem I thought I would have with writing posts in Markdown that I planned to add images to my posts, and I didn't know how I could style them in Markdown. However, I have since learnt that you can add HTML directly in Markdown, and that immediately made this super simple, since I can just add the image, you know, <em>in HTML</em>.</p>
+<p>Also, if I wanted to add some special styling for any particular text, I can simply add an HTML tag around it, assign a class to it, and then style it in CSS.</p>
 <p class="demo-text-markdown">Like this</p>
 <p>Technically inline CSS should work perfectly fine as well.</p>
 <p>On the other hand, if you want to apply changes across all posts - e.g. change the colour of all links in posts - then simply finding the right element to target in CSS will be sufficient.</p>
@@ -347,18 +347,18 @@ pathPrefix: &quot;/blog/&quot;,
 <p class="post-img-caption"></p>
 </div></p>
 <h3>🖼️ Image Handling <a name="images"></a></h3>
-<p>So it's great that I can add images in Markdown files using HTML, but that meant that every time I wanted to add a image, I had to include this chunk of code. Not fun, right?</p>
+<p>So it's great that I can add images in Markdown files using HTML, but that meant that every time I wanted to add an image, I had to include this chunk of code. Not fun, right?</p>
 <pre><code>&lt;div class=&quot;post-body-img-container&quot;&gt;
     &lt;img src=&quot;/blog/posts/images/Ailthir_Chibi.png&quot; class=&quot;post-body-img&quot; /&gt;
     &lt;p class=&quot;post-img-caption&quot;&gt;image caption&lt;/p&gt;
 &lt;/div&gt;
 </code></pre>
-<p>Instead of having to copy and paste this chunk around every time, I created what is known as a shortcode in 11ty, which is basically way to create a shortened version of that code block.</p>
+<p>Instead of having to copy and paste this chunk around every time, I created what is known as a shortcode in 11ty, which is basically a way to create a shortened version of that code block.</p>
 <p>So now, all I have to add in the Markdown file itself is this:</p>
 <pre><code>{% imgBlock &quot;/posts/images/Ailthir_Chibi.png&quot;, &quot;image caption&quot; %}
 </code></pre>
 <p>Which will give me the exact same rendered HTML output as the code block above.</p>
-<p>To achieve this, I just needed to include this function in the .elventy.js config file:</p>
+<p>To achieve this, I just needed to include this function in the .eleventy.js config file:</p>
 <pre><code>eleventyConfig.addShortcode(&quot;imgBlock&quot;, function (src, caption) {
     const url = eleventyConfig.getFilter(&quot;url&quot;)(src);
     return `
@@ -372,7 +372,7 @@ pathPrefix: &quot;/blog/&quot;,
 </code></pre>
 <p>Great! But some of the images look a little too small in the post. What if you could click on them to view a larger version display in a lightbox?</p>
 <p><strong>Image Modal</strong></p>
-<p>You could probably achieve this with some JS library like <a href="https://lokeshdhakar.com/projects/lightbox2/">LightBox2</a>, but since I'm using Bootstrap already, I prefer to use their built in modal.</p>
+<p>You could probably achieve this with some JS library like <a href="https://lokeshdhakar.com/projects/lightbox2/">LightBox2</a>, but since I'm using Bootstrap already, I prefer to use their built-in modal.</p>
 <p>I can recycle the same modal I'm using in my <a href="https://kanekos.neocities.org/gallery/#original">art gallery page</a> for this.</p>
 <p>First, I create a new .njk file containing the HTML code for my modal, naming it something like image-modal.njk:</p>
 <details>
@@ -491,7 +491,7 @@ function showImage(image) {
 <h3>🌟 Future Plans <a name="todo"></a></h3>
 <p>For my own reference, here is a to-do list of features I plan to add to this blog in the near future:</p>
 <ul>
-<li>Microblog - this will be a list of my status.cafe statues, probably extracted using the Surfing Waves RSS widget</li>
+<li>Microblog - this will be a list of my status.cafe statuses, probably extracted using the Surfing Waves RSS widget</li>
 <li>More image styling options in posts, maybe even an image gallery or carousel?</li>
 <li>A way to filter or list posts by date</li>
 <li>Update graphics - I gotta stop reusing that same Catnekos png</li>
