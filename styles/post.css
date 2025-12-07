@@ -30,9 +30,13 @@
 }
 
 .post-body-img {
-  width: 300px;
-  background-color: #2b737937;
+  width: 60%;
   border-radius: 10px;
+}
+
+.post-body-img:hover {
+  filter: drop-shadow(0 0 0.75rem gray);
+  transition: 0.2s ease-in-out;
 }
 
 .post-body-img-l {
