@@ -46,6 +46,26 @@ module.exports = function (eleventyConfig) {
     `;
   });
 
+   eleventyConfig.addShortcode("imgBlockSmall", function (src, caption) {
+    const url = eleventyConfig.getFilter("url")(src);
+
+    const prefix =
+      process.env.NODE_ENV === "neocities" ? "https://kanekos99.github.io/" : "";
+
+    const finalUrl = `${prefix}${url}`;
+
+    return `
+      <div class="post-body-img-container">
+        <img src="${finalUrl}" class="post-body-img" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+        <p class="post-img-caption">${caption}</p>
+      </div>
+    `;
+  });
+
   return {
     dir: {
       input: "src",

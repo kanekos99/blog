@@ -3,16 +3,12 @@ title: Hello World!
 author: kanekos
 date: 2025-12-03
 tags: ["personal", "blog"]
-image: /posts/images/Ailthir_Chibi.png
+image: /posts/images/thing.png
 imageAlt: This is a test
 description: Hello and welcome to my blog! Here's a simple introduction post to set things up. Why did I code a blog? Well, mostly to challenge myself, and hopefully learn how to use a new front end framework in the process.
 ---
 
-<div class="post-body-img-container">
-    <img src="{{ '/posts/images/Ailthir_Chibi.png' | url }}" class="post-body-img" />
-    <p class="post-img-caption">Hello! This is a place holder image for now</p>
-</div>
-<br>
+{% imgBlockSmall "/posts/images/sleep.png", "" %}
 
 Hello and welcome to my blog! My name is Kan or Kaneko, and I am a hobbyist artist, but I recently I'm also having a lot of fun with static web development.
 <br>

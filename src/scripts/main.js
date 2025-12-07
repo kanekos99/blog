@@ -8,7 +8,7 @@ const modalImg = document.getElementById("modal-image");
 
 function showNextOrPrevImg(direction) {
   const visibleImages = Array.from(
-    document.querySelectorAll(".post-body-img-l")
+    document.querySelectorAll(".post-body-img-l, .post-body-img")
   );
   const currentSrc = modalImg.src;
   let currentIndex = visibleImages.findIndex((img) => img.src === currentSrc);
