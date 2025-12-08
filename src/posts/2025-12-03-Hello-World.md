@@ -10,7 +10,7 @@ description: Hello and welcome to my blog! Here's a simple introduction post to 
 
 {% imgBlockSmall "/posts/images/sleep.png", "" %}
 
-Hello and welcome to my blog! My name is Kan or Kaneko, and I am a hobbyist artist, but I recently I'm also having a lot of fun with static web development.
+Hello and welcome to my blog! My name is Kan or Kaneko, and I am a hobbyist artist, but recently I'm also having a lot of fun with static web development.
 <br>
 <br>
 Why did I code a blog? Why not just settle for Blogspot or Bear Blog? Well, mostly to challenge myself, and hopefully learn how to use a new front end framework in the process. I've always hated installing node modules, so as far as possible, I've kept to using vanilla Javascript or whatever libraries that I could get through a CDN. Sorry if my coding practices are extremely questionable. But that all changes with this blog! Yay! (Not really, please don't look at the source code for this, it is still really bad.)

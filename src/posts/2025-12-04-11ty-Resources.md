@@ -16,7 +16,7 @@ As a disclaimer, these tutorials/ resources probably require some knowledge of H
 ### Basic 11ty tutorial
 
 - [**Turning a HTML page template into an 11ty site**](https://www.youtube.com/watch?v=4wD00RT6d-g)<br>
-  > If you already have a page template that is written in HTML and CSS (or you know how to create one), this Youtube tutorial shows you how you can turn it into an 11ty site. Goes into the basics of 11ty, including installation process. Also includes a guide on how to use Git and Netifly to deploy and update your blog. Not too relevant for me since I don't use Netifly, but still interesting nonetheless.
+  > If you already have a page template that is written in HTML and CSS (or you know how to create one), this Youtube tutorial shows you how you can turn it into an 11ty site. Goes into the basics of 11ty, including installation process. Also includes a guide on how to use Git and Netlify to deploy and update your blog. Not too relevant for me since I don't use Netlify, but still interesting nonetheless.
   > <br>
 
 ### Basic blog features
@@ -24,11 +24,11 @@ As a disclaimer, these tutorials/ resources probably require some knowledge of H
 - [**Creating tag pages**](https://www.youtube.com/watch?v=kRQr9W7WcVc)<br>
   > A Youtube tutorial for creating pages like [this](/blog/tag/resources/) to allow people to filter your posts by tags.
 - [**Pagination with 11ty**](https://www.youtube.com/watch?v=ZUguRkGz-3Q)<br>
-  > A short Youtube tutorial on how to paginate your posts using 11ty's built in pagination functions. I didn't use this in the end and opted for a custom JS pagination instead because I wanted to paginate my tag pages as well, which this doesn't seem to be capable of (as far as I am aware, but do let me know if that is possible too.)
+  > A short Youtube tutorial on how to paginate your posts using 11ty's built-in pagination functions. I didn't use this in the end and opted for a custom JS pagination instead because I wanted to paginate my tag pages as well, which this doesn't seem to be capable of (as far as I am aware, but do let me know if that is possible too.)
 - [**Javascript Pagination**](https://www.geeksforgeeks.org/javascript/create-a-pagination-using-html-css-and-javascript/)<br>
   > I used this as a base for implementing a custom Javascript pagination function for this blog. Unfortunately because I have too little posts on this blog as of me writing this, the pagination feature is not yet visible.
 - [**Ayano's Comment Widget**](https://virtualobserver.moe/ayano/comment-widget)<br>
-  > The widget that I'm using for the comments section on my posts! It fetches comments that are stored in a google sheet so no third party service required. Pretty easy to set up and super customisable. Much better than any other third party static site comments feature that I've found. Unforuntately it doesn't work for newer Neocities sites that have a more restrictive CORS policy, but it's totally functional if you have an older website like mine, or if you use some other hosting platform like Github Pages.
+  > The widget that I'm using for the comments section on my posts! It fetches comments that are stored in a google sheet so no third party service required. Pretty easy to set up and super customisable. Much better than any other third party static site comments feature that I've found. Unfortunately it doesn't work for newer Neocities sites that have a more restrictive CORS policy, but it's totally functional if you have an older website like mine, or if you use some other hosting platform like Github Pages.
 
 ### Deployment
 
@@ -48,6 +48,6 @@ As a disclaimer, these tutorials/ resources probably require some knowledge of H
 
 <hr class="dotted-divider">
 
-If I have missed out any, I'll update it in this post later. For how a run down of how I put everything together to create this blog, you can check out this post [here](/blog/posts/2025-12-05-Blog-Dev-Log-1/).
+If I have missed out any, I'll update it in this post later. For a rundown of how I put everything together to create this blog, you can check out this post [here](/blog/posts/2025-12-05-Blog-Dev-Log-1/).
 
 </div>
