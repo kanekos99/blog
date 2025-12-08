@@ -2,7 +2,7 @@
 title: Helpful 11ty Coding Tutorials
 author: kanekos
 date: 2025-12-04
-tags: ["resources", "blog"]
+tags: ["resources", "blog", "coding"]
 imageAlt: 11ty logo
 description: Do you get frustrated when you follow a coding tutorial but it just doesn't work for you for no explicable reason? Here is a compilation of all the resources and tutorials I used while building this blog that mostly worked out of the box for me or with minimal tweaks.
 ---
@@ -26,7 +26,7 @@ As a disclaimer, these tutorials/ resources probably require some knowledge of H
 - [**Pagination with 11ty**](https://www.youtube.com/watch?v=ZUguRkGz-3Q)<br>
   > A short Youtube tutorial on how to paginate your posts using 11ty's built-in pagination functions. I didn't use this in the end and opted for a custom JS pagination instead because I wanted to paginate my tag pages as well, which this doesn't seem to be capable of (as far as I am aware, but do let me know if that is possible too.)
 - [**Javascript Pagination**](https://www.geeksforgeeks.org/javascript/create-a-pagination-using-html-css-and-javascript/)<br>
-  > I used this as a base for implementing a custom Javascript pagination function for this blog. Unfortunately because I have too little posts on this blog as of me writing this, the pagination feature is not yet visible.
+  > I used this as a base for implementing a custom Javascript pagination function for this blog. You can check out this post for my [pagination function](/blog/posts/2025-12-09-Simple-Javascript-Pagination/)!
 - [**Ayano's Comment Widget**](https://virtualobserver.moe/ayano/comment-widget)<br>
   > The widget that I'm using for the comments section on my posts! It fetches comments that are stored in a google sheet so no third party service required. Pretty easy to set up and super customisable. Much better than any other third party static site comments feature that I've found. Unfortunately it doesn't work for newer Neocities sites that have a more restrictive CORS policy, but it's totally functional if you have an older website like mine, or if you use some other hosting platform like Github Pages.
 

@@ -2,7 +2,7 @@
 title: How I Made This Blog - Dev Log 1
 author: kanekos
 date: 2025-12-05
-tags: ["projects", "blog", "blog dev log"]
+tags: ["projects", "blog", "blog dev log", "coding"]
 image: /posts/images/blog-dev-log/canva_blog.png
 imageAlt: Blog UI Design
 description: A documentation of how I put this blog together. May or may not have a sequel depending on when or what new features I add to the blog in the future.
@@ -66,7 +66,7 @@ You can view my source code for this blog in my [Github repository](https://gith
 
 ### 🏠 Blog Index Page <a name="blog-index"></a>
 
-This is [the landing page](/blog/), which will display a preview of all posts, sorted in chronological order, with the most recent ones at the top. It has pagination, but unfortunately there are too few posts right now on this site to demonstrate it.
+This is [the landing page](/blog/), which will display a preview of all posts, sorted in chronological order, with the most recent ones at the top. It has pagination as well.
 
 ### 📑 Posts <a name="blog-posts"></a>
 
@@ -165,7 +165,7 @@ Similar to the tag list page, [this page](/blog/archive/) displays all the posts
 
 ### 🔢 Pagination <a name="pagination"></a>
 
-I'll update this section when I have more than five posts on this blog.
+I've created a separate post about how I've implemented the pagination on this blog in Javascript. You can check it out [here](/blog/posts/2025-12-09-Simple-Javascript-Pagination/)!
 
 ### 🚫 Fixing Broken Links <a name="links"></a>
 

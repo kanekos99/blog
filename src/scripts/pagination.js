@@ -1,17 +1,22 @@
+//This is the number of items shown per page
 const postsPerPage = 5;
-const postsContainer = document.getElementById("blog-posts-container");
-const pageNumberContainer = document.getElementById("page-number-container");
+//This is the ID of element containing the items
+const postContainerID = "blog-posts-container";
+//This is a common class all your items should have
+const postClassName = "blog-post-container";
 
-const posts = Array.from(
-  postsContainer.getElementsByClassName("blog-post-container")
-);
+/*-----------Script starts here------------*/
+let currentPage = 1;
+
+const postsContainer = document.getElementById(postContainerID);
+
+const posts = Array.from(postsContainer.getElementsByClassName(postClassName));
 
 const totalPages = Math.ceil(posts.length / postsPerPage);
-let currentPage = 1;
 
 displayPage(currentPage);
 
-if (totalPages > 5) {
+if (posts.length > postsPerPage) {
   appendPaginationControls();
 }
 
@@ -133,7 +138,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 function handleHashChange(windowLocation) {
   const pageNumber = Number(windowLocation.hash.slice(1));
-  if (pageNumber >= 1 && pageNumber <= 5) {
+  if (pageNumber >= 1 && pageNumber <= totalPages) {
     currentPage = pageNumber;
     displayPage(currentPage);
     updatePagination();
