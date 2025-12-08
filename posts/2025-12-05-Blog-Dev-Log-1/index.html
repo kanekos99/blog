@@ -213,7 +213,7 @@
 <p>I don't think I can offer a better explanation of what needs to be done in text than <a href="https://www.youtube.com/watch?v=4wD00RT6d-g">this video</a>, so I won't go into detail for this part. But the end result is that I had some source code that 11ty could compile into static HTML pages.</p>
 <p>You can view my source code for this blog in my <a href="https://github.com/kanekos99/blog">Github repository</a>.</p>
 <h3>🏠 Blog Index Page <a name="blog-index"></a></h3>
-<p>This is <a href="/blog/">the landing page</a>, which will display a preview of all posts, sorted in chronological order, with the most recent ones at the top. It has pagination, but unfortunately there are too few posts right now on this site to demonstrate it.</p>
+<p>This is <a href="/blog/">the landing page</a>, which will display a preview of all posts, sorted in chronological order, with the most recent ones at the top. It has pagination as well.</p>
 <h3>📑 Posts <a name="blog-posts"></a></h3>
 <p>Every post on this blog is created by inserting content written in a Markdown file into a common template. I mean, that is just how 11ty works, so it is nothing special. Other than the content of the post itself, you can also display &quot;meta&quot; information, such as the post date and the post tags, which is defined in the header portion of the Markdown file (also known as the front matter).</p>
 <p><strong>Example for this post</strong></p>
@@ -304,7 +304,7 @@ layout: &quot;base.njk&quot;
 </div></p>
 <p>Similar to the tag list page, <a href="/blog/archive/">this page</a> displays all the posts ever on this site. Really it's just a flattened version of the landing page, so it is created in basically the same manner, but only displaying the date and title of each post.</p>
 <h3>🔢 Pagination <a name="pagination"></a></h3>
-<p>I'll update this section when I have more than five posts on this blog.</p>
+<p>I've created a separate post about how I've implemented the pagination on this blog in Javascript. You can check it out <a href="/blog/posts/2025-12-09-Simple-Javascript-Pagination/">here</a>!</p>
 <h3>🚫 Fixing Broken Links <a name="links"></a></h3>
 <p>The biggest problem I faced when I started to use 11ty was that I had no idea how to handle links. After I got the generated HTML files and dumped them on Neocities, all the links, including those to my CSS and Javascript files, were just completely broken. When I tried to search up this issue online, there didn't seem to be any straightforward answer to this problem either.</p>
 <p>This issue seemed to be that I was deploying my blog under kanekos.neocities.org<b>/blog/</b>, instead of simply kanekos.neocities.org/ — because I keep all of the files related to this blog in their own folder, instead of the root directory.</p>
@@ -511,6 +511,9 @@ function showImage(image) {
     
   <!-- prettier-ignore -->
   <a href="/blog/tag/blog-dev-log/">blog dev log</a>
+    
+  <!-- prettier-ignore -->
+  <a href="/blog/tag/coding/">coding</a>
    
 </div>
 <hr class="dotted-divider" />

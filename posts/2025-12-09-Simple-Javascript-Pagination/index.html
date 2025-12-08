@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Javascript Pagination</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/blog/styles/main.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/blog/styles/post.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/blog/styles/comment-widget.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"
+      integrity="sha512-Y8iWYJDo6HiTo5xtml1g4QqHtl/PO1w+dmUpQfQSOTqKNsMhExfyPN2ncNAe9JuJUSKzwK/b6oaNPop4MXzkwg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/blog/assets/icon.png"
+    />
+  </head>
+  <body>
+    <div class="main-body" id="main-body">
+      <div class="container mt-5">
+        <div class="d-flex flex-row flex-wrap justify-content-center">
+          <div class="sidebar">
+  <a href="/blog/">
+    <img src="/blog/assets/blog.png" class="sidebar-img" />
+  </a>
+  <div class="about-blog-box">
+    <p>
+      Just a space for me to write stuff. Might post personal updates, updates
+      on my projects or maybe even some resources.
+    </p>
+    <button
+      class="credits-button mt-3"
+      data-bs-toggle="modal"
+      data-bs-target="#aboutBlogModal"
+    >
+      credits
+    </button>
+  </div>
+  <div class="accordion filters-box mt-2">
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <button
+          class="filters-title accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#filter-list"
+          aria-expanded="true"
+          aria-controls="filter-list"
+        >
+          categories
+        </button>
+      </div>
+      <div id="filter-list" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <hr class="dotted-divider" />
+          <div class="filters-list">
+            <div class="d-flex flex-row flex-wrap justify-content-center">
+              <a class="filter-item" href="/blog/tag/resources">
+                resources
+              </a>
+              <a class="filter-item" href="/blog/tag/personal">
+                personal
+              </a>
+              <a class="filter-item" href="/blog/tag/projects">
+                projects
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sidebar-buttons-row mt-2">
+    <div class="tags-btn">
+      <a href="/blog/taglist">
+        <i class="fa fa-tags me-2" aria-hidden="true"></i>tags</a
+      >
+    </div>
+    <div class="archive-btn">
+      <a href="/blog/archive">
+        <i class="fa fa-archive me-2" aria-hidden="true"></i>
+        archive</a
+      >
+    </div>
+  </div>
+</div>
+
+          <div class="blog-container mb-5">
+            <div class="top-buttons-row">
+  <div class="back-btn top-btn">
+    
+    <a href="/blog/"><i class="fa fa-caret-left me-2"></i>back</a>
+    
+  </div>
+  <div class="tags-btn top-btn hide-btn">
+    <a href="/blog/taglist">
+      <i class="fa fa-tags me-2" aria-hidden="true"></i>tags</a
+    >
+  </div>
+  <div class="archive-btn top-btn hide-btn">
+    <a href="/blog/archive">
+      <i class="fa fa-archive me-2" aria-hidden="true"></i>
+      archive</a
+    >
+  </div>
+</div>
+
+            <div class="blog-box-outer">
+              <img
+                src="/blog/assets/yellow-ribbon.png"
+                class="blog-ribbon-deco"
+              />
+              <div class="blog-box-inner" id="blog-posts-container">
+                
+<p class="post-date-label">Dec 9, 2025</p>
+<h1 class="post-title-header mt-2 mb-3">
+  Simple Javascript Pagination
+</h1>
+<hr class="dotted-divider" />
+<div class="post-body">
+  <div>
+    <p>This is a custom pagination feature that I have wrote in Javascript, which I am also using on this blog. I thought I would share the code here, in case someone might find it useful, since it is relatively simple and customisable.</p>
+<p>It is based on <a href="https://www.geeksforgeeks.org/javascript/create-a-pagination-using-html-css-and-javascript/">this tutorial</a> from GeeksForGeeks, with some slight modifications.</p>
+<p>You can find a demo of this on CodePen: <a href="https://codepen.io/kanekos99/pen/myPamRm">Link</a></p>
+<hr class="dotted-divider">
+<p>To start off, you will need all the elements that you want to paginate to be in one HTML file.</p>
+<p>Here is an example:</p>
+<pre><code>&lt;div id=&quot;post-container&quot;&gt;
+  &lt;div class=&quot;post&quot;&gt;Item 1&lt;/div&gt;
+  &lt;div class=&quot;post&quot;&gt;Item 2&lt;/div&gt;
+  &lt;div class=&quot;post&quot;&gt;Item 3&lt;/div&gt;
+  &lt;div class=&quot;post&quot;&gt;Item 4&lt;/div&gt;
+  &lt;div class=&quot;post&quot;&gt;Item 5&lt;/div&gt;
+  &lt;div class=&quot;post&quot;&gt;Item 6&lt;/div&gt;
+  &lt;div class=&quot;post&quot;&gt;Item 7&lt;/div&gt;
+  &lt;div class=&quot;post&quot;&gt;Item 8&lt;/div&gt;
+  &lt;div class=&quot;post&quot;&gt;Item 9&lt;/div&gt;
+  &lt;div class=&quot;post&quot;&gt;Item 10&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>At the bottom of all the elements you want to pagination, include this:</p>
+<pre><code>&lt;div id=&quot;pagination&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+<p><em>(Note: Try not to change the ID for this. If you want to do so, you will have to modify it in the script below as well.)</em></p>
+<p>This is the element that will contain the pagination buttons. The buttons themselves will be dynamically appended in Javascript.</p>
+<p>This is the Javascript code:</p>
+<details>
+    <summary class="code-block">
+        <b>View code</b>
+    </summary>
+<pre><code>//This is the number of items shown per page
+const postsPerPage = 3;
+//This is the ID of element containing the items
+const postContainerID = &quot;post-container&quot;;
+//This is a common class all your items should have
+const postClassName = &quot;post&quot;;
+
+/*-----------Script starts here------------*/
+let currentPage = 1;
+
+const postsContainer = document.getElementById(postContainerID);
+
+const posts = Array.from(postsContainer.getElementsByClassName(postClassName));
+
+const totalPages = Math.ceil(posts.length / postsPerPage);
+
+displayPage(currentPage);
+
+//Only show pagination if you have more than one page worth of items
+if (posts.length &gt; postsPerPage) {
+  appendPaginationControls();
+}
+
+function displayPage(page) {
+  const startIndex = (page - 1) * postsPerPage;
+  const endIndex = startIndex + postsPerPage;
+  posts.forEach((post, index) =&gt; {
+    if (index &gt;= startIndex &amp;&amp; index &lt; endIndex) {
+      post.style.display = &quot;block&quot;;
+    } else {
+      post.style.display = &quot;none&quot;;
+    }
+  });
+}
+
+//This adds the next and previous buttons and the pagination numbers
+function appendPaginationControls() {
+  const pagination = document.getElementById(&quot;pagination&quot;);
+
+  //append previous button
+  const prevLink = document.createElement(&quot;a&quot;);
+  prevLink.href = &quot;#&quot;;
+  prevLink.id = &quot;prev&quot;;
+  prevLink.classList.add(&quot;disabled&quot;);
+
+  const prevLinkText = document.createTextNode(&quot;previous&quot;);
+
+  prevLink.appendChild(prevLinkText);
+  pagination.appendChild(prevLink);
+
+  prevLink.addEventListener(&quot;click&quot;, (e) =&gt; {
+    e.preventDefault();
+    if (currentPage &gt; 1) {
+      currentPage--;
+      displayPage(currentPage);
+      updatePagination();
+    }
+  });
+
+  //append number buttons
+  for (let i = 1; i &lt;= totalPages; i++) {
+    const pageLink = document.createElement(&quot;a&quot;);
+    pageLink.href = &quot;#&quot;;
+    pageLink.classList.add(&quot;page-link&quot;);
+    if (i === 1) {
+      pageLink.classList.add(&quot;active&quot;);
+    }
+    pageLink.dataset.page = i;
+    pageLink.textContent = i;
+
+    pagination.appendChild(pageLink);
+
+    pageLink.addEventListener(&quot;click&quot;, (e) =&gt; {
+      e.preventDefault();
+      const page = parseInt(pageLink.getAttribute(&quot;data-page&quot;));
+      if (page !== currentPage) {
+        currentPage = page;
+        displayPage(currentPage);
+        updatePagination();
+      }
+    });
+  }
+
+  //append next button
+  const nextLink = document.createElement(&quot;a&quot;);
+  nextLink.href = &quot;#&quot;;
+  nextLink.id = &quot;next&quot;;
+
+  const nextLinkText = document.createTextNode(&quot;next&quot;);
+
+  nextLink.appendChild(nextLinkText);
+  pagination.appendChild(nextLink);
+
+  nextLink.addEventListener(&quot;click&quot;, (e) =&gt; {
+    e.preventDefault();
+    if (currentPage &lt; totalPages) {
+      currentPage++;
+      displayPage(currentPage);
+      updatePagination();
+    }
+  });
+}
+
+function updatePagination() {
+  const prevButton = document.getElementById(&quot;prev&quot;);
+  const nextButton = document.getElementById(&quot;next&quot;);
+  const pageLinks = document.querySelectorAll(&quot;.page-link&quot;);
+
+  window.location.hash = currentPage;
+
+  if (currentPage === 1) {
+    prevButton.classList.add(&quot;disabled&quot;);
+  } else {
+    prevButton.classList.remove(&quot;disabled&quot;);
+  }
+
+  if (currentPage === totalPages) {
+    nextButton.classList.add(&quot;disabled&quot;);
+  } else {
+    nextButton.classList.remove(&quot;disabled&quot;);
+  }
+
+  pageLinks.forEach((link) =&gt; {
+    const page = parseInt(link.getAttribute(&quot;data-page&quot;));
+    link.classList.toggle(&quot;active&quot;, page === currentPage);
+  });
+}
+
+/*--------optional: only if you want the pages to change based on the url like yourwebsite.com/blog#1 and so on ----------*/
+
+window.addEventListener(&quot;hashchange&quot;, () =&gt; {
+  handleHashChange(window.location);
+});
+
+window.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
+  handleHashChange(window.location);
+});
+
+function handleHashChange(windowLocation) {
+  const pageNumber = Number(windowLocation.hash.slice(1));
+  if (pageNumber &gt;= 1 &amp;&amp; pageNumber &lt;= totalPages) {
+    currentPage = pageNumber;
+    displayPage(currentPage);
+    updatePagination();
+  }
+}
+</code></pre>
+</details>
+</br>
+This is the only part that you will need to modify:
+<pre><code>//This is the number of items shown per page
+const postsPerPage = 3;
+
+//This is the ID of element containing the items you want to pagination
+const postContainerID = &quot;post-container&quot;
+
+//This is a common class all the items you want to paginate should have
+const postClassName = &quot;post&quot;
+</code></pre>
+<p><em>(Of course, if you're familiar with Javascript and there are other parts of the code that you want to change, feel free to do so as well.)</em></p>
+<p>Include the Javascript code in a separate JS file and link it in your HTML page, or just add it to any JS file you're already using.</p>
+<p>Finally, create a new CSS file or in your existing CSS file, add these two classes:</p>
+<pre><code>/*feel free to modify with your own customisations*/
+
+/*reduce opacity next and prev button when they 
+are disabled and make them unclickable*/
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: default;
+}
+
+/*bolds the active page number*/
+.active {
+  font-weight: 900;
+}
+</code></pre>
+<p>You can add whatever other customisations you want, or edit the default ones I have given above. To customize the pagination buttons, you can use these CSS selectors:</p>
+<ul>
+<li>Previous button: <code>#prev</code></li>
+<li>Page number buttons: <code>.page-link</code></li>
+<li>Next button: <code>#next</code></li>
+</ul>
+<p><b>Optional</b> - If you want to use icons for the previous and next buttons instead of text and are also using FontAwesome, you can replace the <code>appendPaginationControls()</code> function with this instead:</p>
+<details>
+    <summary class="code-block">
+        <b>View code</b>
+    </summary>
+<pre><code>function appendPaginationControls() {
+  const pagination = document.getElementById(&quot;pagination&quot;);
+
+  //append previous button
+  const prevLink = document.createElement(&quot;a&quot;);
+  prevLink.href = &quot;#&quot;;
+  prevLink.id = &quot;prev&quot;;
+  prevLink.classList.add(&quot;disabled&quot;);
+
+  const prevIcon = document.createElement(&quot;i&quot;);
+  prevIcon.classList.add(&quot;fa&quot;, &quot;fa-caret-left&quot;);
+  prevIcon.setAttribute(&quot;aria-hidden&quot;, &quot;true&quot;);
+
+  prevLink.appendChild(prevIcon);
+  pagination.appendChild(prevLink);
+
+  prevLink.addEventListener(&quot;click&quot;, (e) =&gt; {
+    e.preventDefault();
+    if (currentPage &gt; 1) {
+      currentPage--;
+      displayPage(currentPage);
+      updatePagination();
+    }
+  });
+
+  //append number buttons
+  for (let i = 1; i &lt;= totalPages; i++) {
+    const pageLink = document.createElement(&quot;a&quot;);
+    pageLink.href = &quot;#&quot;;
+    pageLink.classList.add(&quot;page-link&quot;);
+    if (i === 1) {
+      pageLink.classList.add(&quot;active&quot;);
+    }
+    pageLink.dataset.page = i;
+    pageLink.textContent = i;
+
+    pagination.appendChild(pageLink);
+
+    pageLink.addEventListener(&quot;click&quot;, (e) =&gt; {
+      e.preventDefault();
+      const page = parseInt(pageLink.getAttribute(&quot;data-page&quot;));
+      if (page !== currentPage) {
+        currentPage = page;
+        displayPage(currentPage);
+        updatePagination();
+      }
+    });
+  }
+
+  //append next button
+  const nextLink = document.createElement(&quot;a&quot;);
+  nextLink.href = &quot;#&quot;;
+  nextLink.id = &quot;next&quot;;
+
+  const nextIcon = document.createElement(&quot;i&quot;);
+  nextIcon.classList.add(&quot;fa&quot;, &quot;fa-caret-right&quot;);
+  nextIcon.setAttribute(&quot;aria-hidden&quot;, &quot;true&quot;);
+
+  nextLink.appendChild(nextIcon);
+  pagination.appendChild(nextLink);
+
+  nextLink.addEventListener(&quot;click&quot;, (e) =&gt; {
+    e.preventDefault();
+    if (currentPage &lt; totalPages) {
+      currentPage++;
+      displayPage(currentPage);
+      updatePagination();
+    }
+  });
+}
+</code></pre>
+</details>
+</br>
+And that is all! Let me know if you have tried this or if you're facing any issues!
+
+  </div>
+</div>
+<div class="post-tags-box">
+  <h3>Tags:</h3>
+     
+  <!-- prettier-ignore -->
+  <a href="/blog/tag/resources/">resources</a>
+    
+  <!-- prettier-ignore -->
+  <a href="/blog/tag/coding/">coding</a>
+   
+</div>
+<hr class="dotted-divider" />
+
+<div id="c_widget"></div>
+<script src="/blog/scripts/comment-widget.js"></script>
+
+              </div>
+            </div>
+            <div class="footer-container mt-2">
+              <button
+                class="footer-btn"
+                onclick="window.scrollTo({top:0,behavior:'smooth'})"
+              >
+                <i class="fa fa-arrow-up me-2" aria-hidden="true"></i>
+                <span>top</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="aboutBlogModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content about-modal-content">
+      <div class="modal-body">
+        <div class="modal-title credits-title">credits</div>
+        <div class="credits-body mt-3">
+          <ul>
+            <li>
+              This blog is coded by me with
+              <a href="https://www.11ty.dev/">Eleventy</a> with the help of many
+              tutorials, a list of which you can find
+              <a href="/blog/posts/2025-12-04-11ty-Resources/">here</a
+              >. Bootstrap was also used for the HTML template.
+            </li>
+            <li>
+              Artworks are drawn by me unless stated otherwise and any decorative graphics are made by me in
+              <a href="https://www.canva.com/">Canva</a>.
+            </li>
+            <li>
+              I am using
+              <a href="https://virtualobserver.moe/ayano/comment-widget"
+                >Ayano's Comment Widget</a
+              >
+              for the comments section on the posts.
+            </li>
+          </ul>
+          <hr class="dotted-divider" />
+          <div class="close-modal-container">
+            <button
+              type="button"
+              class="btn btn-secondary close-about-modal-btn"
+              data-bs-dismiss="modal"
+            >
+              back to blog
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- Modal -->
+<div
+  class="modal fade"
+  id="galleryModal"
+  tabindex="-1"
+  aria-labelledby="galleryModalLabel"
+>
+  <i
+    class="fa fa-times-circle-o modal-cross"
+    aria-hidden="true"
+    data-bs-dismiss="modal"
+    aria-label="Close"
+  ></i>
+  <div class="modal-nav-container">
+    <i
+      class="fa fa-chevron-left modal-arrow modal-arrow-left"
+      aria-hidden="true"
+      onclick="showNextOrPrevImg(-1);"
+    ></i>
+  </div>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="d-flex flex-row justify-content-center modal-row">
+        <div class="modal-image-container">
+          <img src="" class="modal-image img-fluid" id="modal-image" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-nav-container">
+    <i
+      class="fa fa-chevron-right modal-arrow modal-arrow-right"
+      aria-hidden="true"
+      onclick="showNextOrPrevImg(1);"
+    ></i>
+  </div>
+</div>
+
+  </body>
+  <script src="/blog/scripts/main.js"></script>
+</html>
