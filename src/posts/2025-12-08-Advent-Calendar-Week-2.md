@@ -8,7 +8,7 @@ imageAlt: Advent Calendar Challenge
 description: A log of my attempt at Petrapixel's Advent Calendar of Digital Challenges, compiling challenges from Day 8 to 15.
 ---
 
-The second week of me attempting [Petrapixel's Advent Calendar of Digital Challenges](https://petrapixel.neocities.org/fun/advent-calendar-2025)! As mentioned in my post for [Week 1](/blog/posts/2025-12-06-Advent-Calendar-Week-1/), I'm going to do these challenges weekly instead of daily. I might get the time to attempt them throughout the week, but I'll still be keeping my posts about them to once a week.
+The second week of me attempting [Petrapixel's Advent Calendar of Digital Challenges](https://petrapixel.neocities.org/fun/advent-calendar-2025)! As mentioned in my post for [Week 1](/blog/posts/2025-12-06-Advent-Calendar-Week-1/), I'm going to do these challenges weekly instead of daily. While I might get the time to attempt them on some week days, I'll still be keeping my posts about them to once a week.
 
 <details>
   <summary class="quick-nav">
@@ -16,6 +16,7 @@ The second week of me attempting [Petrapixel's Advent Calendar of Digital Challe
   </summary> 
   <ul class="content-nav">
       <li><a href="#day-8">Day 8 - Small Circle</a></li>
+      <li><a href="#day-9">Day 9 - E-Books</a></li>
   </ul>
 </details>
 
@@ -37,7 +38,7 @@ The second week of me attempting [Petrapixel's Advent Calendar of Digital Challe
 
 I picked my private Twitter account for this, since I follow the most amount of random people on this account, whereas on my Instagram and public Twitter, I'm mostly following mutuals or friends.
 
-The downside of this is that I am following 398 people on this Twitter account, so there is no way I can possibly get it down to 50. Still, I'll give it a shot and clean out the accounts that I'm no longer interested in.
+The downside of this is that I am following 398 people on this Twitter account, so there is no way I can possibly get it down to 50. Still, I thought I'd give it a shot and clean out the accounts that I'm no longer interested in.
 
 Aaaand... 
 
@@ -47,4 +48,24 @@ Look I really tried my best 😂 But my Twitter following list has pretty much b
 
 <hr class="dotted-divider">
 
+### 🎁 Day 9 - E-Books <a name="day-9"></a>
 
+<details class="challenge-box">
+    <summary>
+        <b>Challenge</b>
+    </summary>
+    <i>If you have e-books, it's now time to sort them - on your PC or e-reader or whatever. I highly recommend the free software Calibri for e-book management.
+    </br></br>
+    Bonus challenge for tryhards & go-getters:
+    </br></br>
+   Download new e-books free & legally from Project Gutenberg. It's a treasure trove.</i>
+</details>
+<br>
+
+The closest thing I have to an e-reader is the Books app on my iPhone. In which I have a grand total of 23 books. I guess I can still try to sort them:
+
+{% imgBlock "/posts/images/advent_calendar/ebooks.jpg", "" %}
+
+Okay, okay, to make this a little more of a challenge, I'll dedicate this day to updating the fanfic rec list on my Phainon shrine page instead.
+
+<hr class="dotted-divider">
