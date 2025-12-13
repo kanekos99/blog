@@ -17,6 +17,10 @@ The second week of me attempting [Petrapixel's Advent Calendar of Digital Challe
   <ul class="content-nav">
       <li><a href="#day-8">Day 8 - Small Circle</a></li>
       <li><a href="#day-9">Day 9 - E-Books</a></li>
+      <li><a href="#day-10">Day 10 - Passwords</a></li>
+      <li><a href="#day-11">Day 11 - Privacy</a></li>
+      <li><a href="#day-12">Day 12 - Browser-switch</a></li>
+      <li><a href="#day-13">Day 13 - Phone Declutter</a></li>
   </ul>
 </details>
 
@@ -66,6 +70,85 @@ The closest thing I have to an e-reader is the Books app on my iPhone. In which 
 
 {% imgBlock "/posts/images/advent_calendar/ebooks.jpg", "" %}
 
-Okay, okay, to make this a little more of a challenge, I'll dedicate this day to updating the fanfic rec list on my Phainon shrine page instead.
+<hr class="dotted-divider">
+
+### 🎁 Day 10 - Passwords <a name="day-10"></a>
+
+<details class="challenge-box">
+    <summary>
+        <b>Passwords</b>
+    </summary>
+    <i>Enter your email address into Have I Been Pwned to see if your email was ever in a data breach.
+    </br></br>
+    Bonus challenge for tryhards & go-getters:
+    </br></br>
+   Change your passwords. Yes, all of them. Or at least a few.
+</i>
+</details>
+<br>
+
+Ngl if I hadn't heard of this site before, I'd be a little more cautious about entering my email into a random website.
+
+{% imgBlock "/posts/images/advent_calendar/pwned_site.png", "" %}
+
+Well, thanks Wattpad. I don't even remember signing up for an account with this email.
+
+<hr class="dotted-divider">
+
+### 🎁 Day 11 - Privacy <a name="day-11"></a>
+
+<details class="challenge-box">
+    <summary>
+        <b>Privacy</b>
+    </summary>
+    <i>Make your social media accounts private. That means instagram, twitter, etc.
+    </br></br>
+    Bonus challenge for tryhards & go-getters:
+    </br></br>
+   Block people you are jealous of, don't like or for some other reason don't want to see posts of.
+</i>
+</details>
+<br>
+
+Unfortunately I do need to use Instagram for posting my art, so I'll be skipping this challenge. I do have some private accounts for posting photos and the like but all of my public facing accounts are for art exclusively.
+
+<hr class="dotted-divider">
+
+### 🎁 Day 12 - Browser Switch <a name="day-12"></a>
+
+<details class="challenge-box">
+    <summary>
+        <b>Browser Switch</b>
+    </summary>
+    <i>If you're currently using Google Chrome, well... Let's not, okay? Switch to another browser, I recommend Firefox.
+    </br></br>
+    Bonus challenge for tryhards & go-getters:
+    </br></br>
+   Let's try to get away from Google even more: Replace google.com with another search engine like DuckDuckGo or Ecosia.
+</i>
+</details>
+<br>
+Downloaded Firefox to give it a try. Now I just have to figure out how to make it CORS-disabled.
+
+{% imgBlock "/posts/images/advent_calendar/firefox.png", "" %}
+
+<hr class="dotted-divider">
+
+### 🎁 Day 13 - Phone Declutter <a name="day-13"></a>
+
+<details class="challenge-box">
+    <summary>
+        <b>Phone Declutter</b>
+    </summary>
+    <i>Sort through your phone gallery and other files on your phones, and make sure you delete everything you don't need.
+    </br></br>
+    Bonus challenge for tryhards & go-getters:
+    </br></br>
+   Use your phone's settings or a space-saver app to detect which files/apps use the most space on your phone, and make space accordingly.
+</i>
+</details>
+<br>
+
+I deleted some random images from my phone gallery, but I still need to find some time to upload my most recent travel photos to cloud before I can remove them.
 
 <hr class="dotted-divider">

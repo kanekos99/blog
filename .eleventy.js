@@ -30,7 +30,9 @@ module.exports = function (eleventyConfig) {
     const url = eleventyConfig.getFilter("url")(src);
 
     const prefix =
-      process.env.NODE_ENV === "neocities" ? "https://kanekos99.github.io/" : "";
+      process.env.NODE_ENV === "neocities"
+        ? "https://kanekos99.github.io/"
+        : "";
 
     const finalUrl = `${prefix}${url}`;
 
@@ -46,11 +48,13 @@ module.exports = function (eleventyConfig) {
     `;
   });
 
-   eleventyConfig.addShortcode("imgBlockSmall", function (src, caption) {
+  eleventyConfig.addShortcode("imgBlockSmall", function (src, caption) {
     const url = eleventyConfig.getFilter("url")(src);
 
     const prefix =
-      process.env.NODE_ENV === "neocities" ? "https://kanekos99.github.io/" : "";
+      process.env.NODE_ENV === "neocities"
+        ? "https://kanekos99.github.io/"
+        : "";
 
     const finalUrl = `${prefix}${url}`;
 
@@ -63,6 +67,25 @@ module.exports = function (eleventyConfig) {
         />
         <p class="post-img-caption">${caption}</p>
       </div>
+    `;
+  });
+
+  eleventyConfig.addShortcode("postSnippetThumbnail", function (src, alt) {
+    const url = eleventyConfig.getFilter("url")(src);
+
+    const prefix =
+      process.env.NODE_ENV === "neocities"
+        ? "https://kanekos99.github.io/"
+        : "";
+
+    const finalUrl = `${prefix}${url}`;
+
+    return `
+      <img
+        src="${finalUrl}"
+        alt="${alt}"
+        class="post-img"
+      />
     `;
   });
 
