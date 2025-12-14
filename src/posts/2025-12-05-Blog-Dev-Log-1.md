@@ -405,7 +405,6 @@ For my own reference, here is a to-do list of features I plan to add to this blo
 - Microblog - this will be a list of my status.cafe statuses, probably extracted using the Surfing Waves RSS widget
 - More image styling options in posts, maybe even an image gallery or carousel? 
 - A way to filter or list posts by date
-- Fix links for post thumbnail images
 
 And that is all for this post which covers the basic features that I've implemented in this blog! There will be another entry to this dev log only if/ when I add new features to this blog.
 
