@@ -21,6 +21,7 @@ The second week of me attempting [Petrapixel's Advent Calendar of Digital Challe
       <li><a href="#day-11">Day 11 - Privacy</a></li>
       <li><a href="#day-12">Day 12 - Browser-switch</a></li>
       <li><a href="#day-13">Day 13 - Phone Declutter</a></li>
+      <li><a href="#day-14">Day 14 - Anti-Adobe</a></li>
   </ul>
 </details>
 
@@ -150,5 +151,24 @@ Downloaded Firefox to give it a try. Now I just have to figure out how to make i
 <br>
 
 I deleted some random images from my phone gallery, but I still need to find some time to upload my most recent travel photos to cloud before I can remove them.
+
+<hr class="dotted-divider">
+
+### 🎁 Day 14 - Anti-Adobe <a name="day-14"></a>
+
+<details class="challenge-box">
+    <summary>
+        <b>Anti-Adobe</b>
+    </summary>
+    <i>Adobe sucks, I think we can all agree. So - whether or not you're actually paying for it - let's get rid of our Adobe software. Replace Photoshop/InDesign/Illustrator with Affinity, which is very similar but free!
+    </br></br>
+    Bonus challenge for tryhards & go-getters:
+    </br></br>
+   If you're currently using Adobe Premiere Pro you can replace it with the free software Davinci Resolve.
+</i>
+</details>
+<br>
+
+As a certified Adobe hater, I haven't used their products in years now. Fuck subscriptions. I recommend [Photopea](https://www.photopea.com/) instead for quick edits, or [Canva](https://www.canva.com/) to make graphics easily. Both can be used in your browser without any download needed.
 
 <hr class="dotted-divider">
