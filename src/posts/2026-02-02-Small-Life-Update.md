@@ -3,7 +3,7 @@ title: Small Life Update
 author: kanekos
 date: 2026-02-02
 tags: ["personal"]
-description: Just a quick update on what I've been doing for the past month - aka the time I suddenly got really into game dev...?
+description: Just a quick update on what I've been doing for the past month - aka the time I suddenly got really into game dev...? 
 ---
 
 So... I kind of gave up updating this blog (and my entire website tbh) for a month because I was a little busy with some other projects. But I guess it's never too late for an update :D
@@ -41,3 +41,7 @@ And that is pretty much how the past two months have been for me.
 It feels a little odd not have a big project to work on anymore, although I did want to take some time to rest and recharge. Except my brain won't let me and now I'm constantly coming up with new game/ story ideas that may or may not go anywhere, which is the last thing I need when I already have so many uncompleted projects...
 
 Anyway, I am starting small again with simple things like updating my website. (I really got to get rid of the Christmas theme aksjhad like okay maybe Feburary is too early for Christmas!!)
+
+Also I'm trying deploying to neocities via a github action because one of the reasons I lowkey gave up updating this blog is that it was also really inconvenient to have to reupload the whole blog dist folder each time. 
+
+I followed [this guide](https://localghost.dev/blog/how-i-deploy-my-eleventy-site-to-neocities/) and it was pretty easy to set-up. But back up your site before you try this I guess!! 
