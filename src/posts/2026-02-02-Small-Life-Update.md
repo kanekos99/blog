@@ -16,7 +16,7 @@ Around the end of last December, I started learning Godot for fun and I got real
 
 It is honestly more of an art demo than a game since the only thing you can do is to walk around in a tiny area and have one dialogue with another character, but I made all of the assets in this scene, which I'm pretty proud of.
 
-I might make a more detailed post about it later, but you can check out the recording of the demo on [my Instagram](https://www.instagram.com/p/DS4-JNWEYwl/?utm_source=ig_web_copy_link)
+I might make a more detailed post about it later, but you can check out the recording of the demo on [my Instagram](https://www.instagram.com/p/DS4-JNWEYwl/?utm_source=ig_web_copy_link).
 
 After this point, I got a little intimidated by the scope of what I wanted for this game (it's intended to be an action rpg of sorts?), so I decided to work on something a little simpler first by joining a game jam.
 
@@ -42,6 +42,6 @@ It feels a little odd not have a big project to work on anymore, although I did 
 
 Anyway, I am starting small again with simple things like updating my website. (I really need to get rid of the Christmas theme aksjhad like okay maybe Feburary is too early for Christmas!!)
 
-Also I'm trying deploying to neocities via a github action because one of the reasons I lowkey gave up updating this blog is that it was also really inconvenient to have to reupload the whole blog dist folder each time. 
+Also I'm trying deploying to neocities via a github action because one of the reasons I lowkey gave up updating this blog is that it was really inconvenient to have to reupload the whole blog dist folder each time. 
 
 I followed [this guide](https://localghost.dev/blog/how-i-deploy-my-eleventy-site-to-neocities/) and it was pretty easy to set-up. But back up your site before you try this I guess!!
