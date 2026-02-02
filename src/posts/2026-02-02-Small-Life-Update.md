@@ -44,4 +44,4 @@ Anyway, I am starting small again with simple things like updating my website. (
 
 Also I'm trying deploying to neocities via a github action because one of the reasons I lowkey gave up updating this blog is that it was also really inconvenient to have to reupload the whole blog dist folder each time. 
 
-I followed [this guide](https://localghost.dev/blog/how-i-deploy-my-eleventy-site-to-neocities/) and it was pretty easy to set-up. But back up your site before you try this I guess!! 
+I followed [this guide](https://localghost.dev/blog/how-i-deploy-my-eleventy-site-to-neocities/) and it was pretty easy to set-up. But back up your site before you try this I guess!!
