@@ -19,4 +19,4 @@ jobs:
         with: 
           api_token: ${{ secrets.NEOCITIES_TOKEN }}
           dist_dir: "public" 
-          cleanup: true 
+          cleanup: false 
