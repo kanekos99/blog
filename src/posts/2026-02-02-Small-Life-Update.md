@@ -30,7 +30,7 @@ It's a pretty silly story about a vampire butler trying to kill the vampire lord
 
 Around the time I was wrapping up my VN development, Arknights: Endfield came out and that became a pretty big distraction as well. 
 
-I feel obliged to glaze this game since it is the only gacha that has actually given me the standard character that I want on my beginner banner pulls:
+I feel obliged to glaze this game since it is the only gacha that actually gave me the standard character that I want on my beginner banner pulls:
 
 {% imgBlock "/posts/images/endfield.png", "" %}
 
