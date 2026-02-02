@@ -18,5 +18,5 @@ jobs:
       - uses: bcomnes/deploy-to-neocities@v1 
         with: 
           api_token: ${{ secrets.NEOCITIES_TOKEN }}
-          dist_dir: "public/blog" 
+          dist_dir: "public" 
           cleanup: true 
