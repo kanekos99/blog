@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0.5 Years of Game (Visual Novel) Dev</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/blog/styles/main.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/blog/styles/post.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/blog/styles/comment-widget.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"
+      integrity="sha512-Y8iWYJDo6HiTo5xtml1g4QqHtl/PO1w+dmUpQfQSOTqKNsMhExfyPN2ncNAe9JuJUSKzwK/b6oaNPop4MXzkwg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/blog/assets/icon.png"
+    />
+  </head>
+  <body>
+    <div class="main-body" id="main-body">
+      <div class="container mt-5">
+        <div class="d-flex flex-row flex-wrap justify-content-center">
+          <div class="sidebar">
+  <a href="/blog/">
+    <img src="/blog/assets/blog.png" class="sidebar-img" />
+  </a>
+  <div class="about-blog-box">
+    <p>
+      Just a space for me to write stuff. Might post personal updates, updates
+      on my projects or maybe even some resources.
+    </p>
+    <button
+      class="credits-button mt-3"
+      data-bs-toggle="modal"
+      data-bs-target="#aboutBlogModal"
+    >
+      credits
+    </button>
+  </div>
+  <div class="accordion filters-box mt-2">
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <button
+          class="filters-title accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#filter-list"
+          aria-expanded="true"
+          aria-controls="filter-list"
+        >
+          categories
+        </button>
+      </div>
+      <div id="filter-list" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <hr class="dotted-divider" />
+          <div class="filters-list">
+            <div class="d-flex flex-row flex-wrap justify-content-center">
+              <a class="filter-item" href="/blog/tag/resources">
+                resources
+              </a>
+              <a class="filter-item" href="/blog/tag/personal">
+                personal
+              </a>
+              <a class="filter-item" href="/blog/tag/projects">
+                projects
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sidebar-buttons-row mt-2">
+    <div class="tags-btn">
+      <a href="/blog/taglist">
+        <i class="fa fa-tags me-2" aria-hidden="true"></i>tags</a
+      >
+    </div>
+    <div class="archive-btn">
+      <a href="/blog/archive">
+        <i class="fa fa-archive me-2" aria-hidden="true"></i>
+        archive</a
+      >
+    </div>
+  </div>
+</div>
+
+          <div class="blog-container mb-5">
+            <div class="top-buttons-row">
+  <div class="back-btn top-btn">
+    
+    <a href="/blog/"><i class="fa fa-caret-left me-2"></i>back</a>
+    
+  </div>
+  <div class="tags-btn top-btn hide-btn">
+    <a href="/blog/taglist">
+      <i class="fa fa-tags me-2" aria-hidden="true"></i>tags</a
+    >
+  </div>
+  <div class="archive-btn top-btn hide-btn">
+    <a href="/blog/archive">
+      <i class="fa fa-archive me-2" aria-hidden="true"></i>
+      archive</a
+    >
+  </div>
+</div>
+
+            <div class="blog-box-outer">
+              <img
+                src="/blog/assets/yellow-ribbon.png"
+                class="blog-ribbon-deco"
+              />
+              <div class="blog-box-inner" id="blog-posts-container">
+                
+<p class="post-date-label">Sep 20, 2026</p>
+<h1 class="post-title-header mt-2 mb-3">
+  0.5 Years of Game (Visual Novel) Dev
+</h1>
+<hr class="dotted-divider" />
+<div class="post-body">
+  <div>
+    <p>Yes, I took a break from updating this blog and this site in general for the past few months. Mostly because I do coding at work, so it gets a little grating to be doing the same thing during my free time as well.</p>
+<p>However, I completed another <a href="https://the-pusheen-cult.nekoweb.org/">personal web project</a> some time ago that required me to pick up Eleventy again, and that gave me a small burst of motivation to put in some more work on this website. While there's lots of stuff I want to write about, let's just get this one out of the way first. As a long-due follow up to my previous life update post, the rest of this post will be about the visual novels I've released in the past half a year and my experience developing them.</p>
+<p><em>(I'll use the terms &quot;game&quot; and &quot;visual novel&quot; interchangeably here because I'm just writing what comes naturally to me, I'm not here to debate whether a visual novel should be considered a game.)</em></p>
+<h3>How (Not) To Kill a Vampire Lord</h3>
+<p><em>Game link: <a href="https://kanekos99.itch.io/how-not-to-kill-a-vampire-lord">itch.io</a></em></p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/vn-dev/vampire.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>This is the first ever game(?)/ visual novel(?)/ thing(?) I completed, and it's about toxic gay vampires. You might start to notice a pattern soon.</p>
+<p>I made this game for the <a href="https://itch.io/jam/swakjam-2026">Sealed with a Kiss 2026 Game Jam</a> purely on a whim (there's another pattern here), because the theme of the game jam was &quot;Toxic Love&quot; and I suddenly remembered my toxic vampire yaoi OC couple.</p>
+<p>The plot of this visual novel basically follows the day in the life of a vampire butler, Cyrus, as he attempts to murder his vampire master, Mikael. Mikael is an obnoxious and arrogant rich young lord. He also happens to be in love with Cyrus and hits on him constantly, which annoys the heck out of Cyrus. But that's not the reason why Cyrus wants to kill Mikael, at least not entirely. To find out the real reason, you'll have to play the game!! :D</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/vn-dev/vampire_game.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>I like to think of this game as a joke I took too seriously. Most of the plot is just a series of unserious shenanigans (although there are some darker untertones). What I did put in a lot of effort into was the art and general presentation of it. That isn't to say I didn't put any effort into the writing. I did try my best to make a coherent story past all the silliness. However, my writing is always what I'm the least confident about, so I thought I'd at least try to make the game look nice <s>to scam people into playing it</s>.</p>
+<p>As a solo dev, I made most of the art assets myself, including the sprites, CGs and GUI design. The only thing I couldn't make in the end were the backgrounds as this game jam had a month-long deadline and I ran out of time, so I had to use heavily edited stock photos for those. I mean I hate drawing backgrounds anyway, so it works out for me.</p>
+<p>This game was made with Ren'Py (a super popular visual novel engine) and the programming is pretty basic. This is your bog standard Ren'Py visual novel. Since this was the first visual novel I attempted to make seriously, I didn't want to do anything too complicated. The most complicated code in this game is probably like a function to play typewriter sound effects when the dialogue is appearing on the screen.</p>
+<p>I cannot make music to save my life, so I sourced my music from Pixabay and royalty free music on Youtube. Choosing the background music tracks was fun. The only troublesome thing is that there are so many AI generated music tracks nowadays. To be honest, since I know next to nothing about making music, it's not immediately obvious to me whether a soundtrack is AI generated or not. Pixabay does have a label for AI generated pieces and I try to avoid those, but I suspect that not every AI generated piece is labelled as such.</p>
+<p>All in all, I'm still pretty proud of this game and I enjoyed making it. At least at the start. It was a struggle to keep myself motivated to finish up the last few CGs, but that's how all of my projects go.</p>
+<h3>Star Fall</h3>
+<p><em>Game link: <a href="https://kanekos99.itch.io/star-fall">itch.io</a></em></p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/vn-dev/starfall.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>This game was conceptualised and developed in the span of three days as a joke for April Fools' day (and also the <a href="https://itch.io/jam/worst-visual-novel-ever-challenge-2026">Worst Visual Novel Challenge</a>). It's one of those games with deliberately shitty art, although in my case, it is actually just what my placeholder assets tend to look like, rather than me intentionally trying to draw badly.</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/vn-dev/starfall_game.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>Despite this, this game still has more &quot;gameplay&quot; elements than the previous vampire visual novel, by virtue of it being a point-and-click game. The coding involved is slightly more complicated this time.</p>
+<p>The backgrounds had to be split into layers, with each of the elements that you can click on being a separate image. In Ren'Py, the clickable elements are displayed on an overlay screen as image buttons, with separate idle and hover states.</p>
+<p>I won't go into further technical details since it'll just sound like gibberish to anyone who isn't familiar with Ren'Py, but if anyone is interested in how to make a super basic point and click game in Ren'Py, let me know.</p>
+<p>This game features some of my oldest original characters, who used to be actual cats. In this game, they are cat people instead. And since this is a troll game, they are quite far removed from their original versions.</p>
+<p>The main character is an ordinary high school teenage girl by the name of Andromeda, who lives in a town called Star Fall. She encounters two mysterious brothers with magical powers one day, and they have to save the town from being destroyed by a Dark Lord.</p>
+<p>Oh and this is also an otome game I guess, so the brothers, Pollux and Castor, are love interests for Andromeda. Pollux is the normal one who is sensible and stoic, but otherwise boring and exists to be the NPC that gives you fetch quests. Castor is an evil fuckboy.</p>
+<p>They can also end up together, as a couple, in one of the routes if Andromeda chooses to reject both of them. (They're not actually biologically related as brothers.) And that is my mind-blowing, completely original twist on the love triangle trope, yes, yes.</p>
+<p>Personally, I still find parts of the game to be quite funny, but it might be in the way one might find an inside joke amusing, and my sense of humour is pretty broken.</p>
+<h3>Fleeting Dream</h3>
+<p><em>Game link: <a href="https://kanekos99.itch.io/fleeting-dream">itch.io</a></em></p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/vn-dev/fleeting_dream.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>In my latest visual novel, I made a return to toxic yaoi. Can I make a game without any kind of yaoi? Find out next time on kanekos99.itch.io!</p>
+<p>No spoilers but the cute titlescreen art for this game is a scam. This one is more or less as serious of a game as I could possibly make. On <a href="https://vndb.org/v67084">VNDB</a> someone even gave it the Utsuge tag, which means depressing game. Well, I don't know if I would consider it depressing, but it's definitely not a fluffy story. Since it's so short, I felt that the only way I could make it impactful is to make it darker in tone.</p>
+<p>This game is really self-indulgent, but in that sense, I suppose it is also more personal to me. Or maybe it's just recency bias since I made it when I suddenly really got into danmei (Chinese BL) novels again.</p>
+<p>The main character featured in this game is a fox spirit called Qiu Ye, who is one of my favourites, so in this game, you get to RP as his (male) love interest. Or you can be mean to him, because I like bullying my OCs too.</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/vn-dev/dream_game.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>Hmmm I think that is all I can say about the game without giving more spoilers, but I swear there is some plot stuff going on too. As much plot stuff I can fit into a game with a 1000-word limit, since this game was meant for the <a href="https://itch.io/jam/o2a2-2026">O2A2 game jam</a>.</p>
+<p>There is nothing complicated in terms of the coding for this game, but I did finally learn about persistent variables in Ren'Py, and how to make the title screen change after getting a certain ending, which was my way of getting around the only 1 CG rule for O2A2.</p>
+<p>Oh yes, finding music for this game was a pain in the ass. I guess there just aren't many royalty-free AI-free vaguely sad traditional Chinese music soundtracks out there. Shoutout to <a href="https://pixabay.com/music/china-mandarin-calmly-music-2965/">the soundtrack I did find</a> because it's a very nice soundtrack. Please don't be AI.</p>
+<p>This game was also an entry for the <a href="https://itch.io/jam/yaoi-game-jam-2026">Yaoi Game Jam</a>, which just ended recently. Well, actually it ended in August but September has been a complete blur for me. I hope I can get around to playing some of the other entries soon ;w;</p>
+<hr class="dotted-divider">
+<p>I have no idea what my next game is going to be or when it will be released. More specifically, I have too many ideas, yet absolutely nothing concrete. I actually want to make a toxic yuri game at some point in time. But I also want to make an RPGMaker game. (Not that those things are mutually exclusive.)</p>
+<p>Mostly right now I'm just focused on Not Dying at work.</p>
+<p>In whatever free time I have left, I want to draw more, make more animated videos, and work more on this website. I'll try to update this blog at least once a month as a monthly wrap-up of sorts. Although maybe this can count as my September entry since I really didn't do shit this month lmfao</p>
+
+  </div>
+</div>
+<div class="post-tags-box">
+  <h3>Tags:</h3>
+     
+  <!-- prettier-ignore -->
+  <a href="/blog/tag/projects/">projects</a>
+    
+  <!-- prettier-ignore -->
+  <a href="/blog/tag/gamedev/">gamedev</a>
+    
+  <!-- prettier-ignore -->
+  <a href="/blog/tag/personal/">personal</a>
+   
+</div>
+<hr class="dotted-divider" />
+
+<div id="c_widget"></div>
+<script src="/blog/scripts/comment-widget.js"></script>
+
+              </div>
+            </div>
+            <div class="footer-container mt-2">
+              <button
+                class="footer-btn"
+                onclick="window.scrollTo({top:0,behavior:'smooth'})"
+              >
+                <i class="fa fa-arrow-up me-2" aria-hidden="true"></i>
+                <span>top</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="aboutBlogModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content about-modal-content">
+      <div class="modal-body">
+        <div class="modal-title credits-title">credits</div>
+        <div class="credits-body mt-3">
+          <ul>
+            <li>
+              This blog is coded by me with
+              <a href="https://www.11ty.dev/">Eleventy</a> with the help of many
+              tutorials, a list of which you can find
+              <a href="/blog/posts/2025-12-04-11ty-Resources/">here</a
+              >. Bootstrap was also used for the HTML template.
+            </li>
+            <li>
+              Artworks are drawn by me unless stated otherwise and any decorative graphics are made by me in
+              <a href="https://www.canva.com/">Canva</a>.
+            </li>
+            <li>
+              I am using
+              <a href="https://virtualobserver.moe/ayano/comment-widget"
+                >Ayano's Comment Widget</a
+              >
+              for the comments section on the posts.
+            </li>
+          </ul>
+          <hr class="dotted-divider" />
+          <div class="close-modal-container">
+            <button
+              type="button"
+              class="btn btn-secondary close-about-modal-btn"
+              data-bs-dismiss="modal"
+            >
+              back to blog
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- Modal -->
+<div
+  class="modal fade"
+  id="galleryModal"
+  tabindex="-1"
+  aria-labelledby="galleryModalLabel"
+>
+  <i
+    class="fa fa-times-circle-o modal-cross"
+    aria-hidden="true"
+    data-bs-dismiss="modal"
+    aria-label="Close"
+  ></i>
+  <div class="modal-nav-container">
+    <i
+      class="fa fa-chevron-left modal-arrow modal-arrow-left"
+      aria-hidden="true"
+      onclick="showNextOrPrevImg(-1);"
+    ></i>
+  </div>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="d-flex flex-row justify-content-center modal-row">
+        <div class="modal-image-container">
+          <img src="" class="modal-image img-fluid" id="modal-image" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-nav-container">
+    <i
+      class="fa fa-chevron-right modal-arrow modal-arrow-right"
+      aria-hidden="true"
+      onclick="showNextOrPrevImg(1);"
+    ></i>
+  </div>
+</div>
+
+  </body>
+  <script src="/blog/scripts/main.js"></script>
+</html>
