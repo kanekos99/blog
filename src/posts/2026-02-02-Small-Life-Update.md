@@ -24,7 +24,7 @@ I ended up finding [this visual novel game jam](https://itch.io/jam/swakjam-2026
 
 I will definitely make a more detailed post about it, but for now, you can check out my entry [here](https://kanekos99.itch.io/how-not-to-kill-a-vampire-lord)!
 
-{% imgBlock "/posts/images/vampire_vn/titlescreen.png", "" %}
+{% imgBlock "/posts/images/vn-dev/vampire.png", "" %}
 
 It's a pretty silly story about a vampire butler trying to kill the vampire lord that he serves, but do read the content warnings before playing since there are some darker themes.
 
