@@ -2,7 +2,7 @@
 title: Small Life Update
 author: kanekos
 date: 2026-02-02
-tags: ["personal"]
+tags: ["personal", "gamedev"]
 description: Just a quick update on what I've been doing for the past month - aka the time I suddenly got really into game dev...? 
 ---
 
