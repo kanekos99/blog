@@ -9,7 +9,7 @@ body {
   min-height: 100svh;
   margin: 0;
   padding: 0;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   color: #2b7379;
   font-family: afacad;
   font-size: 1.05rem;
@@ -19,7 +19,8 @@ body {
   width: 100%;
   height: 100%;
   background: white;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='none' stroke='%23FFFFFF' stroke-width='2'/%3E%3C/svg%3E"),
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='none' stroke='%23FFFFFF' stroke-width='2'/%3E%3C/svg%3E"),
     linear-gradient(
       45deg,
       rgba(237, 208, 159, 1) 0%,
@@ -29,7 +30,7 @@ body {
   background-repeat: repeat;
   background-position: 0px -2px; /* shift down by 20px */
   text-align: center;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   overflow-x: hidden;
 }
 
@@ -613,6 +614,151 @@ body {
   justify-content: end;
 }
 
+/*---------------------------- Status Feed --------------------------------*/
+
+.status-feed-box {
+  background-color: #67a9a9;
+  background-color: #2b7379;
+  width: 70%;
+  max-width: 300px;
+  border-radius: 25px;
+  margin: auto;
+  box-shadow: 2px 2px #5c9999;
+  padding: 20px 8px 50px 8px;
+}
+
+.status-feed-inner {
+  background:
+    linear-gradient(
+      135deg,
+      transparent 0%,
+      transparent 40%,
+      rgba(200, 230, 255, 0.4) 40%,
+      rgba(200, 230, 255, 0.4) 55%,
+      transparent 55%,
+      transparent 100%
+    ),
+    #ffffff;
+  margin: auto;
+  border-radius: 5px;
+  width: 100%;
+  min-height: 400px;
+  box-shadow: 1px 1px #90cbcb;
+}
+
+.status-feed-top {
+  width: 60%;
+  margin: auto;
+  min-height: 15px;
+  background-color: #67a9a9;
+  background-color: #2b7379;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.status-feed-header {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 5px;
+  background-color: #2b7379;
+  background-color: #67a9a9;
+  color: white;
+  font-family: "Dosis";
+  font-weight: 900;
+  padding: 5px 10px;
+  border-radius: 25px;
+  /* background-color: rgba(237, 208, 159, 1);
+  color: rgb(127, 101, 68); */
+}
+
+.status-list {
+  width: 95%;
+  margin: auto;
+  max-height: 360px;
+  overflow-y: scroll;
+}
+
+.status-item {
+  background-color: #d6eef3e6;
+  background-color: #c2e4eaa9;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  line-height: 1;
+  padding: 8px;
+  margin: 10px 0px;
+  width: 98%;
+  text-align: right;
+}
+
+.status-date {
+  font-style: italic;
+  opacity: 60%;
+  font-weight: 900;
+  font-size: 0.7rem;
+  margin-top: 10px;
+}
+
+.status-user {
+  font-weight: 900;
+}
+
+.status-user a {
+  cursor: pointer;
+  text-decoration: none !important;
+  color: #246469 !important;
+}
+
+.status-user a:hover {
+  text-decoration: underline solid #2b7379 1.5px !important;
+  transition: ease-in-out 0.2s;
+}
+
+.status-text {
+  text-align: right;
+  margin-top: 6px;
+}
+
+.status-feed-container {
+  position: relative;
+  margin-bottom: 150px;
+}
+
+.status-feed-container-mb {
+  display: none;
+  position: relative;
+  margin-bottom: 150px;
+}
+
+.status-feed-imgbox {
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.status-feed-img {
+  width: 200px;
+  filter: drop-shadow(0 0 0.1rem gray);
+}
+
+/*-------- status feed scrollbar --------*/
+/* Track */
+.status-list::-webkit-scrollbar-track {
+  background: transparent;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* Handle */
+.status-list::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  background: linear-gradient(rgba(171, 215, 216, 0.5));
+}
+
+.status-list::-webkit-scrollbar {
+  width: 3px;
+}
+
 /*---------------------------- Scrollbar -----------------------------*/
 
 /* width */
@@ -762,6 +908,42 @@ body {
 
   .about-modal-content {
     width: 70%;
+  }
+
+  .status-feed-container {
+    display: none;
+  }
+
+  .status-feed-box {
+    width: 100%;
+    max-width: none;
+  }
+
+  .status-feed-img {
+    display: none;
+  }
+
+  .status-feed-container-mb {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .status-feed-inner {
+    min-height: 250px;
+  }
+
+  .status-list {
+    width: 100%;
+    max-height: 260px;
+  }
+
+  .status-item {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .status-list::-webkit-scrollbar {
+    display: none;
   }
 }
 
