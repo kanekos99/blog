@@ -41,12 +41,12 @@ function getStatusFeed() {
         //hide loader and show status list
         statusLoading.forEach((loader) => {
           loader.classList.add("fade-out");
-          setTimeout(() => (loader.style.display = "none"), 200);
+          setTimeout(() => (loader.style.display = "none"), 100);
         });
 
         statusLists.forEach((list) => {
           list.style.display = "block";
-          setTimeout(() => list.classList.add("fade-in"), 300);
+          setTimeout(() => list.classList.add("fade-in"), 200);
         });
       });
     });
