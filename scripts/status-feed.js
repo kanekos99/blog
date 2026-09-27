@@ -1,4 +1,5 @@
 const statusLists = document.querySelectorAll(".status-list");
+const statusLoading = document.querySelectorAll(".status-loading");
 
 function getStatusFeed() {
   fetch("https://status.cafe/users/kanekos.atom")
@@ -35,6 +36,17 @@ function getStatusFeed() {
         //apply for both mobile and desktop view
         statusLists.forEach((statusList) => {
           statusList.innerHTML += statusItemHTML;
+        });
+
+        //hide loader and show status list
+        statusLoading.forEach((loader) => {
+          loader.classList.add("fade-out");
+          setTimeout(() => (loader.style.display = "none"), 200);
+        });
+
+        statusLists.forEach((list) => {
+          list.style.display = "block";
+          setTimeout(() => list.classList.add("fade-in"), 300);
         });
       });
     });

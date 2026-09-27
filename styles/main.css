@@ -642,8 +642,8 @@ body {
   margin: auto;
   border-radius: 5px;
   width: 100%;
-  min-height: 400px;
   box-shadow: 1px 1px #90cbcb;
+  height: 425px;
 }
 
 .status-feed-top {
@@ -675,6 +675,8 @@ body {
   margin: auto;
   max-height: 360px;
   overflow-y: scroll;
+  display: none;
+  opacity: 0%;
 }
 
 .status-item {
@@ -730,7 +732,7 @@ body {
 
 .status-feed-imgbox {
   position: absolute;
-  bottom: -100px;
+  bottom: -165px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
@@ -738,7 +740,111 @@ body {
 
 .status-feed-img {
   width: 200px;
-  filter: drop-shadow(0 0 0.1rem gray);
+  filter: drop-shadow(0 0 0.3rem gray);
+  cursor: pointer;
+}
+
+.status-feed-img:hover {
+  animation: circleFloat 1.5s infinite linear;
+  transition: ease-in-out 0.2s;
+  -webkit-animation: jello-horizontal 2s ease-in-out infinite both;
+  animation: jello-horizontal 2s ease-in-out infinite both;
+}
+
+.status-loading {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 120px;
+}
+
+@-webkit-keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 0.2s ease-out forwards;
+}
+
+.fade-in {
+  animation: fadeIn 0.2s ease-in forwards;
 }
 
 /*-------- status feed scrollbar --------*/
@@ -919,8 +1025,15 @@ body {
     max-width: none;
   }
 
+  .status-feed-imgbox {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-140%);
+  }
+
   .status-feed-img {
-    display: none;
+    width: 120px;
   }
 
   .status-feed-container-mb {
@@ -929,7 +1042,7 @@ body {
   }
 
   .status-feed-inner {
-    min-height: 250px;
+    height: 325px;
   }
 
   .status-list {
