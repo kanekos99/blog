@@ -26,6 +26,24 @@ module.exports = function (eleventyConfig) {
     return [...tagSet].sort();
   });
 
+  eleventyConfig.addCollection("filteredTagList", function (collectionApi) {
+    const excludedTags = ["all", "alltags", "post"]; 
+
+    let filtedTags = new Set();
+
+    collectionApi.getAll().forEach((item) => {
+      if (item.data.tags) {
+        item.data.tags.forEach((tag) => {
+          if (!excludedTags.includes(tag)) {
+            filtedTags.add(tag);
+          }
+        });
+      }
+    });
+
+    return Array.from(filtedTags);
+  });
+
   eleventyConfig.addShortcode("imgBlock", function (src, caption) {
     const url = eleventyConfig.getFilter("url")(src);
 
