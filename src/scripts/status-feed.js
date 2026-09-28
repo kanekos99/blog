@@ -18,7 +18,10 @@ function getStatusFeed() {
 
         const statusArray = status.split(" ");
         const statusUser = statusArray[0];
-        const statusEmoji = statusArray[1];
+        const statusEmoji =
+          statusArray[1].trim() === "" ? statusArray[2] : statusArray[1];
+
+        console.log(statusArray);
 
         let statusItemHTML = `
             <div class="status-item">
