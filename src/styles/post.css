@@ -162,6 +162,36 @@
   font-weight: 600;
 }
 
+.post-text a {
+  text-decoration: 2px underline dotted #2b73797b;;
+  color: #2b7379;
+}
+
+.post-text a:hover {
+  text-decoration: 2px underline solid #2b7379;
+  font-weight: 900;
+  transition: ease-in-out;
+}
+
+dt {
+  margin-bottom: 5px;
+}
+
+dd {
+  margin-left: 18px;
+  margin-bottom: 20px;
+}
+
+dd a {
+  color: #2b7379;
+  font-weight: 600;
+  text-decoration: underline solid 2px #2b737967;
+}
+
+dd a:hover {
+  color: #67a9a9;
+}
+
 /*-------------------------- for individual posts---------------------*/
 
 /* advent calendar */
@@ -290,6 +320,10 @@
   }
   .post-body-img-l {
     width: 100%;
+  }
+
+  dd {
+    margin-left: 0px;
   }
 }
 
