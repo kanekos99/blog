@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Small Life Update</title>
+    <title>A Very Basic Ren&#39;Py Tutorial</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -146,17 +146,20 @@
 />
               <div class="blog-box-inner" id="blog-posts-container">
                 
-<p class="post-date-label">Feb 2, 2026</p>
+<p class="post-date-label">Oct 6, 2026</p>
 <h1 class="post-title-header mt-2 mb-3">
-  Small Life Update
+  A Very Basic Ren&#39;Py Tutorial
 </h1>
 <hr class="dotted-divider" />
 <div class="post-body">
   <div>
-    <p>So... I kind of gave up updating this blog (and my entire website tbh) for a month because I was a little busy with some other projects. But I guess it's never too late for an update :D</p>
-<p>Around the end of last December, I started learning Godot for fun and I got really into game dev for a bit. I ended up making this little prototype game thingy?</p>
+    <p>I got a comment regarding coding in Ren'Py so here is an extremely basic quick start guide to making your own visual novels with it. I will add on to this guide if there are more questions.</p>
+<h3>Step 1: Download and install Ren'Py</h3>
+<p>You can download it <a href="https://www.renpy.org/">here</a>. I personally use version 8.5.2 but any version will work.</p>
+<h3>Step 2: Create a new project</h3>
+<p>Open the Ren'Py application and click +Create New Project. Go through the options that come up and pick whatever suits you.</p>
 <p><div class="post-body-img-container">
-<img src="/blog/posts/images/unicorn_game/unicorn_game_2.png" class="post-body-img-l" 
+<img src="/blog/posts/images/renpy/renpy_1.png" class="post-body-img-l" 
           onclick="showImage(this);"
           data-bs-toggle="modal"
           data-bs-target="#galleryModal"
@@ -164,43 +167,120 @@
 <p class="post-img-caption"></p>
 </div></p>
 <p><div class="post-body-img-container">
-<img src="/blog/posts/images/unicorn_game/unicorn_game_1.png" class="post-body-img-l" 
+<img src="/blog/posts/images/renpy/renpy_2.png" class="post-body-img-l" 
           onclick="showImage(this);"
           data-bs-toggle="modal"
           data-bs-target="#galleryModal"
         />
 <p class="post-img-caption"></p>
 </div></p>
-<p>It is honestly more of an art demo than a game since the only thing you can do is to walk around in a tiny area and have one dialogue with another character, but I made all of the assets in this scene, which I'm pretty proud of.</p>
-<p>I might make a more detailed post about it later, but you can check out the recording of the demo on <a href="https://www.instagram.com/p/DS4-JNWEYwl/?utm_source=ig_web_copy_link">my Instagram</a>.</p>
-<p>After this point, I got a little intimidated by the scope of what I wanted for this game (it's intended to be an action rpg of sorts?), so I decided to work on something a little simpler first by joining a game jam.</p>
-<p>I ended up finding <a href="https://itch.io/jam/swakjam-2026">this visual novel game jam</a> on itch.io, and spent the entirety of January working on my submission for it.</p>
-<p>I will definitely make a more detailed post about it, but for now, you can check out my entry <a href="https://kanekos99.itch.io/how-not-to-kill-a-vampire-lord">here</a>!</p>
+<h3>Step 3: Open the project's script</h3>
+<p>After your project is created, you should see it in the launcher.</p>
 <p><div class="post-body-img-container">
-<img src="/blog/posts/images/vn-dev/vampire.png" class="post-body-img-l" 
+<img src="/blog/posts/images/renpy/renpy_launcher.png" class="post-body-img-l" 
           onclick="showImage(this);"
           data-bs-toggle="modal"
           data-bs-target="#galleryModal"
         />
 <p class="post-img-caption"></p>
 </div></p>
-<p>It's a pretty silly story about a vampire butler trying to kill the vampire lord that he serves, but do read the content warnings before playing since there are some darker themes.</p>
-<p>Around the time I was wrapping up my VN development, Arknights: Endfield came out and that became a pretty big distraction as well.</p>
-<p>I feel obliged to glaze this game since it is the only gacha that actually gave me the standard character that I want on my beginner banner pulls:</p>
+<p>Click &quot;script.rpy&quot; and it should open in your default code or text editor. You can take reference from the default code in the script to start your own scripting or follow what I have in the next steps.</p>
 <p><div class="post-body-img-container">
-<img src="/blog/posts/images/endfield.png" class="post-body-img-l" 
+<img src="/blog/posts/images/renpy/script.png" class="post-body-img-l" 
           onclick="showImage(this);"
           data-bs-toggle="modal"
           data-bs-target="#galleryModal"
         />
 <p class="post-img-caption"></p>
 </div></p>
-<p>But it is really very fun and I love factory building!!!!!!</p>
-<p>And that is pretty much how the past two months have been for me.</p>
-<p>It feels a little odd not have a big project to work on anymore, although I did want to take some time to rest and recharge. Except my brain won't let me and now I'm constantly coming up with new game/ story ideas that may or may not go anywhere, which is the last thing I need when I already have so many uncompleted projects...</p>
-<p>Anyway, I am starting small again with simple things like updating my website. (I really need to get rid of the Christmas theme aksjhad like okay maybe Feburary is too early for Christmas!!)</p>
-<p>Also I'm trying deploying to neocities via a github action because one of the reasons I lowkey gave up updating this blog is that it was really inconvenient to have to reupload the whole blog dist folder each time.</p>
-<p>I followed <a href="https://localghost.dev/blog/how-i-deploy-my-eleventy-site-to-neocities/">this guide</a> and it was pretty easy to set-up. But back up your site before you try this I guess!!</p>
+<h3>Step 4: Set up the basics</h3>
+<p>Define a new character using the line below:</p>
+<pre><code>define b = Character(&quot;Bob&quot;, image=&quot;bob&quot;)
+</code></pre>
+<p>Define a default image for your character:</p>
+<pre><code>image bob default = &quot;images/bob_default.png&quot;
+</code></pre>
+<p>Define an alternate image where the character has their mouth open (i.e. they are speaking):</p>
+<pre><code>image bob speak = &quot;images/bob_speak.png&quot;
+</code></pre>
+<p>(Make sure you actually add these images in your images folder!)</p>
+<p>Put all of this before the part in your script that says &quot;label start&quot;</p>
+<h3>Step 5: Start scripting</h3>
+<p>&quot;label start&quot; is where your story actually starts. Just start scripting inside that block. The code mentioned in the following steps should be <em>inside</em> this block. Remove all the default code as well in case it throws an error.</p>
+<h3>Step 6: Show background image</h3>
+<p>To display any background image, use this line:</p>
+<pre><code>scene your_background
+</code></pre>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/renpy/background.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>Make sure you have a file called your_background.png (or jpg/ webp/ whatever) in your images folder! Also ideally it should match the resolution of your game! If your game is 1920px x 1080px then make it the same resolution!!</p>
+<h3>Step 7: Show character</h3>
+<p>To show your character's sprite, you can use this line:</p>
+<pre><code>show bob default
+</code></pre>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/renpy/character.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<h3>Step 8: Add narration</h3>
+<p>Write anything in quotation marks inside of the &quot;label start&quot; block to make it print in the dialogue box.</p>
+<p><strong>Example</strong>:</p>
+<pre><code>&quot;This is the start of the story.&quot;
+</code></pre>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/renpy/narration.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>This will show as narration text and is not tagged to any character.</p>
+<h3>Step 9: Add character dialogue</h3>
+<p>To make your character say something, you can write this following:</p>
+<pre><code>b @ speak &quot;Hi, I'm Bob.&quot;
+</code></pre>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/renpy/dialogue.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>This will show as Bob saying it. The &quot;@ speak&quot; part of the line is used to display Bob's sprite with his mouth open (the talking sprite).</p>
+<hr class="dotted-divider">
+<p>Aaaaand that is all. If you followed this guide up till this point, your script.rpy file should look something like this:</p>
+<pre><code>define b = Character(&quot;Bob&quot;, image=&quot;bob&quot;)
+
+image bob default = &quot;images/bob_default.png&quot;
+image bob speak = &quot;images/bob_speak.png&quot;
+
+label start:
+
+    scene your_background
+
+    show bob default
+
+    &quot;This is the start of the story.&quot;
+
+    b @ speak &quot;Hi, I'm Bob.&quot;
+
+    return
+</code></pre>
+<p>Now you can make the rest of the game 😭</p>
+<p>In all seriousness, if there is an ask for how to do something more specific in Ren'Py, I can try to make a tutorial for that as well.</p>
+<p>Or you can check out the <a href="https://www.renpy.org/doc/html/index.html">Ren'Py documentation</a>. Or the tutorial game they provide you upon installation of the software.</p>
 
   </div>
 </div>
@@ -208,10 +288,13 @@
   <h3>Tags:</h3>
      
   <!-- prettier-ignore -->
-  <a href="/blog/tag/personal/">personal</a>
+  <a href="/blog/tag/resources/">resources</a>
     
   <!-- prettier-ignore -->
   <a href="/blog/tag/gamedev/">gamedev</a>
+    
+  <!-- prettier-ignore -->
+  <a href="/blog/tag/coding/">coding</a>
    
 </div>
 <hr class="dotted-divider" />

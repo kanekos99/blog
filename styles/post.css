@@ -226,6 +226,8 @@ dd a:hover {
   background: none;
   border: none;
   cursor: default;
+  width: auto;
+  margin: auto;
 }
 
 .modal-image-container {
