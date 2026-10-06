@@ -4,7 +4,7 @@ author: kanekos
 date: 2026-10-06
 tags: ["resources", "gamedev", "coding"]
 image: /posts/images/renpy/dialogue.png
-description: A super, duper extremely basic Ren'Py scripting tutorial and quick start guide.
+description: A super duper extremely basic Ren'Py scripting tutorial and quick start guide.
 ---
 
 I got a comment regarding coding in Ren'Py so here is an extremely basic quick start guide to making your own visual novels with it. I will add on to this guide if there are more questions.
