@@ -3,7 +3,7 @@ title: "100 Questions for Webmasters"
 author: kanekos
 date: 2026-09-28
 tags: ["personal", "questionnaires"]
-description: Answering 100 Questions for Webmasters by <a href='https://mouseling.net/100webmaster' target="_blank">MOUSELING.net</a> because I'm bored
+description: Answering 100 Questions for Webmasters by <a href='https://mouseling.net/100webmaster' target="_blank">MOUSELING.net</a> because I'm bored...
 ---
 
 I don't know if I even qualify as a webmaster with how sporadically I update this website but I answered this entire questionnaire when I was bored and procrastinating, so I might as well put it up here. I swear will make some more coding/ resources focused posts soon. (Why do I always lie.)
