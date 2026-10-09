@@ -6,11 +6,9 @@ const blog_posts = [
 {%- for post in collections.post | reverse -%}
   {
     title: {{ post.data.title | dump | safe }},
-    date: {{ post.data.date | postDate | dump | safe }},
+    date: {{ post.data.date | dump | safe }},
     description: {{ post.data.description | dump | safe }},
     url: {{ post.url | url | dump | safe }}
   }{% if not loop.last %},{% endif %}
 {%- endfor %}
 ];
-
-export default blog_posts;
