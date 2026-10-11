@@ -1019,7 +1019,7 @@ body {
   }
 
   .about-modal-content {
-    width: 70%;
+    width: 70% !important;
   }
 
   .status-feed-container {
@@ -1077,7 +1077,7 @@ body {
   }
 
   .about-modal-content {
-    width: 100%;
+    width: 100% !important;
   }
 
   .footer-container {
