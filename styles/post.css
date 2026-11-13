@@ -53,6 +53,8 @@
 
 .post-img-caption {
   margin: 0px;
+  margin-top: 5px;
+  line-height: 1.1;
   font-style: italic;
 }
 
@@ -93,6 +95,16 @@
 .post-body div h3 {
   font-weight: 600;
   font-size: 1.3rem;
+}
+
+.post-body div h3 a {
+  color: #2b7379;
+  font-weight: 600;
+  text-decoration: underline solid 2px #2b737967;
+}
+
+.post-body div h3 a:hover {
+  color: #67a9a9;
 }
 
 .post-body div p a {
@@ -163,7 +175,7 @@
 }
 
 .post-text a {
-  text-decoration: 2px underline dotted #2b73797b;;
+  text-decoration: 2px underline dotted #2b73797b;
   color: #2b7379;
 }
 

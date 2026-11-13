@@ -1,4 +1,14 @@
 const blog_posts = [{
+    title: "Shanghai + Beijing Trip (October 2026)",
+    date: "2026-11-13T00:00:00.000Z",
+    description: "October Monthly Update Part 2 — Highlights of a trip to Shanghai (and Beijing) I took at the end of October",
+    url: "/blog/posts/2026-11-13-Shanghai-Trip/"
+  },{
+    title: "October Website Updates",
+    date: "2026-11-13T00:00:00.000Z",
+    description: "October Monthly Update Part 1 — Changes I've made to my Neocities site in the month of October.",
+    url: "/blog/posts/2026-11-13-October-Website-Updates/"
+  },{
     title: "A Very Basic Ren'Py Tutorial",
     date: "2026-10-06T00:00:00.000Z",
     description: "A super duper extremely basic Ren'Py scripting tutorial and quick start guide.",

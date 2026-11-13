@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>October Website Updates</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/blog/styles/main.css"
+/>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/blog/styles/post.css"
+/>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/blog/styles/comment-widget.css"
+/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"
+      integrity="sha512-Y8iWYJDo6HiTo5xtml1g4QqHtl/PO1w+dmUpQfQSOTqKNsMhExfyPN2ncNAe9JuJUSKzwK/b6oaNPop4MXzkwg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/blog/assets/icon.png"
+/>
+  </head>
+  <body>
+    <div class="main-body" id="main-body">
+      <div class="container mt-5">
+        <div class="d-flex flex-row flex-wrap justify-content-center align-items-start">
+          <div class="sidebar">
+  <a href="/blog/">
+    <img src="/blog/assets/blog.png" class="sidebar-img"/>
+  </a>
+  <div class="about-blog-box">
+    <p>
+      Just a space for me to write stuff. Might post personal updates, updates
+      on my projects or maybe even some resources.
+    </p>
+    <button
+      class="credits-button mt-3"
+      data-bs-toggle="modal"
+      data-bs-target="#aboutBlogModal"
+    >
+      credits
+    </button>
+  </div>
+  <div class="accordion filters-box mt-2">
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <button
+          class="filters-title accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#filter-list"
+          aria-expanded="true"
+          aria-controls="filter-list"
+        >
+          categories
+        </button>
+      </div>
+      <div id="filter-list" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <hr class="dotted-divider"/>
+          <div class="filters-list">
+            <div class="d-flex flex-row flex-wrap justify-content-center">
+              <a class="filter-item" href="/blog/tag/resources">
+                resources
+              </a>
+              <a class="filter-item" href="/blog/tag/personal">
+                personal
+              </a>
+              <a class="filter-item" href="/blog/tag/projects">
+                projects
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sidebar-buttons-row mt-2">
+    <div class="tags-btn">
+      <a href="/blog/taglist">
+        <i class="fa fa-tags me-2" aria-hidden="true"></i>tags</a
+      >
+    </div>
+    <div class="archive-btn">
+      <a href="/blog/archive">
+        <i class="fa fa-archive me-2" aria-hidden="true"></i>
+        archive</a
+      >
+    </div>
+  </div>
+  
+</div>
+          <div class="blog-container mb-5">
+            <div class="top-buttons-row">
+  <div class="back-btn top-btn">
+    
+    <a href="/blog/"><i class="fa fa-caret-left me-2"></i>back</a>
+    
+  </div>
+  <div class="tags-btn top-btn hide-btn">
+    <a href="/blog/taglist">
+      <i class="fa fa-tags me-2" aria-hidden="true"></i>tags</a
+    >
+  </div>
+  <div class="archive-btn top-btn hide-btn">
+    <a href="/blog/archive">
+      <i class="fa fa-archive me-2" aria-hidden="true"></i>
+      archive</a
+    >
+  </div>
+</div>
+
+            <div class="blog-box-outer">
+              <img
+                src="/blog/assets/yellow-ribbon.png"
+                class="blog-ribbon-deco"
+/>
+              <div class="blog-box-inner" id="blog-posts-container">
+                
+<p class="post-date-label">Nov 13, 2026</p>
+<h1 class="post-title-header mt-2 mb-3">
+  October Website Updates
+</h1>
+<hr class="dotted-divider" />
+<div class="post-body">
+  <div>
+    <p><em>This was supposed to be part of my monthly update post for October (which I'm writing in November, don't worry about it), but it was getting a bit too long, so I've split it into two. In this post, I'll mainly be discussing my website updates. If you'd rather read about random bullshit I did in Shanghai, you can check out <a href="/blog/posts/2026-11-13-Shanghai-Trip/">this post</a> instead.</em></p>
+<details>
+  <summary class="quick-nav">
+      Quick Nav
+  </summary> 
+  <ul class="content-nav">
+      <li><a href="#gallery">Art Gallery</a></li>
+      <li><a href="#sketchlog">Sketch Log</a></li>
+      <li><a href="#home">Home Page</a></li>
+      <li><a href="#games">Games Page</a></li>
+      <li><a href="#ocs">OC Gallery</a></li>
+      <li><a href="#future">Future Plans</a></li>
+  </ul>
+</details>
+<hr class="dotted-divider">
+<p>In October, my primary focus project-wise was the development of my <a href="https://kanekos.neocities.org/">Neocities website</a>. The following are pages I've updated or newly added:</p>
+<h3><a href="https://kanekos.neocities.org/gallery/">Art Gallery</a> <a name="gallery"></a></h3>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/gallery-update.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>This page was long overdue for an update since I don't add new art to it regularly, so I did a bulk upload of new images.</p>
+<p>I added a new section to showcase my <a href="https://kanekos.neocities.org/gallery/#animation">animations</a> (well, what few there are). For better organisation, I also separated my <a href="https://kanekos.neocities.org/gallery/#charas">character designs</a> into their own section, instead of putting them in the original art or sketches section.</p>
+<p>I classified my character designs into reference sheets and draft sketches but there honestly isn't much of a difference between the two. It's purely vibes-based.</p>
+<p>Finally, I applied for the <a href="https://dumbiee.neocities.org/webring/art/">NEONET Arts Collective Web Ring</a> so I added the widget for that!</p>
+<h3><a href="https://kanekos.neocities.org/sketchlog/">Sketch Log</a> <a name="sketchlog"></a></h3>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/sketchlog.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>Since my gallery page is more of an art portfolio showcase than a space for me to showcase my latest art, I decided to finally revamp my ancient sketch log page, where I can dump any and all of my art. Any new art, that is. I will not be retroactively posting old artworks here... And since I didn't get much of a chance to draw in October, being busy working on this website, it's still pretty empty thus far.</p>
+<p>The UI of this page is more or less inspired by Tumblr (makes me wonder why I don't just use Tumblr instead 😂). I debated between making this page using a static site generator like 11ty or using pure Javascript. Pure Javascript won in the end because I wanted to be able to add new posts easily.</p>
+<p>I can create a new post by uploading my images somewhere, and then submitting a Google Form which adds my post to a Google Sheet. The website then fetches all posts from the Google Sheet and displays them on this page (which is why there's a loading screen). It's kind of like how the comments on this blog work.</p>
+<p>Because I didn't use an SSG, I had to code my own tagging and pagination system, which was an absolute pain in the ass. Oh and I guess you can leave a comment on posts as well.</p>
+<p>If this sounds way too complicated or over-engineered for such a simple static page, well, it is... But hopefully I will be more motivated to update this page since I don't have to modify any code to add a new post. And I can do it from mobile as well.</p>
+<p>The downside is that any updates to this page won't show in my Neocities activity ¯\_(ツ)_/¯</p>
+<h3><a href="https://kanekos.neocities.org/">Home Page</a> <a name="home"></a></h3>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/homepage.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>Next is an update to my home page. While I liked the minimalistic style of my old home page, I felt that it was hard to tell if there were any new updates to the site, like if there was any new art added, for example, or if there were any new posts on my blog.</p>
+<p>Additionally, since I was adding new pages to the site, the directory section (which used to be a single column) was getting a bit long, so that needed a redesign as well.</p>
+<p>For the first point, I added the Noticeboard section, which would summarise all the latest site updates, as well as showcase my art. As of now, all of this relies on Javascript since I'll definitely be too lazy to manually update this page. However, I will need to implement some kind of cache-busting to make sure the latest scripts are pulled in for everyone whenever there is an update...</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/directory.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>As for the directory, I transformed it into a two column layout. This layout is a little more annoying as I'm limited on the amount of description text I can write for each item, or it wouldn't look nice. But it is more condensed now so all the items are more easily visible at a glance.</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/neighbourhood.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>On top of that, I added a Neighbourhood section where I can display buttons to other sites and webring widgets, as I've been meaning to apply to webrings for some time.</p>
+<p>And finally, there is a minor change to the UI of the Changelog section to give it more space.</p>
+<h3><a href="https://kanekos.neocities.org/games/">Games Page</a> <a name="games"></a></h3>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/games.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>Just a simple static page to compile all of the games I've made. Of which there aren't that many... Technically I could have added all of them to my home page directory, but I wanted to make a separate page for better organisation.</p>
+<h3><a href="https://kanekos.neocities.org/oc-gallery/">OC Gallery</a> <a name="ocs"></a></h3>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/oc-gallery.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>Last but not the least, I finally have a page to showcase my OCs!</p>
+<p>I haven't uploaded that many characters yet as I've been focusing on filling up the profiles of those that I have added. Most of the art and writing here have been migrated over from Toyhouse or Unvale or Art Fight so there's not that much new per se. Still, the profiles here should reflect the latest, most up-to-date information about my characters.</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/chara-profile.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>My character profile templates are pretty basic but functional since I'm focusing on adding more OCs rather than customisation. It is also pretty modular, in that most of the sections are optional. This way I can quickly add a new character who maybe only has a one line descriptor and one image, or I can make a completely decked out profile with trivia, relationships, AUs, a complete backstory, etc.</p>
+<p>This page was built using 11ty, the same as this blog. I think I would die making it otherwise. The downside is that I don't have one centralised place to give me an overview of all profiles and manage them in a table form. I don't know if it is possible for 11ty to generate something like that...?</p>
+<p>One aspect I'm still struggling with is the gallery. Right now I manage the images for all my characters in one JSON file. However, this is a little annoying to edit. I don't have a better solution for now so I guess I'll stick to it.</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/oc-gallery-2.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<h3>Future Plans <a name="future"></a></h3>
+<p>To wrap up this section, here are some of my future plans for my site, in order of priority:</p>
+<ul>
+<li>Cache busting for home page</li>
+<li>An archive page to showcase past versions of pages</li>
+<li>Add a new interactive shrine</li>
+<li>Apply to more webrings</li>
+<li>Add more OCs to the OC gallery</li>
+<li>Add a page for writing</li>
+<li>Add a separate page for comics (instead of putting them in my gallery page)</li>
+</ul>
+
+  </div>
+</div>
+<div class="post-tags-box">
+  <h3>Tags:</h3>
+     
+  <!-- prettier-ignore -->
+  <a href="/blog/tag/personal/">personal</a>
+    
+  <!-- prettier-ignore -->
+  <a href="/blog/tag/projects/">projects</a>
+   
+</div>
+<hr class="dotted-divider" />
+
+<div id="c_widget"></div>
+<script src="/blog/scripts/comment-widget.js"></script>
+
+              </div>
+            </div>
+            
+            <div class="footer-container mt-2">
+              <button
+                class="footer-btn"
+                onclick="window.scrollTo({top:0,behavior:'smooth'})"
+              >
+                <i class="fa fa-arrow-up me-2" aria-hidden="true"></i>
+                <span>top</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="aboutBlogModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content about-modal-content">
+      <div class="modal-body">
+        <div class="modal-title credits-title">credits</div>
+        <div class="credits-body mt-3">
+          <ul>
+            <li>
+              This blog is coded by me with
+              <a href="https://www.11ty.dev/">Eleventy</a> with the help of many
+              tutorials, a list of which you can find
+              <a href="/blog/posts/2025-12-04-11ty-Resources/">here</a
+              >. Bootstrap was also used for the HTML template.
+            </li>
+            <li>
+              Artworks are drawn by me unless stated otherwise and any decorative graphics are made by me in
+              <a href="https://www.canva.com/">Canva</a>.
+            </li>
+            <li>
+              I am using
+              <a href="https://virtualobserver.moe/ayano/comment-widget"
+                >Ayano's Comment Widget</a
+              >
+              for the comments section on the posts.
+            </li>
+          </ul>
+          <hr class="dotted-divider" />
+          <div class="close-modal-container">
+            <button
+              type="button"
+              class="btn btn-secondary close-about-modal-btn"
+              data-bs-dismiss="modal"
+            >
+              back to blog
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Modal -->
+<div
+  class="modal fade"
+  id="galleryModal"
+  tabindex="-1"
+  aria-labelledby="galleryModalLabel"
+>
+  <i
+    class="fa fa-times-circle-o modal-cross"
+    aria-hidden="true"
+    data-bs-dismiss="modal"
+    aria-label="Close"
+  ></i>
+  <div class="modal-nav-container">
+    <i
+      class="fa fa-chevron-left modal-arrow modal-arrow-left"
+      aria-hidden="true"
+      onclick="showNextOrPrevImg(-1);"
+    ></i>
+  </div>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="d-flex flex-row justify-content-center modal-row">
+        <div class="modal-image-container">
+          <img src="" class="modal-image img-fluid" id="modal-image" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-nav-container">
+    <i
+      class="fa fa-chevron-right modal-arrow modal-arrow-right"
+      aria-hidden="true"
+      onclick="showNextOrPrevImg(1);"
+    ></i>
+  </div>
+</div>
+
+  </body>
+  <script src="/blog/scripts/main.js"></script>
+  <script src="/blog/scripts/status-feed.js"></script>
+</html>

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Shanghai + Beijing Trip (October 2026)</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/blog/styles/main.css"
+/>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/blog/styles/post.css"
+/>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/blog/styles/comment-widget.css"
+/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"
+      integrity="sha512-Y8iWYJDo6HiTo5xtml1g4QqHtl/PO1w+dmUpQfQSOTqKNsMhExfyPN2ncNAe9JuJUSKzwK/b6oaNPop4MXzkwg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/blog/assets/icon.png"
+/>
+  </head>
+  <body>
+    <div class="main-body" id="main-body">
+      <div class="container mt-5">
+        <div class="d-flex flex-row flex-wrap justify-content-center align-items-start">
+          <div class="sidebar">
+  <a href="/blog/">
+    <img src="/blog/assets/blog.png" class="sidebar-img"/>
+  </a>
+  <div class="about-blog-box">
+    <p>
+      Just a space for me to write stuff. Might post personal updates, updates
+      on my projects or maybe even some resources.
+    </p>
+    <button
+      class="credits-button mt-3"
+      data-bs-toggle="modal"
+      data-bs-target="#aboutBlogModal"
+    >
+      credits
+    </button>
+  </div>
+  <div class="accordion filters-box mt-2">
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <button
+          class="filters-title accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#filter-list"
+          aria-expanded="true"
+          aria-controls="filter-list"
+        >
+          categories
+        </button>
+      </div>
+      <div id="filter-list" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <hr class="dotted-divider"/>
+          <div class="filters-list">
+            <div class="d-flex flex-row flex-wrap justify-content-center">
+              <a class="filter-item" href="/blog/tag/resources">
+                resources
+              </a>
+              <a class="filter-item" href="/blog/tag/personal">
+                personal
+              </a>
+              <a class="filter-item" href="/blog/tag/projects">
+                projects
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sidebar-buttons-row mt-2">
+    <div class="tags-btn">
+      <a href="/blog/taglist">
+        <i class="fa fa-tags me-2" aria-hidden="true"></i>tags</a
+      >
+    </div>
+    <div class="archive-btn">
+      <a href="/blog/archive">
+        <i class="fa fa-archive me-2" aria-hidden="true"></i>
+        archive</a
+      >
+    </div>
+  </div>
+  
+</div>
+          <div class="blog-container mb-5">
+            <div class="top-buttons-row">
+  <div class="back-btn top-btn">
+    
+    <a href="/blog/"><i class="fa fa-caret-left me-2"></i>back</a>
+    
+  </div>
+  <div class="tags-btn top-btn hide-btn">
+    <a href="/blog/taglist">
+      <i class="fa fa-tags me-2" aria-hidden="true"></i>tags</a
+    >
+  </div>
+  <div class="archive-btn top-btn hide-btn">
+    <a href="/blog/archive">
+      <i class="fa fa-archive me-2" aria-hidden="true"></i>
+      archive</a
+    >
+  </div>
+</div>
+
+            <div class="blog-box-outer">
+              <img
+                src="/blog/assets/yellow-ribbon.png"
+                class="blog-ribbon-deco"
+/>
+              <div class="blog-box-inner" id="blog-posts-container">
+                
+<p class="post-date-label">Nov 13, 2026</p>
+<h1 class="post-title-header mt-2 mb-3">
+  Shanghai + Beijing Trip (October 2026)
+</h1>
+<hr class="dotted-divider" />
+<div class="post-body">
+  <div>
+    <p><em>This was supposed to be part of my monthly update post for October (which I'm writing in November, don't worry about it), but it was getting a bit too long, so I've split it into two. In this post, I'll be talking about my trip to China. If you'd rather read about my October website updates instead, you can check out <a href="/blog/posts/2026-11-13-October-Website-Updates/">this post</a>.</em></p>
+<hr class="dotted-divider">
+<p>I went to Shanghai and Beijing near the end of October. As someone who loves the cold, the autumn weather was great and perfect for being outdoors. Unfortunately, I spent most of my time inside of random malls.</p>
+<p>Whenever I go to China, I have this instinctive urge to search for anime-related places. And Shanghai is kind of the ideal destination for this, since it is probably one of the cities with the highest concentration of malls dedicated to anime stuff (or 二次元 as they call it).</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/5.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption">Yes that is a large Lycahugo billboard for Lycaon's birthday outside this mall</p>
+</div></p>
+<p>Bailian ZX Creative Centre (百联ZX创趣场) — pictured above — is a fairly famous one that I decided to visit. This isn't actually some random mall though, since it's right on the busiest shopping street in Shanghai.</p>
+<p>Inside is basically five full floors of anime merch shops, including shops for official Japanese anime studios. This was an official IG and WIT Studio shop with your typical Attack on Titan and Haikyuu!! merch, but I didn't expect to see the new <a href="https://myanimelist.net/anime/31433/Ginga_Eiyuu_Densetsu__Die_Neue_These_-_Kaikou">LOGH</a> anime getting featured as well (although there wasn't any actual merch):</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/7.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption">Can they make Season 5 (?) lmfao....</p>
+</div></p>
+<p>However, my true destination was this — a <a href="https://sevenseasentertainment.com/series/case-file-compendium-bing-an-ben-novel/">Case File Compendium</a> themed cafe:</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/8.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>This is a Chinese BL/ Danmei novel I read earlier this year which lowkey got me back into the genre as a whole. <s>(It also lowkey influenced my decision to go to Shanghai but let's not talk about that <em>shhhh</em>)</s></p>
+<p>Anyway, I saw this cafe online about a month ago and honestly did not expect it to still be there by the time I was in Shanghai, but somehow it really did run until then. So I simply had to go there...</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/9.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>I went on a Monday morning so it was completely empty except for me LMFAO but at least I didn't have to make a booking which would probably have been impossible as a foreigner (don't quote me on that).</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/10.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>The food was surprisingly decent, but other than that, I think it's pretty similar to your typical anime cafe, where you order themed food and get a bunch of freebies. There was also a lot of merch for sale, but I didn't buy any because I already got enough of the freebies 😂</p>
+<p>Anyway, here are some other highlights from the streets of Shanghai.</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/1.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>There was a White Rabbit candy shop right outside of the hotel I was staying at that had a Honkai Star Rail collab. The same collab is featured on these mini sightseeing trams.</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/4.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>And I was just minding my own business, on the way to the Oriental Pearl Tower, when I saw a bus with a Genshin Collab advertisement.</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/3.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>On the topic of Hoyoverse games, I'm admittedly not as big of a fan now as I was in the past, but since I was in Shanghai, I had to drop by their headquarters.</p>
+<p>In actuality, they have a lot of different office buildings scattered throughout one area. I wanted to check out this Astral Express, and it was an absolute pain in the ass to find.</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/11.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>Oh and they only have one office that allows visitors, but only on weekends, and you'll have to make a booking on some WeChat application. Unfortunately, I didn't realise that and I went on a week day, which meant I didn't get to go inside 😅</p>
+<p>Of course, this process might change again in the future so don't be like me. Do your research before going to an obscure Chinese business park to visit your favourite Gacha game company 👍 <em>(Please don't actually go to anyone's office unless it's explicitly allowed.)</em></p>
+<p>As a consolation, there is a park/ mall area near the Hoyoverse office with a bunch of installations themed around different (Gacha) games, which was pretty cool.</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/12.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption">Dragon from Honkai Star Rail</p>
+</div></p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/19.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption">Evernight's jellyfish from Honkai Star Rail</p>
+</div></p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/20.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption">Bangboos from Zenless Zone Zero</p>
+</div></p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/21.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption">Trash can from Honkai Star Rail — It says 'I am an artwork and I'm not accepting trash' so I wonder if someone tried to throw something inside LOL</p>
+</div></p>
+<p>Although there were quite a few Hoyoverse installations, games from other companies were featured too, since their offices were also in the same area.</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/13.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption">The factory from Arknights: Endfield LMFAO</p>
+</div></p>
+<p>Weeb stuff aside, I did also go to actual tourist spots in Shanghai, and they were pretty pleasant if you can avoid the crowds.</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/2.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>I got up around 7am to take photos on Nanjing Road (the busiest shopping street in Shanghai) and there was basically no one else around. Of course the shops aren't open either, but you can take a walk peacefully.</p>
+<p>In contrast, going there at night is a completely different experience...</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/23.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>The Northern Bund area is also more peaceful and more suited for scenic views of the CBD skyline.</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/15.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/24.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>And here is a cat in Zhujiajiao Water Town who has zero fucks left to give.</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/22.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>Hotel room with a view of the Bund:</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/6.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption">Ft. my Ranwan plushies</p>
+</div></p>
+<p>And finally, here is my (small) merch haul from Shanghai, most of which are freebies from the Case File Compendium cafe...</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/14.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>In the bottom left corner are my attempts at making felt dolls of my OCs at these DIY felt doll shops. They work like an IRL Picrew where you have to select the base, different hair parts, clothes and accessories, and then iron them together to make the doll. I don't think I did a good job of making them resemble my characters but I tried my best with the limited selection ;w;</p>
+<p>All in all, I don't think I bought much stuff considering the number of merch shops I went to. I've reached the point where it isn't so much the price of the merch holding me back, as the fact that I have to find space to store it!!! Storage space has become more precious than merch to me... Unfortunately, I still like <em>looking</em> at merch, so I can't help but impulse-buy sometimes.</p>
+<p>As for Beijing, I was there for a comparatively shorter duration and I didn't get the chance to do as much. I've also been there quite a few times, so I can no longer be bothered to go to all the tourist spots.</p>
+<p>However, the autumn scenery is very pretty.</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/17.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>And here are some cute cats at a temple.</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/16.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>Naturally I also had to visit some anime malls, where I came across some interesting billboards.</p>
+<p><div class="post-body-img-container">
+<img src="/blog/posts/images/2026-oct/18.png" class="post-body-img-l" 
+          onclick="showImage(this);"
+          data-bs-toggle="modal"
+          data-bs-target="#galleryModal"
+        />
+<p class="post-img-caption"></p>
+</div></p>
+<p>Aaaand that's it for my October update. Hopefully the next monthly update won't be as long...</p>
+
+  </div>
+</div>
+<div class="post-tags-box">
+  <h3>Tags:</h3>
+     
+  <!-- prettier-ignore -->
+  <a href="/blog/tag/personal/">personal</a>
+    
+  <!-- prettier-ignore -->
+  <a href="/blog/tag/travel/">travel</a>
+   
+</div>
+<hr class="dotted-divider" />
+
+<div id="c_widget"></div>
+<script src="/blog/scripts/comment-widget.js"></script>
+
+              </div>
+            </div>
+            
+            <div class="footer-container mt-2">
+              <button
+                class="footer-btn"
+                onclick="window.scrollTo({top:0,behavior:'smooth'})"
+              >
+                <i class="fa fa-arrow-up me-2" aria-hidden="true"></i>
+                <span>top</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="aboutBlogModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content about-modal-content">
+      <div class="modal-body">
+        <div class="modal-title credits-title">credits</div>
+        <div class="credits-body mt-3">
+          <ul>
+            <li>
+              This blog is coded by me with
+              <a href="https://www.11ty.dev/">Eleventy</a> with the help of many
+              tutorials, a list of which you can find
+              <a href="/blog/posts/2025-12-04-11ty-Resources/">here</a
+              >. Bootstrap was also used for the HTML template.
+            </li>
+            <li>
+              Artworks are drawn by me unless stated otherwise and any decorative graphics are made by me in
+              <a href="https://www.canva.com/">Canva</a>.
+            </li>
+            <li>
+              I am using
+              <a href="https://virtualobserver.moe/ayano/comment-widget"
+                >Ayano's Comment Widget</a
+              >
+              for the comments section on the posts.
+            </li>
+          </ul>
+          <hr class="dotted-divider" />
+          <div class="close-modal-container">
+            <button
+              type="button"
+              class="btn btn-secondary close-about-modal-btn"
+              data-bs-dismiss="modal"
+            >
+              back to blog
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Modal -->
+<div
+  class="modal fade"
+  id="galleryModal"
+  tabindex="-1"
+  aria-labelledby="galleryModalLabel"
+>
+  <i
+    class="fa fa-times-circle-o modal-cross"
+    aria-hidden="true"
+    data-bs-dismiss="modal"
+    aria-label="Close"
+  ></i>
+  <div class="modal-nav-container">
+    <i
+      class="fa fa-chevron-left modal-arrow modal-arrow-left"
+      aria-hidden="true"
+      onclick="showNextOrPrevImg(-1);"
+    ></i>
+  </div>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="d-flex flex-row justify-content-center modal-row">
+        <div class="modal-image-container">
+          <img src="" class="modal-image img-fluid" id="modal-image" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-nav-container">
+    <i
+      class="fa fa-chevron-right modal-arrow modal-arrow-right"
+      aria-hidden="true"
+      onclick="showNextOrPrevImg(1);"
+    ></i>
+  </div>
+</div>
+
+  </body>
+  <script src="/blog/scripts/main.js"></script>
+  <script src="/blog/scripts/status-feed.js"></script>
+</html>
