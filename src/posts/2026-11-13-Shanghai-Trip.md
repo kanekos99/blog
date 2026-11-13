@@ -4,7 +4,7 @@ author: kanekos
 date: 2026-11-13
 tags: ["personal", "travel"]
 image: /posts/images/2026-oct/autumn.png
-description: October Monthly Update Part 2 — Highlights of a trip to Shanghai (and Beijing) I took at the end of October
+description: October Monthly Update Part 2 — Highlights from a trip to Shanghai (and Beijing) I took at the end of October
 ---
 
 _This was supposed to be part of my monthly update post for October (which I'm writing in November, don't worry about it), but it was getting a bit too long, so I've split it into two. In this post, I'll be talking about my trip to China. If you'd rather read about my October website updates instead, you can check out [this post](/blog/posts/2026-11-13-October-Website-Updates/)._

@@ -4,7 +4,7 @@ author: kanekos
 date: 2026-11-13
 tags: ["personal", "projects"]
 image: /posts/images/2026-oct/homepage.png
-description: October Monthly Update Part 1 — Changes I've made to my Neocities site in the month of October.
+description: October Monthly Update Part 1 — Changes I've made to my Neocities site in the month of October
 ---
 
 _This was supposed to be part of my monthly update post for October (which I'm writing in November, don't worry about it), but it was getting a bit too long, so I've split it into two. In this post, I'll mainly be discussing my website updates. If you'd rather read about random bullshit I did in Shanghai, you can check out [this post](/blog/posts/2026-11-13-Shanghai-Trip/) instead._
