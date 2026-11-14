@@ -18,17 +18,17 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="{{ '/styles/main.css' | url }}"
+      href="{{ '/styles/main.css' | url }}{{ nocache }}"
 />
     <link
       rel="stylesheet"
       type="text/css"
-      href="{{ '/styles/post.css' | url }}"
+      href="{{ '/styles/post.css' | url }}{{ nocache }}"
 />
     <link
       rel="stylesheet"
       type="text/css"
-      href="{{ '/styles/comment-widget.css' | url }}"
+      href="{{ '/styles/comment-widget.css' | url }}{{ nocache }}"
 />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -87,6 +87,6 @@
     {% include 'credit-modal.njk' %}
     {% include 'image-modal.njk' %}
   </body>
-  <script src="{{ '/scripts/main.js' | url }}"></script>
-  <script src="{{ '/scripts/status-feed.js' | url }}"></script>
+  <script src="{{ '/scripts/main.js' | url }}{{ nocache }}"></script>
+  <script src="{{ '/scripts/status-feed.js' | url }}{{ nocache }}"></script>
 </html>
