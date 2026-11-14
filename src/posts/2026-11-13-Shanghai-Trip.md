@@ -19,7 +19,7 @@ Whenever I go to China, I have this instinctive urge to search for anime-related
 
 Bailian ZX Creative Centre (百联ZX创趣场) — pictured above — is a fairly famous one that I decided to visit. This isn't actually some random mall though, since it's right on the busiest shopping street in Shanghai.
 
-Inside is basically five full floors of anime merch shops, including shops for official Japanese anime studios. This was an official IG and WIT Studio shop with your typical Attack on Titan and Haikyuu!! merch, but I didn't expect to see the new [LOGH](https://myanimelist.net/anime/31433/Ginga_Eiyuu_Densetsu__Die_Neue_These_-_Kaikou) anime getting featured as well (although there wasn't any actual merch):
+Inside is basically five full floors of anime merch shops, including shops for official Japanese anime studios. There was an official IG and WIT Studio shop with your typical Attack on Titan and Haikyuu!! merch, but I didn't expect to see the new [LOGH](https://myanimelist.net/anime/31433/Ginga_Eiyuu_Densetsu__Die_Neue_These_-_Kaikou) anime getting featured as well (although there wasn't any actual merch).
 
 {% imgBlock "/posts/images/2026-oct/7.png", "Can they make Season 5 (?) lmfao...." %}
 
