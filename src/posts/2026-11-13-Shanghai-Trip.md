@@ -91,7 +91,7 @@ The Northern Bund area is also more peaceful and more suited for scenic views of
 
 {% imgBlock "/posts/images/2026-oct/24.png", "" %}
 
-And here is a cat in Zhujiajiao Water Town who has zero fucks left to give.
+And here is a cat in Zhujiajiao Water Town with zero fucks left to give.
 
 {% imgBlock "/posts/images/2026-oct/22.png", "" %}
 
